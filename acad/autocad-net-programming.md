@@ -1,4 +1,5 @@
 ---
+layout: default
 title: "Autocad.NET ile Programlamaya Başlangıç"
 permalink: /acad/autocad-net-programming/
 excerpt: "Autocad.NET"

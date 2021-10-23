@@ -1,6 +1,6 @@
 ---
 title: "Autocad.NET ile Programlamaya Başlangıç"
-permalink: /_acad/autocad-net-programming/
+permalink: /acad/autocad-net-programming/
 excerpt: "Autocad.NET"
 toc: true
 ---

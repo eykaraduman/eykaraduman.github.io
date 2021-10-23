@@ -8,7 +8,7 @@ main:
   - title: "Hakkımda"
     url: /about/
 
-sidebar:
+sidemenu:
 - title: Getting Started
     children:
       - title: "Quick-Start Guide"

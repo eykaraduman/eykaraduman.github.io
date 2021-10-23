@@ -15,8 +15,10 @@
 # in the templates via {{ site.myvariable }}.
 locale: "tr-TR"
 title: Programlama Güncesi
+title_separator : "-"
+subtitle : "Esen Yalım Karaduman"
 email: esen.yalim@gmail.com
-description: Esen Yalım Karaduman
+description: C# Python Programming
 twitter_username: username
 github_username: eykaraduman
 minimal_mistakes_skin: default

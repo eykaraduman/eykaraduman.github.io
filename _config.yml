@@ -23,6 +23,7 @@ twitter_username: username
 github_username: eykaraduman
 minimal_mistakes_skin: default
 search: true
+author_profile: false
 
 # Build settings
 markdown: kramdown

@@ -71,9 +71,6 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://github.com/eykaraduman"
 
-sidebar:
-  nav: "sidebar"
-
 footer:
   links:
     - label: "GitHub"

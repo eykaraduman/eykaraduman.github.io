@@ -73,6 +73,12 @@ footer:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/eykaraduman"
+      
+comments:
+  provider: "disqus"
+  disqus:
+    shortname: "esenyalim"
+    
 defaults:
   # _posts
   - scope:

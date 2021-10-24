@@ -1,6 +1,6 @@
 ---
 permalink: /contact/
-title: "Contact"
+title: "İletişim"
 date: 2016-08-26
 last_modified_at: 2018-02-13T12:42:42-05:00
 excerpt: "Preferred methods of sending your questions, inquires, messages, and love letters to me."
@@ -22,6 +22,6 @@ excerpt: "Preferred methods of sending your questions, inquires, messages, and l
     <textarea name="message"></textarea>
   </label>
   <!-- your other form fields go here -->
-  <button type="Gönder">Send</button>
+  <button type="submit">Gönder</button>
 </form>
 

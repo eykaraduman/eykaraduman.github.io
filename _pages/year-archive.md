@@ -1,5 +1,5 @@
 ---
-title: "Posts by Year"
+title: "Yıllara göre yazılar"
 permalink: /posts/
 layout: posts
 author_profile: false

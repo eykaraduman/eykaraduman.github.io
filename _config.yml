@@ -60,7 +60,7 @@ plugins:
 author:
   name   : "Esen Yalım Karaduman"
   avatar : "/assets/images/bio-photo.jpg"
-  #bio    : "My awesome biography constrained to a sentence or two goes here."
+  # bio    : "My awesome biography constrained to a sentence or two goes here."
   location  : "Ankara"
   email  : "esen.yalim@gmail.com"
   links:

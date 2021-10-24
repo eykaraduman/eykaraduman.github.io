@@ -2,7 +2,7 @@
 classes: wide
 title: Trapez Kanallarda Su Yüksekliğinin Python ile Çözümü
 excerpt: "Trapez kanallarda Manning eşitliği için su derinliği, A kesit alanı, R hidrolik yarıçap, n manning katsayısı, So kanal taban eğimi ve Q debi olmak üzere SciPy `root` fonksiyonu kullanılarak çözülebilir."
-published: true
+published: false
 mathjax: true
 categories:
   - Python

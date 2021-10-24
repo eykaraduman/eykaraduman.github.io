@@ -2,7 +2,7 @@
 classes: wide
 title: Dairesel Kesitlerin Hidroliği
 excerpt: "Açık kanallar için Manning eşitliği, R hidrolik yarıçap, So kanal taban eğimi olmak üzere aşağıdaki gibidir."
-published: true
+published: false
 mathjax: false
 categories:
   - Python

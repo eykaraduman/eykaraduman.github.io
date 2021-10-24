@@ -1,6 +1,6 @@
 ---
 permalink: /about/
-title: "About"
+title: "Hakkımda"
 author_profile: true
 ---
 

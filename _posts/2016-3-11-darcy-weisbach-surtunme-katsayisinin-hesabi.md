@@ -1,7 +1,7 @@
 ---
 classes: wide
 title: Darcy-Weisbach Sürtünme Katsayısının Hesabı
-published: true
+published: false
 mathjax: true
 categories:
   - Python

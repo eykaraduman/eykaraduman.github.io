@@ -9,13 +9,10 @@ main:
     url: /about/
 
 sidemenu:
-  - title: Getting Started
+  - title: Başlangıç
+    url: /blog/
     children:
-      - title: "Quick-Start Guide"
-        url: /docs/quick-start-guide/
-      - title: "Structure"
-        url: /docs/structure/
-      - title: "Installation"
-        url: /docs/installation/
-      - title: "Upgrading"
-        url: /docs/upgrading/
+      - title: "AutoCAD.NET Programlama"
+        url: /acad/autocad-net-programming/
+      - title: "HecRAS"
+        url: /hecras/hecras/

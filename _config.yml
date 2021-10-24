@@ -77,7 +77,7 @@ footer:
 comments:
   provider: "disqus"
   disqus:
-    shortname: "esenyalim"
+    shortname: "https-eykaraduman-github-io-blog"
     
 defaults:
   # _posts

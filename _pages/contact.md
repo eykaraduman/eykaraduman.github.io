@@ -18,35 +18,5 @@ If you have a question, please read my [frequently asked questions section](/faq
 
 For anything else, use the contact form below.
 
-<form id="form1" name="form1" accept-charset="UTF-8" autocomplete="off" enctype="multipart/form-data" method="post" novalidate action="https://mademistakes.wufoo.com/forms/zr2w1zk1hbcjv0/#public">
-  <div>
-    <label id="title7" for="Field7">Name
-      <input id="Field7" name="Field7" type="text" spellcheck="false" maxlength="255" required placeholder="Your name">
-    </label>
-  </div>
-  <div>
-    <label id="title2" for="Field2">Email address <small>(will remain private)</small>
-      <input id="Field2" name="Field2" type="email" spellcheck="false" maxlength="255" required placeholder="email@address.com">
-    </label>
-  </div>
-  <div>
-    <label id="title1" for="Field1">Message
-      <textarea id="Field1" name="Field1" spellcheck="true" rows="10" cols="50" required></textarea>
-    </label>
-  </div>
-  <div>
-    <label id="title10" for="Field10">How&rsquo;d you hear about my website?
-      <input id="Field10" name="Field10" type="text" maxlength="255" placeholder="e.g. Searching the web">
-    </label>
-  </div>
-  <div>
-    <button id="saveForm" name="saveForm" class="btn" type="submit">Send message</button>
-  </div>
-  <div class="hidden">
-    <label for="comment">Do not fill this out
-      <textarea name="comment" id="comment" rows="1" cols="1"></textarea>
-      <input type="hidden" id="idstamp" name="idstamp" value="DXSyHZyBYpNZI+88LvVOKO8dSfd/5lyIeCQAXFVxeJY=">
-    </label>
-  </div>
-</form>
+<div id="wufoo-zhpkh7v0o0xexr"> Fill out my <a href="https://esenyalim.wufoo.com/forms/zhpkh7v0o0xexr">online form</a>. </div> <script type="text/javascript"> var zhpkh7v0o0xexr; (function(d, t) { var s = d.createElement(t), options = { 'userName':'esenyalim', 'formHash':'zhpkh7v0o0xexr', 'autoResize':true, 'height':'500', 'async':true, 'host':'wufoo.com', 'header':'show', 'ssl':true }; s.src = ('https:' == d.location.protocol ?'https://':'http://') + 'secure.wufoo.com/scripts/embed/form.js'; s.onload = s.onreadystatechange = function() { var rs = this.readyState; if (rs) if (rs != 'complete') if (rs != 'loaded') return; try { zhpkh7v0o0xexr = new WufooForm(); zhpkh7v0o0xexr.initialize(options); zhpkh7v0o0xexr.display(); } catch (e) { } }; var scr = d.getElementsByTagName(t)[0], par = scr.parentNode; par.insertBefore(s, scr); })(document, 'script'); </script>
 

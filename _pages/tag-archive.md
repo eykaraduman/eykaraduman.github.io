@@ -1,5 +1,5 @@
 ---
-title: "Posts by Tag"
+title: "Etiketlere göre yazılar"
 permalink: /tags/
 layout: tags
 author_profile: false

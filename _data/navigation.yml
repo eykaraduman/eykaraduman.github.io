@@ -5,6 +5,8 @@ main:
     url: /categories/
   - title: "Etiketler"
     url: /tags/
+  - title: "İletişim"
+    url: /contact/
   - title: "Hakkımda"
     url: /about/
 

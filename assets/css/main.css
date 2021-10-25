@@ -4,11 +4,13 @@
 
 @charset "utf-8";
 
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
-@import "minimal-mistakes"; // main partials
-
 .page__footer-follow {
   li {
     text-transform: capitalize;
   }
 }
+
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}"; // skin
+@import "minimal-mistakes"; // main partials
+
+

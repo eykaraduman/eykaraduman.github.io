@@ -4,7 +4,7 @@ permalink: /acad/autocad-net-programming/
 excerpt: "Autocad.NET"
 toc: true
 sidebar:
-  nav: "sidemenu"
+  nav: "autocadnetmenu"
 ---
 
 AutoCAD.Net ile programlamaya giriş.

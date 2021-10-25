@@ -12,7 +12,7 @@ main:
 
 sidemenu:
   - title: Başlangıç
-    url: 
+    url: /
     children:
       - title: "AutoCAD.NET Programlama"
         url: /acad/autocad-net-programming/

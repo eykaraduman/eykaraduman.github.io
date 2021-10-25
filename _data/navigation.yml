@@ -18,3 +18,12 @@ sidemenu:
         url: /acad/autocad-net-programming/
       - title: "HecRAS"
         url: /hecras/hecras/
+
+autocadnetmenu:
+  - title: AutoCAD.NET Programlama
+    url: /acad/autocad-net-programming/
+    children:
+      - title: "Giriş"
+        url: /
+      - title: "Dönüşümler"
+        url: /

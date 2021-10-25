@@ -218,6 +218,7 @@ tr: &DEFAULT_TR
   loading_label              : "Yükleniyor..."
   search_label_text          : "Ara"
   search_algolia_no_results  :
+  search_placeholder_text    : "Aranacak terimi girin..."
   back_to_top                : "Başa dön"
 tr-TR:
   <<: *DEFAULT_TR

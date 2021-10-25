@@ -14,6 +14,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale: "tr-TR"
+logo: "/assets/images/logo.png"
 title: Programlama Güncesi
 title_separator : "-"
 subtitle : "Esen Yalım Karaduman"

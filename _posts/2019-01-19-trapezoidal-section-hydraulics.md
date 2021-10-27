@@ -17,6 +17,7 @@ Trapez kanallarda Manning eşitliği, $A$ kesit alanı, $R$ hidrolik yarıçap, 
 $$
 Q = \dfrac{1}{n} \cdot A \cdot R^{2/3} \cdot S_{o}^{1/2}
 $$
+
 Python SciPy kütüphanesi ait `root` fonksiyonu manning eşitliğini çözmek için kullanılmıştır. Su yüksekliğini bulunabilmesi için başlangıç tahmini olarak ise kritik derinlik seçilmiştir. 
 
 $$

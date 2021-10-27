@@ -14,6 +14,7 @@ tags:
 3 boyutlu uzayda noktaları/nesneleri taşımak, ölçeklemek ve döndürmek için 4x4 boyutunda dönüşüm matrisi kullanılır. Bu matrisler CAD sistemlerinde önemli bir yer tutar. Dönüşüm matrisinin ilk 3 kolonu ölçekleme ve döndürme, 4. kolonu ise yer değiştirme/taşıma ile ilgilidir. Aşağıda temel dönüşüm matrislerininin nasıl oluşturulabileceğini bulabilirsiniz.
 
 ### Birim dönüşüm matrisi
+
 $$
 \begin{bmatrix} 1 & 0 & 0 & 0 \\ 0 & 1 & 0 & 0\\ 0 & 0 & 1 & 0\\ 0 & 0 & 0 & 1 \end{bmatrix}
 $$
@@ -32,6 +33,7 @@ $$
 $$
 
 #### y ekseni etrafında döndürme
+
 $$
 \begin{bmatrix}
  cos\theta & 0 &  sin\theta & 0\\
@@ -210,7 +212,12 @@ public static void MoveEntity()
 
 <code>MoveEntity</code> metodu, yerdeğiştirmenin daha rahat takip edilebilmesi için oluşturulan dikdörtgen yerine, onun dönüştürülmüş bir kopyasını taşımakta ve bu işlem için <code>Entity</code> sınıfının <code>GetTransformedCopy</code> yordamını kullanmaktadır. Ayrıca dikdörtgenin başlangıç noktası dünya koordinat sisteminde (WCS'de) olduğundan, yer değiştrime vektörü, seçilen taşıma noktası UCS'den WCS'ye dönüştürülerek kurulmuştur.
 
-{% include figure image_path="/assets/images/move-entity-ucs.png" alt="" caption="Şekil-1:<code>MoveEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç." %}
+
+
+![Şekil-1](https://eykaraduman.github.io/assets/images/move-entity-ucs.png "Şekil-1"){:width="400"}
+
+*Şekil-1:`MoveEntity` metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.*
+
 
 ### AutoCAD nesnelerinin <code>Matrix3d.Scaling</code> dönüşüm matrisiyle ölçeklenmesi
 
@@ -258,7 +265,9 @@ public static void ScaleEntity()
 }
 ```
 
-{% include figure image_path="/assets/images/scale-entity-ucs.png" alt="" caption="Şekil-2: <code>ScaleEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç." %}
+![Şekil-2](https://eykaraduman.github.io/assets/images/scale-entity-ucs.png "Şekil-2"){:width="400"}
+
+*Şekil-2: <code>ScaleEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.*
 
 ### AutoCAD nesnelerinin <code>Matrix3d.Rotation</code> dönüşüm matrisiyle döndürülmesi
 
@@ -304,7 +313,9 @@ public static void RotateEntity()
 }
 ```
 
-{% include figure image_path="/assets/images/rotate-entity-wcs.png" alt="" caption="Şekil-3: <code>RotateEntity</code> metodunun WCS'de çalıştırılmasıyla elde edilen sonuç." %}
+![Şekil-3](https://eykaraduman.github.io/assets/images/rotate-entity-wcs.png "Şekil-3"){:width="400"}
+
+*Şekil-3: <code>RotateEntity</code> metodunun WCS'de çalıştırılmasıyla elde edilen sonuç.*
 
 ### AutoCAD nesnelerine birleştirilmiş dönüşüm matrisi uygulanması
 

@@ -17,7 +17,7 @@ Hidrolik sıçramanın kırılacak enerji ile akım derinliğinin ilişkisine ba
 
 ### Sıçrama Türleri
 
-$1.00 \lt F_{r1} \lt 1.7$  Dalgalı Sıçrama
+#### $1.00 \lt F_{r1} \lt 1.7$  Dalgalı Sıçrama
 
 Froude sayısı birim ya da akım kritikten akarken hidrolik sıçrama oluşmaz. Eşlenik derinlikler $d_1$ ve $d_2$ arasındaki fark az olduğundan su yüzünde sadece hafif bir dalgalanma gözlenir.
 

@@ -14,7 +14,7 @@ Sediment taşınımında kullanılan Shields eğrisi **Şekil-1**'de verilmişti
 
 {% include figure image_path="/assets/images/Shields-Diagram.png" alt="" caption="Şekil-1" %}
 
-Deneysel çalışmalar sonucu elde edilen bu eğri boyutsuz kayma gerilmesi ($\tau_{ * c}$) ve reynolds sayısına ($ Re_{   * c  }$) göre hazırlanmıştır.
+Deneysel çalışmalar sonucu elde edilen bu eğri boyutsuz kayma gerilmesi ($\tau _{ * c}$) ve reynolds sayısına ($ Re_{   * c  }$) göre hazırlanmıştır.
 
 $$
 \tau_{*c}=\dfrac{\tau_c}{\left(\dfrac{\rho_s}{\rho}-1\right)\times \rho\times g\times d}\tag{1}

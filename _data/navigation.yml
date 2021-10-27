@@ -15,13 +15,13 @@ sidemenu:
     url: /
     children:
       - title: "Python"
-        url:/categories/#python
+        url: /categories/#python
       - title: "Hidrolik"
-        url:/categories/#hidrolik
+        url: /categories/#hidrolik
       - title: "AutoCAD.Net"
-        url:/categories/#AutoCAD.Net
+        url: /categories/#AutoCAD.Net
       - title: "ObjectARX"
-        url:/categories/#ObjectARX
+        url: /categories/#ObjectARX
       - title: "AutoCAD.NET ile Programlamaya Giriş"
         url: /acad/autocad-net-programming/
       - title: "HecRAS"

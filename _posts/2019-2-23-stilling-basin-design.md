@@ -21,25 +21,25 @@ Hidrolik sıçramanın kırılacak enerji ile akım derinliğinin ilişkisine ba
 
 Froude sayısı birim ya da akım kritikten akarken hidrolik sıçrama oluşmaz. Eşlenik derinlikler $d_1$ ve $d_2$ arasındaki fark az olduğundan su yüzünde sadece hafif bir dalgalanma gözlenir.
 
-$1.70 \lt F_{r1} \lt 2.5$  Zayıf Sıçrama
+#### $1.70 \lt F_{r1} \lt 2.5$  Zayıf Sıçrama
 
 Froude sayısının 1.70'yi aşmasıyla birlikte su yüzeyinde bir takım küçük çalkantılar oluşur ve bu durum 2.5 değerine ulaşana kadar kuvvetlenerek artar. Ancak hidrolik sıçramanın davranışında bir değişiklik olmaz. Mansapta su yüzeyi düzgün kalır ve zayıf sıçrama oluşur.
 
 {% include figure image_path="/assets/images/Sicrama1.png" alt="" caption="Şekil-1" %}
 
-$2.5 \lt F_{r1} \lt 4.5$  Salınımlı Sıçrama
+#### $2.5 \lt F_{r1} \lt 4.5$  Salınımlı Sıçrama
 
 Salınımlı bir su jeti tabandan yüzeye ve tekrar tabana doğru düzensiz bir şekilde hareket eder. Her salınım yüzeyde büyük ve düzensiz dalgalar oluşturur. Bu dalgalar ancak uzun mesafeler sonunda sönümlenir ve salınımlı sıçrama oluşur.
 
 {% include figure image_path="/assets/images/Sicrama2.png" alt="" caption="Şekil-2" %}
 
-$4.5 \lt F_{r1} \lt 9.0$  Kararlı Sıçrama
+#### $4.5 \lt F_{r1} \lt 9.0$  Kararlı Sıçrama
 
 Yüksek hızlı su jeti sürekli aynı yolu izler. Bu sıçrama tipi mansap etkilerinden en az etkilenen tiptir. Kararlı sıçrama oluşur.
 
 {% include figure image_path="/assets/images/Sicrama3.png" alt="" caption="Şekil-3" %}
 
-$F_{r1} \gt 9.0$  Kuvvetli Sıçrama
+#### $F_{r1} \gt 9.0$  Kuvvetli Sıçrama
 
 Yüksek hızlı jet sıçramanın ön yüzünde darbe etkileri yaratır ve mansapta dalgalı bir yüzey oluşturur. Sıçrama kuvvetlidir.
 
@@ -47,7 +47,7 @@ Yüksek hızlı jet sıçramanın ön yüzünde darbe etkileri yaratır ve mansa
 
 ### Enerji Kırıcı Havuz Tipleri
 
-**USBR Tip-I $(1.7 \lt Fr_{1} \lt 2.5)$**
+#### USBR Tip-I $(1.7 \lt Fr_{1} \lt 2.5)$
 
 Tip-I, şüt bloğu, şaşırtıcı/sönümleyici blok ve mansap eşiği içermez. Havuz boyunun uzun olması ve hidrolik sıçramanın mansap su seviyesi değişimine karşı duyarlı olması nedeniyle genellikle tercih edilmez. Havuz boyu $L$ havuz sonundaki eşlenik derinliğe $d_2$ bağlı olarak (1) eşitliği ile bulunabilir.[^2]
 
@@ -55,7 +55,7 @@ $$
 L/d_{2} = −0.00005 \times Fr_{1}^3 − 0.0036 \times Fr_{1}^2 + 0.0816 \times Fr_{1} + 5.6544 \tag{1}
 $$
 
-**USBR Tip-IV $(2.5 \lt Fr_{1} \lt 4.5)$**
+#### USBR Tip-IV $(2.5 \lt Fr_{1} \lt 4.5)$
 
 Bu tip salınımlı sıçramalar için geliştirilmiştir. Salınımın kararsızlığını azaltmak için şüt saptırma blokları ve mansap eşiği barındırır. Havuz boyu (2) eşitliği ile bulunabilir. Kuyruk suyu derinliğinin eşlenik derinlikten $d_2$ %10 kadar fazla olması önerilmektedir. Çünkü hidrolik sıçrama, düşük Froude sayılarında, kuyruk suyu derinliğine karşı duyarlıdır ve kuyruk suyu derinliğindeki küçük bir azalma sıçramanın havuz dışına taşınmasına neden olabilir.[^3]
 
@@ -67,7 +67,7 @@ $$
 
 Blok genişliği, $0.75\le w_{1}/d_{1}\le 1$ olmak koşuluyla, $w_{1}=B/3.5$ ve blok aralığı ise $s_{1}=2.5\times w_{1}$ seçilebilir. Mansap eşiği yüksekliği ise $h_{4}=d_{1}\times (0.0536\times Fr_{1}+1.04)$ eşitliğiyle hesaplanabilir.
 
-**USBR Tip-II $(Fr_{1} \gt 4.5 \; ; V_{1} \gt 18\,m/s$)**
+#### USBR Tip-II $(Fr_{1} \gt 4.5 \; ; V_{1} \gt 18\,m/s$)
 
 Bu tip, yüksek barajlar, dolgu baraj dolusavakları ve büyük kanal yapıları için geliştirilmiştir. Tasarım şüt bloklarını ve dişli mansap eşiğini içerir. klasik bir hidrolik sıçramayla karşılaştırıldığında gerekli havuz boyunu %30 azaltır. Akımın yüksek hızları düşünülerek şaşırtıcı blok yerleştirilmemiştir. Aynı nedenle kuyruk suyu derinliğinin eşlenik derinlikden $d_2$ %5 kadar fazla olması önerilmektedir. Havuz boyu $L$ (3) eşitliği ile bulunabilir.
 
@@ -85,7 +85,7 @@ $$
 
 Şüt blokları sayısı, $n_{sb}=B/(2 \times d_1)$, $\;w_{1}=s_{1}=B/(2 \times n_{sb})$ olarak seçilebilir. Masap eşiği yüksekliği $h_{2}=0.2\times d_{2}$ olmalı ve aralığı ise $s_{2}=0.15\times d_{2}$'den az olmamalıdır. Diş adedi $\;B/(0.30\times d_{2})+0.50$ eşitliğiyle hesaplanabilir.
 
-**USBR Tip-III $(Fr_{1} \gt 4.5 \; ; V_{1} \lt 18.3\,m/s\; ; q \lt 18.6\,m^{3}/s/m$)**
+#### USBR Tip-III $(Fr_{1} \gt 4.5 \; ; V_{1} \lt 18.3\,m/s\; ; q \lt 18.6\,m^{3}/s/m$)
 
 Bu tip de Tip-II gibi yüksek barajlar, dolgu baraj dolusavakları ve büyük kanal yapıları için geliştirilmiştir. Tasarım şüt bloklarını, şaşırtıcı bloklar ve mansap eşiği içerir. Klasik hidrolik sıçramayla karşılaştırıldığında havuz boyunu %45 azaltır. Akımın hızları sınırlandırılarak beton yüzeyde kavitasyon hasarının önüne geçilmeye çalışılmış ve şaşırtıcı bloklara etkiyen çarpma kuvvetleri azaltılmıştır. Havuz boyu (5) eşitliği ile bulunabilir. Şaşırtıcı blokların havuz başlangıcından uzaklığı $0.8\times d_{2}$ olmalıdır.
 
@@ -105,7 +105,7 @@ $$
 h_{4}=d_{1}\times (0.0571 \times Fr_{1}+0.9714)\tag{7}
 $$
 
-
+### Python Kodu
 
 USBR tipi dört enerji kırıcı havuzun boylarının Froude sayısı ile değişimini birlikte gösteren grafik Şekil-8'de verilmiştir. Bu grafiği çizdirmek için <code>usbr_type_stilling_basin_graph()</code> python yordamı kullanılmıştır.
 
@@ -238,7 +238,7 @@ class USBRStillingBasin:
         self.h4 = self.d1 * (0.0536 * self.fr1 + 1.04)
 ```
 
-**Örnek:**
+### Örnek Çözüm
 
 ```python
 basin = USBRStillingBasin(14.82, 9.5, 0.22, 1.19, 1.31, 1153.30, 1153.70)
@@ -262,8 +262,6 @@ elif basin.type == "IV":
     print("h4 = {0:.2f} m".format(basin.h4))    
     print("w1= {0:.2f} m".format(basin.w1))
 ```
-
-**Sonuç:**
 
 ```python
 Tip = III

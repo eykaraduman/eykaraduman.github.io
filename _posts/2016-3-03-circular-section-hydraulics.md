@@ -12,7 +12,7 @@ tags:
   - Manning Eşitliği
   - Kapasite Eğrisi
 ---
-{% include figure image_path="/assets/images/dairesel-kesit.png" alt="" caption="Şekil-1" width="200" %}
+{% include figure image_path="/assets/images/dairesel-kesit.png" alt="" caption="Şekil-1"%}
 
 Açık kanallar için Manning eşitliği,$R$ hidrolik yarıçap, $S_o$) kanal taban eğimi olmak üzere aşağıdaki gibidir.
 $$

@@ -7,7 +7,7 @@ published: true
 categories:
   - Python
   - Hidrolik
-labels:
+tags:
   - Shields Diyagram
 ---
 Sediment taşınımında kullanılan Shields eğrisi **Şekil-1**'de verilmiştir.

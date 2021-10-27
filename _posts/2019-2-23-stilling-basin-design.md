@@ -9,6 +9,8 @@ toc: true
 categories:
   - Python
   - Hidrolik
+tags:
+  - Enerji Kırıcı Havuz
 ---
 Enerji kırıcı havuzlar, yüksek hıza sahip akımların aşındırıcı etkisini azaltmak için dolusavak, tünel/konduvi, menfez vb. hidrolik yapıların çıkışlarında kullanılır. Enerjiyi kırarak dere yatağını korur ve yapı civarında oyulmaları önlerler.
 

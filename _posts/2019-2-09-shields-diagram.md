@@ -93,7 +93,7 @@ $T=10^o$ için `kinematic_viscosity(...)` yordamıyla kinematik viskozite $\upsi
 
 $\rho_s=2.65\;t/m^3$, $\rho=1.0\;t/m^3$ özgül kütleleri ve dane çapı $d=1\;mm$ için <code class="EnlighterJSRAW" data-enlighter-language="generic">shields_curve_equation(0.001, 2.65, 1.00, 1.33345e-6)</code> python yordamı ile aşağıdaki sonuçlar hesaplanmıştır.
 
-$\tau_{*c}=0.034643$, $\tau_{c}=0.0005605\;t/m^2$, $u_{*c}=0.023676\;m/s$, $Re_{*c}=17.75576$
+$\tau_{\ast c}=0.034643$, $\tau_{c}=0.0005605\;t/m^2$, $u_{\ast c}=0.023676\;m/s$, $Re_{\ast c}=17.75576$
 
 **Shields Eğrisinin Çizdirilmesi**
 

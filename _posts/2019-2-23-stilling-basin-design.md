@@ -2,6 +2,7 @@
 classes: wide
 title: USBR Tip Enerji Kırıcı Havuzlar
 excerpt: "Enerji kırıcı havuzlar, yüksek hıza sahip akımların aşındırıcı etkisini azaltmak için dolusavak, tünel/konduvi, menfez vb. hidrolik yapıların çıkışlarında kullanılır. Enerjiyi kırarak dere yatağını korur ve yapı civarında oyulmaları önlerler."
+permalink: /hidrolik/stilling-basin-design/
 published: true
 mathjax: true
 toc: true

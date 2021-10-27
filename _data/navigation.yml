@@ -13,19 +13,25 @@ main:
 sidemenu:
   - title: Başlangıç
     url: /
+  - title: Programlama
     children:
+      - title: "C#"
+        url: /categories/#c#
       - title: "Python"
         url: /categories/#python
-      - title: "Hidrolik"
-        url: /categories/#hidrolik
       - title: "AutoCAD.Net"
         url: /categories/#AutoCAD.Net
       - title: "ObjectARX"
         url: /categories/#ObjectARX
       - title: "AutoCAD.NET ile\n\nProgramlamaya Giriş"
         url: /acad/autocad-net-programming/
+  - titile: Mühendislik
+    children:
+      - title: "Hidrolik"
+        url: /categories/#hidrolik
       - title: "HecRAS"
         url: /hecras/hecras/
+  
 
 autocadnetmenu:
   - title: AutoCAD.NET Programlama

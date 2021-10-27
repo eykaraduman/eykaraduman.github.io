@@ -79,34 +79,35 @@ Dönüşüm matrisi, AutoCAD.Net API'ye ait `Autodesk.AutoCAD.Geometry`  isim uz
 ```csharp
 Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
 ed.WriteMessage(Matrix3d.Identity.ToString());
+
+((1,0,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1))
 ```
 kodu birim matrisi komut satırına yazdıracaktır.
 
-`((1,0,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1))`
-
-<code>(0, 0, 0)</code> noktasından <code>(3.0, 3.0, 2.0)</code> noktasına taşıma yapmak için <code>Matrix3d.Displacement</code> matrisini kullanabilirsiniz.
+<code>(0, 0, 0)</code> noktasından <code>(3.0, 3.0, 2.0)</code> noktasına taşımak için <code>Matrix3d.Displacement</code> matrisini kullanabilirsiniz.
 
 ```csharp
 ed.WriteMessage(Matrix3d.Displacement(new Vector3d(3.0, 3.0, 2.0)).ToString());
+
+((1,0,0,3),(0,1,0,3),(0,0,1,2),(0,0,0,1))
 ```
 
-`((1,0,0,3),(0,1,0,3),(0,0,1,2),(0,0,0,1))`
 
 Bir AutoCAD nesnesini <code>(1.0, 1.0, 1.0)</code> noktasını merkez alıp <code>Z</code> ekseni etrafında <code>45°</code> döndürmek içinse kullanmanız gereken matris  <code>Matrix3d.Rotation</code>'dır.
 
 ```csharp
 ed.WriteMessage(Matrix3d.Rotation(Math.PI / 4, Vector3d.ZAxis, new Point3d(1.0, 1.0, 1.0)).ToString());
-```
 
-`((0.707106781186547,-0.707106781186548,0,1),(0.707106781186548,0.707106781186547,0,-0.414213562373095),(0,0,1,0),(0,0,0,1))`
+((0.707106781186547,-0.707106781186548,0,1),(0.707106781186548,0.707106781186547,0,-0.414213562373095),(0,0,1,0),(0,0,0,1))
+```
 
 <code>(0.0, 0.0, 0.0)</code> noktasını merkez alıp <code>5</code> katsayısı ile ölçekleme yapmak içinse <code>Matrix3d.Scaling</code> matrisi aşağıdaki gibi kullanılabilir.
 
 ```csharp
 ed.WriteMessage(Matrix3d.Scaling(5.0, Point3d.Origin).ToString());
-```
 
-`((5,0,0,0),(0,5,0,0),(0,0,5,0),(0,0,0,1)`
+((5,0,0,0),(0,5,0,0),(0,0,5,0),(0,0,0,1)
+```
 
 Ayrıca <code>Matrix3d</code> sınıfı, <code>PreMultiplyBy</code>, <code>PostMultiplyBy</code> fonksiyonlarıyla birleştirilmiş dönüşüm matrisleri oluşturmanıza imkan sağladığı gibi izdüşüm (<code>Projection</code>) ve aynalama (<code>Mirroring</code>) için dönüşüm matrisleri de içerir. 
 
@@ -154,9 +155,9 @@ public static ObjectId CreateRectangle(double width, double height)
 }
 ```
 
-Yukardaki metotta dikkate edilmesi gereken iki önemli nokta var; ilki, <code>Editor</code> sınıfı <code>GetPoint(...)</code> metodu ile elde edilen noktanın etkin kullanıcı tanımlı koordinat sisteminde (UCS'de) olması, ikincisi ise <code>Polyline</code>'ın, veritabanına eklendikten sonra UCS'den WCS'ye <code>TransformBy</code> metoduyla dönüşümünün yapılmış olmasıdır. Bu dönüşümün nedeni <code>Editor.GetPoint()</code> metodunun UCS'de bir nokta döndürmesi ve  AutoCAD nesnelerinin geometrik bilgilerinin WCS'de saklanmasıdır.
+Yukardaki metotta dikkate edilmesi gereken iki önemli nokta var; ilki, <code>Editor</code> sınıfı <code>GetPoint(...)</code> metodu ile elde edilen noktanın etkin kullanıcı tanımlı koordinat sisteminde (UCS'de) olması, ikincisi ise <code>Polyline</code>'ın, veritabanına eklendikten sonra UCS'den WCS'ye <code>TransformBy</code> metoduyla dönüşümünün yapılmış olmasıdır. Bu dönüşümün nedeni <code>Editor.GetPoint()</code> metoduyla elde edilen noktanın UCS'de tanımlı olması ve  AutoCAD nesnelerinin geometrik bilgilerinin WCS'de saklanmasıdır.
 
-Aslında AutoCAD.Net API ile geliştirilen her uygulamayı UCS'de denemekte fayda var. Çünkü AutoCAD grafik nesnelerine erişirken, onları veritabanına eklerken ve komut satırından nokta bilgisi alırken, API'nin kullandığı koordinat sistemleri arasındaki dönüşümleri doğru yapmak gerekiyor. Ayrıca UCS'de doğru çalışan bir uygulama, WCS'nin UCS'nin özel bir hali olması nedeniyle, WCS'de de sorunsuz çalışacaktır. Kullanıcı koordinat sistemine <code>Editor</code> sınıfının <code>CurrentUserCoordinateSystem</code> özelliğiyle ulaşılabilirsiniz.
+Aslında AutoCAD.Net API ile geliştirilen her uygulamayı UCS'de denemek önemlidir. Çünkü AutoCAD grafik nesnelerine erişirken, onları veritabanına eklerken ve komut satırından nokta bilgisi alırken, API'nin kullandığı koordinat sistemleri arasındaki dönüşümleri doğru yapmak gerekir. Ayrıca UCS'de doğru çalışan bir uygulama, WCS'nin UCS'nin özel bir hali olması nedeniyle, WCS'de de sorunsuz çalışacaktır. Kullanıcı koordinat sistemine <code>Editor</code> sınıfının <code>CurrentUserCoordinateSystem</code> özelliğiyle ulaşılabilirsiniz.
 
 UCS'den WCS'ye ve WCS'den UCS'ye dönüşüm için aşağıdaki matrisleri kullanabilirsiniz.
 
@@ -165,7 +166,7 @@ Matrix3d ucs2wcs = ed.CurrentUserCoordinateSystem;
 Matrix3d wcs2ucs = ed.CurrentUserCoordinateSystem.Inverse();
 ```
 
-<code>MoveEntity</code> metodu, seçilen herhangi bir noktadan başlayarak, <code>5.0</code> birim genişlik ve yükseklikte çizilen bir dikdörtgenin <code>(5,5,0)</code> vektörüyle nasıl taşınabileceğinin bir örneğini sergilemekte.
+<code>MoveEntity</code> metodu, seçilen herhangi bir noktadan başlayarak, <code>5.0</code> birim genişlik ve yükseklikte çizilen bir dikdörtgenin <code>(5,5,0)</code> vektörüyle nasıl taşınabileceğinin bir örneğini sergilemektedir.
 
 ```csharp
 public static void MoveEntity()
@@ -208,13 +209,13 @@ public static void MoveEntity()
 
 <code>MoveEntity</code> metodu, yerdeğiştirmenin daha rahat takip edilebilmesi için oluşturulan dikdörtgen yerine, onun dönüştürülmüş bir kopyasını taşımakta ve bu işlem için <code>Entity</code> sınıfının <code>GetTransformedCopy</code> yordamını kullanmaktadır. Ayrıca dikdörtgenin başlangıç noktası dünya koordinat sisteminde (WCS'de) olduğundan, yer değiştrime vektörü, seçilen taşıma noktası UCS'den WCS'ye dönüştürülerek kurulmuştur.
 
-{% include figure image_path="/assets/images/move-entity-ucs.png" alt="" caption="Şekil-1" %}
+{% include figure image_path="/assets/images/move-entity-ucs.png" alt="" caption="Şekil-1:<code>MoveEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç." %}
 
 ### AutoCAD nesnelerinin <code>Matrix3d.Scaling</code> dönüşüm matrisiyle ölçeklenmesi
 
 AutoCAD nesnelerini ölçekleyebilmek için,
 
-<ul><li>Önce <code>Matrix3d.Scaling</code> dönüşüm matrisini, bu matrise ölçekleme değeri ile noktasını parametre olarak geçirerek kurmalı</li><li>Daha sonra ölçeklenecek nesneye, <code>Entity</code> sınıfının <code>TransformBy</code> metodunu, bu metoda ölçekleme matrisini parametre olarak geçirerek uygulamalısınız. </li></ul>
+<ul><li>Önce <code>Matrix3d.Scaling</code> dönüşüm matrisinine, ölçekleme değeri ve noktasını parametre olarak geçirerek kurmalı</li><li>Daha sonra ölçeklenecek nesneye, <code>Entity</code> sınıfının <code>GetTransformedCopy</code> metodunukullanrak ölçekleme matrisini parametre olarak geçirerek uygulamalısınız. </li></ul>
 
 XY planında çizdirilen bir dikdörtgeni 3 katına çıkararak kopyalayan <code>ScaleEntity(...)</code> metodu ise aşağıdaki gibi olacaktır
 
@@ -260,9 +261,9 @@ public static void ScaleEntity()
 
 ### AutoCAD nesnelerinin <code>Matrix3d.Rotation</code> dönüşüm matrisiyle döndürülmesi
 
-<ul><li>Önce <code>Matrix3d.Rotation</code> dönüşüm matrisini, bu matrise dönüş açısını, etrafında döndürüleceği ekseni ve noktayı parametre olarak geçirerek kurmalı</li><li>Daha sonra döndürülecek nesneye, <code>Entity</code> sınıfının <code>TransformBy</code> metodunu, bu metoda döndürme matrisini parametre olarak geçirerek uygulamalısınız. </li></ul>
+<ul><li>Önce <code>Matrix3d.Rotation</code> dönüşüm matrisine dönüş açısını, etrafında döndürüleceği ekseni ve noktayı parametre olarak geçirerek kurmalı</li><li>Daha sonra döndürülecek nesneye, <code>Entity</code> sınıfının <code>GetTransformedCopy</code> metoduna döndürme matrisini parametre olarak geçirerek uygulamalısınız. </li></ul>
 
-XY planında çizdirilen bir dikdörtgeni Z ekseni etrafında 45° döndüren<code>RotateEntity(...)</code> metodu ise aşağıdaki gibi olacaktır.
+XY planında çizdirilen bir dikdörtgeni Z ekseni etrafında 45° döndüren <code>RotateEntity(...)</code> metodu ise aşağıdaki gibi olacaktır.
 
 ```csharp
 public static void RotateEntity()
@@ -306,7 +307,7 @@ public static void RotateEntity()
 
 ### AutoCAD nesnelerine birleştirilmiş dönüşüm matrisi uygulanması
 
-Yukarıda gerçekleştirilen taşıma, ölçekleme ve döndürme işlemlerini <code>Matrix3d</code> sınıfının <code>PreMultiplyBy</code> metodu ile bir kerede yapabilirsiniz. Bunun bir örneğini aşağıdaki <code>MoveScaleRotateEntity()</code> metodunda vermeye çalıştım.
+Yukarıda gerçekleştirilen taşıma, ölçekleme ve döndürme işlemlerini <code>Matrix3d</code> sınıfının <code>PreMultiplyBy</code> metodu ile bir kerede yapabilirsiniz. Bunun bir örneğini aşağıdaki <code>MoveScaleRotateEntity()</code> metodunda bulabilirsiniz.
 
 ```csharp
 public static void MoveScaleRotateEntity()

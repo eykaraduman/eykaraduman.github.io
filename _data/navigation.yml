@@ -23,9 +23,9 @@ sidemenu:
         url: /categories/#AutoCAD.Net
       - title: "ObjectARX"
         url: /categories/#ObjectARX
-      - title: "AutoCAD.NET ile\n\nProgramlamaya Giriş"
+      - title: "AutoCAD.NET ile Programlamaya Giriş"
         url: /acad/autocad-net-programming/
-  - titile: Mühendislik
+  - title: Mühendislik
     children:
       - title: "Hidrolik"
         url: /categories/#hidrolik

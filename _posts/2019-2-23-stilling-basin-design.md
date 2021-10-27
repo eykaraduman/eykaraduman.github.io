@@ -24,33 +24,25 @@ $1.70 \lt F_{r1} \lt 2.5$  Zayıf Sıçrama
 
 Froude sayısının 1.70'yi aşmasıyla birlikte su yüzeyinde bir takım küçük çalkantılar oluşur ve bu durum 2.5 değerine ulaşana kadar kuvvetlenerek artar. Ancak hidrolik sıçramanın davranışında bir değişiklik olmaz. Mansapta su yüzeyi düzgün kalır ve zayıf sıçrama oluşur.
 
-```
 {% include figure image_path="/assets/images/Sicrama1.png" alt="" caption="Şekil-1" %}
-```
 
 $2.5 \lt F_{r1} \lt 4.5$  Salınımlı Sıçrama
 
 Salınımlı bir su jeti tabandan yüzeye ve tekrar tabana doğru düzensiz bir şekilde hareket eder. Her salınım yüzeyde büyük ve düzensiz dalgalar oluşturur. Bu dalgalar ancak uzun mesafeler sonunda sönümlenir ve salınımlı sıçrama oluşur.
 
-```
-{% include figure image_path="/assets/images/Sıcrama2.png" alt="" caption="Şekil-2" %}
-```
+{% include figure image_path="/assets/images/Sicrama2.png" alt="" caption="Şekil-2" %}
 
 $4.5 \lt F_{r1} \lt 9.0$  Kararlı Sıçrama
 
 Yüksek hızlı su jeti sürekli aynı yolu izler. Bu sıçrama tipi mansap etkilerinden en az etkilenen tiptir. Kararlı sıçrama oluşur.
 
-```
-{% include figure image_path="/assets/images/Sıcrama3.png" alt="" caption="Şekil-3" %}
-```
+{% include figure image_path="/assets/images/Sicrama3.png" alt="" caption="Şekil-3" %}
 
 $F_{r1} \gt 9.0$  Kuvvetli Sıçrama
 
 Yüksek hızlı jet sıçramanın ön yüzünde darbe etkileri yaratır ve mansapta dalgalı bir yüzey oluşturur. Sıçrama kuvvetlidir.
 
-```
-{% include figure image_path="/assets/images/Sıcrama4.png" alt="" caption="Şekil-4" %}
-```
+{% include figure image_path="/assets/images/Sicrama4.png" alt="" caption="Şekil-4" %}
 
 ### Enerji Kırıcı Havuz Tipleri
 
@@ -70,9 +62,7 @@ $$
 L/d_2 = 0.0411 \times Fr_1^3 − 0.5838 \times Fr_1^2 + 3.0198 \times Fr_1 + 0.3164 \tag{2}
 $$
 
-```
 {% include figure image_path="/assets/images/Tip4.png" alt="" caption="Şekil-5" %}
-```
 
 Blok genişliği, $0.75\le w_{1}/d_{1}\le 1$ olmak koşuluyla, $w_{1}=B/3.5$ ve blok aralığı ise $s_{1}=2.5\times w_{1}$ seçilebilir. Mansap eşiği yüksekliği ise $h_{4}=d_{1}\times (0.0536\times Fr_{1}+1.04)$ eşitliğiyle hesaplanabilir.
 
@@ -90,9 +80,7 @@ $$
 TW=0.475\times d_{1} \times\left(\sqrt{1+8\times Fr_{1}^2} -1\right)\tag{4}
 $$
 
-```
 {% include figure image_path="/assets/images/Tip2.png" alt="" caption="Şekil-6" %}
-```
 
 Şüt blokları sayısı, $n_{sb}=B/(2 \times d_1)$, $\;w_{1}=s_{1}=B/(2 \times n_{sb})$ olarak seçilebilir. Masap eşiği yüksekliği $h_{2}=0.2\times d_{2}$ olmalı ve aralığı ise $s_{2}=0.15\times d_{2}$'den az olmamalıdır. Diş adedi $\;B/(0.30\times d_{2})+0.50$ eşitliğiyle hesaplanabilir.
 
@@ -104,9 +92,7 @@ $$
 L/d_{2} = 0.0005 \times Fr_{1}^3 − 0.0222 \times Fr_{1}^2 + 0.3271 \times Fr_{1} + 1.1558 \tag{5}
 $$
 
-```
 {% include figure image_path="/assets/images/Tip3.png" alt="" caption="Şekil-7" %}
-```
 
 Şüt blokları yüksekliği $(h_{3}$) için eşitlik (6), mansap eşiği yüksekliği $(h_{4}$) için ise eşitlik (7) kullanılabilir. Sıçramanın havuz içinde gerçeklemesi için ise kuyruk suyu derinliği en az $0.832\times d_{2}$ olmalıdır.
 

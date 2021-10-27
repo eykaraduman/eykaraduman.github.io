@@ -12,6 +12,14 @@ tags:
 ---
 Sediment taşınımında kullanılan Shields eğrisi **Şekil-1**'de verilmiştir.
 
+```
+<figure>
+  <img src="/assets/images/Shields-Diagram.png" alt="Şekil-1">
+  <figcaption>Şekil-1</figcaption>
+  <width>800</width>
+</figure>
+```
+
 ![Şekil-1](https://eykaraduman.github.io/assets/images/Shields-Diagram.png "Şekil-1"){:width="800" .tofigure}
 
 {% include figure image_path="/assets/images/Shields-Diagram.png" alt="" caption="Şekil-1" %}

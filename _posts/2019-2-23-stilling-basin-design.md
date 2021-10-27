@@ -128,9 +128,7 @@ def usbr_type_stilling_basin_graph():
     ax.set_xlabel('$Fr_1')
 ```
 
-```
 {% include figure image_path="/assets/images/BasinLength.png" alt="" caption="Şekil-8" %}
-```
 
 USBR tip enerji kırıcı havuz boyutlarını hesaplamak için ise aşağıdaki <code>USBRStillingBasin</code> python sınıfı kullanılabilir.
 

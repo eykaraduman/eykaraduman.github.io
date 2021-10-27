@@ -93,7 +93,7 @@ $$
 L/d_{2} = 0.0005 \times Fr_{1}^3 − 0.0222 \times Fr_{1}^2 + 0.3271 \times Fr_{1} + 1.1558 \tag{5}
 $$
 
-{% include figure image_path="/assets/images/Tip3.png" alt="" caption="Şekil-7" %}
+{% include figure image_path="/assets/images/Tip3.png" alt="" caption="Şekil 7" %}
 
 Şüt blokları yüksekliği $(h_{3}$) için eşitlik (6), mansap eşiği yüksekliği $(h_{4}$) için ise eşitlik (7) kullanılabilir. Sıçramanın havuz içinde gerçeklemesi için ise kuyruk suyu derinliği en az $0.832\times d_{2}$ olmalıdır.
 

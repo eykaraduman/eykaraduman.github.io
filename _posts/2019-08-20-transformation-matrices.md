@@ -1,4 +1,5 @@
 ---
+classes: wide
 title: Dönüşüm Matrisleri
 excerpt: "AutoCAD.Net API ile dönüşüm matrisleri (ölçekleme, döndürme, yer değiştirme)."
 permalink: /acad/transformation-matrices/

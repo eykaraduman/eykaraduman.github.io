@@ -23,7 +23,10 @@ sidemenu:
         url: /categories/#AutoCAD.Net
       - title: "ObjectARX"
         url: /categories/#ObjectARX
-      - title: "AutoCAD.NET ile Programlamaya Giriş"
+      - title: |-
+        AutoCAD.NET ile 
+        
+        Programlamaya Giriş
         url: /acad/autocad-net-programming/
   - title: Mühendislik
     children:

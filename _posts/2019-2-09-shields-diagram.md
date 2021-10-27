@@ -12,6 +12,8 @@ tags:
 ---
 Sediment taşınımında kullanılan Shields eğrisi **Şekil-1**'de verilmiştir.
 
+![](/assets/images/Shields-Diagram.png | width=100)
+
 {% include figure image_path="/assets/images/Shields-Diagram.png" alt="" caption="Şekil-1" %}
 
 Deneysel çalışmalar sonucu elde edilen bu eğri boyutsuz kayma gerilmesi ($\tau_{\ast c}$) ve reynolds sayısına ($Re_{\ast c}$) göre hazırlanmıştır.

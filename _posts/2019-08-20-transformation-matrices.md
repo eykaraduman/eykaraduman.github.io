@@ -114,7 +114,7 @@ ed.WriteMessage(Matrix3d.Scaling(5.0, Point3d.Origin).ToString());
 
 Ayrıca <code>Matrix3d</code> sınıfı, <code>PreMultiplyBy</code>, <code>PostMultiplyBy</code> fonksiyonlarıyla birleştirilmiş dönüşüm matrisleri oluşturmanıza imkan sağladığı gibi izdüşüm (<code>Projection</code>) ve aynalama (<code>Mirroring</code>) için dönüşüm matrisleri de içerir. 
 
-### <code>Matrix3d.Displacement</code> dönüşüm matrisi
+#### <code>Matrix3d.Displacement</code> dönüşüm matrisi
 
 AutoCAD nesnelerinin bir noktadan diğerine nasıl taşınacağını göstermek için genişlik ve yükseklik değerlerini parametre olarak kabul eden <code>CreateRectangle(...)</code> yordamını oluşturacağız öncelikle.
 
@@ -219,7 +219,7 @@ public static void MoveEntity()
 *Şekil-1:`MoveEntity` metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.*
 
 
-### <code>Matrix3d.Scaling</code> dönüşüm matrisi
+#### <code>Matrix3d.Scaling</code> dönüşüm matrisi
 
 AutoCAD nesnelerini ölçekleyebilmek için,
 
@@ -269,7 +269,7 @@ public static void ScaleEntity()
 
 *Şekil-2: <code>ScaleEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.*
 
-### <code>Matrix3d.Rotation</code> dönüşüm matrisi
+#### <code>Matrix3d.Rotation</code> dönüşüm matrisi
 
 <ul><li>Öncelikle, nesnenin etrafında döndürüleceği eksen ve nokta kullanılarak <code>Matrix3d.Rotation</code> dönüşüm matrisi kurulmalıdır.</li><li>Daha sonra döndürülecek nesneye, döndürme matrisini parametre olarak kabul eden <code>Entity</code> sınıfının <code>GetTransformedCopy</code> metodu uygulanmalıdır.</li></ul>
 
@@ -317,7 +317,7 @@ public static void RotateEntity()
 
 *Şekil-3: <code>RotateEntity</code> metodunun WCS'de çalıştırılmasıyla elde edilen sonuç.*
 
-### Birleştirilmiş dönüşüm matrisinin uygulanması
+#### Birleştirilmiş dönüşüm matrisinin uygulanması
 
 Yukarıda gerçekleştirilen taşıma, ölçekleme ve döndürme işlemlerini <code>Matrix3d</code> sınıfının <code>PreMultiplyBy</code> metodu ile bir kerede yapabilirsiniz. Bunun bir örneğini aşağıdaki <code>MoveScaleRotateEntity()</code> metodunda bulabilirsiniz.
 

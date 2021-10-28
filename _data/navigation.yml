@@ -16,13 +16,13 @@ sidemenu:
   - title: Programlama
     children:
       - title: "C#"
-        url: /categories/#c#
+        url: /categories/#c
       - title: "Python"
         url: /categories/#python
       - title: "AutoCAD.Net"
-        url: /categories/#AutoCAD.Net
+        url: /categories/#autocad.net
       - title: "ObjectARX"
-        url: /categories/#ObjectARX
+        url: /categories/#objectarx
       - title: "AutoCAD.NET ile Programlamaya Giriş"
         url: /acad/autocad-net-programming/
   - title: Mühendislik

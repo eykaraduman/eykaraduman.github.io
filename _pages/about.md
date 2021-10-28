@@ -1,7 +1,7 @@
 ---
 permalink: /about/
 title: "Hakkımda"
-author_profile: false
+author_profile: true
 sidebar:
   nav: "sidemenu"
 ---

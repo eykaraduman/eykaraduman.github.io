@@ -216,7 +216,7 @@ public static void MoveEntity()
 
 ![Şekil-1](https://eykaraduman.github.io/assets/images/move-entity-ucs.png "Şekil-1"){:width="400"}
 
-<sub>Şekil-1 :`MoveEntity` metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.</sub>
+<sub>Şekil-1: `MoveEntity` metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.</sub>
 
 
 #### <code>Matrix3d.Scaling</code> dönüşüm matrisi
@@ -267,7 +267,7 @@ public static void ScaleEntity()
 
 ![Şekil-2](https://eykaraduman.github.io/assets/images/scale-entity-ucs.png "Şekil-2"){:width="400"}
 
-<sub> Şekil-2: <code>ScaleEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.</sub>
+<sub>Şekil-2: <code>ScaleEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.</sub>
 
 #### <code>Matrix3d.Rotation</code> dönüşüm matrisi
 

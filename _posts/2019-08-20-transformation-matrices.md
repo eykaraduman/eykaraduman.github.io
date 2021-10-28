@@ -114,7 +114,7 @@ ed.WriteMessage(Matrix3d.Scaling(5.0, Point3d.Origin).ToString());
 
 Ayrıca <code>Matrix3d</code> sınıfı, <code>PreMultiplyBy</code>, <code>PostMultiplyBy</code> fonksiyonlarıyla birleştirilmiş dönüşüm matrisleri oluşturmanıza imkan sağladığı gibi izdüşüm (<code>Projection</code>) ve aynalama (<code>Mirroring</code>) için dönüşüm matrisleri de içerir. 
 
-### AutoCAD nesnelerinin <code>Matrix3d.Displacement</code> dönüşüm matrisiyle taşınması
+### <code>Matrix3d.Displacement</code> dönüşüm matrisi
 
 AutoCAD nesnelerinin bir noktadan diğerine nasıl taşınacağını göstermek için genişlik ve yükseklik değerlerini parametre olarak kabul eden <code>CreateRectangle(...)</code> yordamını oluşturacağız öncelikle.
 
@@ -219,11 +219,11 @@ public static void MoveEntity()
 *Şekil-1:`MoveEntity` metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.*
 
 
-### AutoCAD nesnelerinin <code>Matrix3d.Scaling</code> dönüşüm matrisiyle ölçeklenmesi
+### <code>Matrix3d.Scaling</code> dönüşüm matrisi
 
 AutoCAD nesnelerini ölçekleyebilmek için,
 
-<ul><li>Önce <code>Matrix3d.Scaling</code> dönüşüm matrisinine, ölçekleme değeri ve noktasını parametre olarak geçirerek kurmalı</li><li>Daha sonra ölçeklenecek nesneye, <code>Entity</code> sınıfının <code>GetTransformedCopy</code> metodunukullanrak ölçekleme matrisini parametre olarak geçirerek uygulamalısınız. </li></ul>
+<ul><li>Öncelikle, ölçekleme değeri ve noktası kullanılarak <code>Matrix3d.Scaling</code> dönüşüm matrisi kurulmaldır.</li><li>Daha sonra ölçeklenecek nesneye, ölçekleme matrisini parametre olarak kabul eden <code>Entity</code> sınıfının <code>GetTransformedCopy</code> metodu uygulanmalıdır. </li></ul>
 
 XY planında çizdirilen bir dikdörtgeni 3 katına çıkararak kopyalayan <code>ScaleEntity(...)</code> metodu ise aşağıdaki gibi olacaktır
 
@@ -269,9 +269,9 @@ public static void ScaleEntity()
 
 *Şekil-2: <code>ScaleEntity</code> metodunun etkin UCS'de çalıştırılmasıyla elde edilen sonuç.*
 
-### AutoCAD nesnelerinin <code>Matrix3d.Rotation</code> dönüşüm matrisiyle döndürülmesi
+### <code>Matrix3d.Rotation</code> dönüşüm matrisi
 
-<ul><li>Önce <code>Matrix3d.Rotation</code> dönüşüm matrisine dönüş açısını, etrafında döndürüleceği ekseni ve noktayı parametre olarak geçirerek kurmalı</li><li>Daha sonra döndürülecek nesneye, <code>Entity</code> sınıfının <code>GetTransformedCopy</code> metoduna döndürme matrisini parametre olarak geçirerek uygulamalısınız. </li></ul>
+<ul><li>Öncelikle, nesnenin etrafında döndürüleceği eksen ve nokta kullanılarak <code>Matrix3d.Rotation</code> dönüşüm matrisi kurulmalıdır.</li><li>Daha sonra döndürülecek nesneye, döndürme matrisini parametre olarak kabul eden <code>Entity</code> sınıfının <code>GetTransformedCopy</code> metodu uygulanmalıdır.</li></ul>
 
 XY planında çizdirilen bir dikdörtgeni Z ekseni etrafında 45° döndüren <code>RotateEntity(...)</code> metodu ise aşağıdaki gibi olacaktır.
 
@@ -317,7 +317,7 @@ public static void RotateEntity()
 
 *Şekil-3: <code>RotateEntity</code> metodunun WCS'de çalıştırılmasıyla elde edilen sonuç.*
 
-### AutoCAD nesnelerine birleştirilmiş dönüşüm matrisi uygulanması
+### Birleştirilmiş dönüşüm matrisinin uygulanması
 
 Yukarıda gerçekleştirilen taşıma, ölçekleme ve döndürme işlemlerini <code>Matrix3d</code> sınıfının <code>PreMultiplyBy</code> metodu ile bir kerede yapabilirsiniz. Bunun bir örneğini aşağıdaki <code>MoveScaleRotateEntity()</code> metodunda bulabilirsiniz.
 

@@ -23,8 +23,8 @@ sidemenu:
         url: /categories/#autocad-net
       - title: "ObjectARX"
         url: /categories/#objectarx
-      - title: "AutoCAD.NET ile Programlamaya Giriş"
-        url: /acad/autocad-net-programming/
+      - title: "AutoCAD.NET ile Programlama"
+        url: /autocadnet/beginnertutorial/
   - title: Mühendislik
     children:
       - title: "Hidrolik"
@@ -32,14 +32,3 @@ sidemenu:
       - title: "HecRAS"
         url: /hecras/hecras/
   
-
-autocadnetmenu:
-  - title: AutoCAD.NET Programlama
-    url: /acad/autocad-net-programming/
-    children:
-      - title: "Giriş"
-        url: /
-      - title: "Dönüşümler"
-        url: /
-      - title: "Kaynak Kod"
-        url: /acad/autocad-source-code/

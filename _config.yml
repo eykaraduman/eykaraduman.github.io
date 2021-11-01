@@ -84,6 +84,11 @@ comments:
   disqus:
     shortname: "esenyalim"
     
+collections:
+  acad-net-beginner:
+    output: true
+    permalink: /:collection/:path/
+    
 defaults:
   # _posts
   - scope:
@@ -106,10 +111,19 @@ defaults:
     values:
       layout: single
       author_profile: false
+  # _acad-net-beginner
+  - scope:
+      path: ""
+      type: acad-net-beginner
+    values:
+      layout: single
+      author_profile: false
+      share: true
 
 category_archive:
   type: liquid
   path: /categories/
+  
 tag_archive:
   type: liquid
   path: /tags/

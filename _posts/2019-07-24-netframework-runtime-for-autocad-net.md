@@ -2,6 +2,7 @@
 title: AutoCAD.Net ve .Net Framework Runtime Uyumluluğu
 permalink: /acad/netframework-runtime-for-autocad-net/
 published: true
+classes: wid
 categories:
   - AutoCAD.Net
 ---

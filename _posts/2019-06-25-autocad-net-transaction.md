@@ -2,6 +2,7 @@
 title: AutoCAD.Net ile Transaction Kullanımı
 permalink: /acad/autocad-net-transactions/
 published: true
+classes: wide
 categories:
   - AutoCAD.Net
 ---

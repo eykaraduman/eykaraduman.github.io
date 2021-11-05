@@ -1,6 +1,6 @@
 ---
 title: AutoCAD.Net ve .Net Framework Runtime Uyumluluğu
-permalink: /cada/netframework-runtime-for-autocad-net/
+permalink: /acad/netframework-runtime-for-autocad-net/
 published: true
 categories:
   - AutoCAD.Net

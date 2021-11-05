@@ -1,5 +1,5 @@
 ---
-title:AutoCAD.Net ile Transaction Kullanımı
+title: AutoCAD.Net ile Transaction Kullanımı
 permalink: /acad/autocad-net-transactions/
 published: true
 categories:

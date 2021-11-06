@@ -2,8 +2,6 @@
 title: "Autocad.NET Eklentisi Oluşturma"
 permalink: /autocadnet/beginnertutorial/create-project-from-stratch/
 classes: wide
-excerpt: ""
-toc: true
 ---
 
 C#, F#, Visual Basic .Net vb. programlama dillerinden birini biliyorsanız AutoCAD.Net (Managed ObjectArx Wrapper) ile programlamaya giriş yapabilirsiniz. Benim tercihim .Net platformunun en popüler dillerinden biri olan C#’dan yana.
@@ -18,9 +16,9 @@ ObjectARX SDK, AutoCAD.Net eklentisi oluşturabilmek için kullanabilecek olan V
 
 Biz *Uygulama Sihirbazını* kullanmaksızın, en baştan AutoCAD.Net eklentisini kendimiz oluşturacağız. 
 
-Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyla aşağıdaki adımları izleyin:
+Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyla aşağıdaki adımları izleyebilirsiniz.
 
-- *File **→** Add **→** New Project* seçilerek açılan pencereden bir sınıf kütüphanesi oluşturun. Seçilen Framework'un AutoCAD sürümüyle uyumlu olmasına dikkat edin. Örneğin AutoCAD 2013 için .Net Framework 4'ü kullanmalısınız. (Bkz. Şekil-1)
+- `File > Add > New Project` seçilerek açılan pencereden bir sınıf kütüphanesi oluşturun. Seçilen Framework'un AutoCAD sürümüyle uyumlu olmasına dikkat edin. Örneğin AutoCAD 2013 için .Net Framework 4'ü kullanmalısınız. (Bkz. Şekil-1)
 	![Şekil-1](https://eykaraduman.github.io/assets/images/add-new-project.png "Şekil-1"){:width="800"}
 	
 	<sub>Şekil-1: Yeni bir AutoCAD.Net projesi oluşturulması</sub>
@@ -31,10 +29,87 @@ Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyl
   - `AcMgd.dll` (AutoCAD uygulama sınıflarını içerir)
 
 - Properties penceresini kullanarak bu üç dosyanın `Copy Local` özelliğini `False` olarak ayarlayın. Böylece eklentinizin derleneceği dizine kopyalanmaları engellenecektir. (Bkz. Şekil-2)
-	
-	![Şekil-2](https://eykaraduman.github.io/assets/images/copy-local-false.png "Şekil-2")
-		
-	
-	<sub>Şekil-2</sub>
-	
-	
+
+  ![Şekil-2](https://eykaraduman.github.io/assets/images/copy-local-false.png "Şekil-2")
+  	
+
+  <sub>Şekil-2</sub>
+
+- Sınıf kütüphanemizi, bir AutoCAD.Net eklentisine dönüştürmek için,  `Autodesk.AutoCAD.Runtime` isim uzayında bulunan `IExtensionApplication` sınıfından türettiğimiz  `Plugin.cs` sınıfını projemize eklemeliyiz.
+
+  ```csharp
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Text;
+  
+  using Autodesk.AutoCAD.ApplicationServices;
+  using Autodesk.AutoCAD.EditorInput;
+  using Autodesk.AutoCAD.Runtime;
+  
+  [assembly: ExtensionApplication(typeof(PgAutoCAD.Plugin))]
+  
+  namespace PgAutoCAD
+  {
+      public class Plugin: IExtensionApplication
+      {
+          public void Initialize()
+          {
+              Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
+              ed.WriteMessage("\nPgAutoCAD yüklendi...");
+          }
+  
+          public void Terminate()
+          {
+              
+          }
+      }
+  }
+  ```
+
+  `[assembly: ExtensionApplication(typeof(PgAutoCAD.Plugin))]`satırı uygulamamızın giriş sınıfının `Plugin.cs` olduğunu ifade etmektedir.
+
+  `Initialize()` fonksiyonu eklentimiz ilk yüklendiğinde ve `Terminate()` fonksiyonu ise eklentimiz sonlandırılırken yapılacaklar için kullanılmaktadır.
+
+- Komutları oluşturabilmek içinse aşağıdaki `Commands.cs` sınıfını projemize eklemeliyiz.
+
+  ```csharp
+  using System;
+  using System.Collections.Generic;
+  using System.Linq;
+  using System.Text;
+  
+  using Autodesk.AutoCAD.ApplicationServices;
+  using Autodesk.AutoCAD.EditorInput;
+  using Autodesk.AutoCAD.Runtime;
+  
+  [assembly: CommandClass(typeof(PgAutoCAD.Commands))]
+  
+  namespace PgAutoCAD
+  {
+      public class Commands
+      {
+          [CommandMethod("KomutGrubu", "IlkKomutum", "IlkKomutYerel", CommandFlags.Modal)]
+          public void IlkKomut() 
+          {
+              Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
+              ed.WriteMessage("\nİlk komut oluşturuldu");
+          }
+      }
+  }
+  ```
+
+  Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod`etiketine bağlı birer fonksiyon olarak tanımlanmaktadır. AutoCAD komut satırına `IlkKomutum` yazıldığında `IlkKomut()` fonksiyonu çalışacaktır.
+
+Artık Visual Studio 2017 ortamında `Build > Build PgAutoCAD` sekmesini seçerek derlediğimiz sonuç dll’yi (`..\Release\PgAutoCAD.dll` ya da `..\Debug\PgAutoCAD.dll`) yüklemek için AutoCAD Netload komutu kullanabilirsiniz.
+
+#### Hata Ayıklama Ayarları
+AutoCAD.Net projelerinde Visual Studio ile hata ayıklayabilmek için yapılması gereken birkaç basit ayar var.
+Aşağıdaki adımları izleyerek projelerinizde kolaylıkla hata ayıklayabilirsiniz.
+
+- Proje kök klasörü altında `start` adlı bir .scr (script) dosyası oluşturun. `netload AcadDebug.dll` satırını bu dosyaya yazarak `start.scr` dosyasını projenize ekleyin. Dosya özelliklerinden `Copy to Output Directory` seçeneğini `Copy always` olarak değiştirin. Böylece derleme sırasında `start.scr` dosyası debug klasörüne kopyalanacaktır.
+- Project menüsünden proje özelliklerini seçin (PgAutoCAD Properties...).
+- Debug sekmesinde, **Start extarnal progam** ve **Command line arguments** seçeneklerini Şekil-3'deki gibi doldurup proje ayarlarını kaydedin. `/nologo` anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. `/b “start.scr”` ise AutoCAD açıldıktan sonra `start.scr` script dosyasını çalıştırarak eklentiyi yükleyecektir.
+
+
+

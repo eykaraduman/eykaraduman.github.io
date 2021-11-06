@@ -1,10 +1,8 @@
 main:
-  - title: "Yazılar"
+  - title: "Arşiv"
     url: /posts/
   - title: "Kategoriler"
     url: /categories/
-  - title: "Etiketler"
-    url: /tags/
   - title: "İletişim"
     url: /contact/
   - title: "Hakkımda"

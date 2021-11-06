@@ -12,7 +12,7 @@ Autocad için .Net uygulaması geliştirmeye başlamadan önce aşağıda gereks
 2. ObjectARX 2013 SDK (Uygulama Geliştirme Aracı). (SDK'yı [buradan](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) indirebilirsiniz.)
 4. Visual Studio 2017
 
-ObjectARX SDK, AutoCAD.Net eklentisi oluşturabilmek için kullanabilecek olan Visual Studio şablonlarını (AutoCAD.Net  Uygulama Sihirbazı) içermektedir. Bu sihirbazı SDK içinde bulabilirsiniz. Bu yazıda **Uygulama Sihirbazını** kullanmaksızın, en baştan AutoCAD.Net eklentisini nasıl oluşturulacağını göstermeye çalışacağım.
+ObjectARX SDK, AutoCAD.Net eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.Net  Uygulama Sihirbazı) içermektedir. Ancak bu yazıda **Uygulama Sihirbazını** kullanmaksızın, en baştan AutoCAD.Net eklentisini nasıl oluşturulacağını göstermeye çalışacağım.
 
 Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyla aşağıdaki adımlar izlenmelidir.
 

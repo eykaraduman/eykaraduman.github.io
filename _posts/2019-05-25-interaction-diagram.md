@@ -30,8 +30,8 @@ $$
 $$
 $-f_{yd} \leq f_{si} \leq f_{yd}$ sınırı dışındaki gerilmeler için donatı akmıştır.
 
+<img src="{{ "/assets/images/KedSekil2.png" | absolute_url }}" width="50%">
 <figure>
-  <img src="{{ "/assets/images/KedSekil2.png" | absolute_url }}" width="50%">
   <figcaption>Şekil-2</figcaption>
 </figure>
 

@@ -1,10 +1,7 @@
 ---
 permalink: /contact/
 title: "İletişim"
-date: 2016-08-26
-last_modified_at: 2018-02-13T12:42:42-05:00
-excerpt: "Preferred methods of sending your questions, inquires, messages, and love letters to me."
-author: true
+author_profile: true
 ---
 <div id="contact">
 <div id="contact-form">

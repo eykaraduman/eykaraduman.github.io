@@ -6,7 +6,7 @@ classes: wide
 
 C#, F#, Visual Basic .Net vb. programlama dillerinden birini biliyorsanız AutoCAD.Net (Managed ObjectArx Wrapper) ile programlamaya giriş yapabilirsiniz. Benim tercihim .Net platformunun en popüler dillerinden biri olan C#’dan yana.
 
-Autocad için .Net uygulaması yazmaya başlamadan önce aşağıda gereksinimleri edinip bilgisayarınıza kurmalısınız. (AutoCAD ve Visual Studio sürümleri sisteminize göre aşağıdakilersen farklılık gösterebilir. Ancak ObjectARX SDK'nın, AutoCAD sürümünüz ile uyumlu olmasına dikkat etmelisiniz.)
+Autocad için .Net uygulaması yazmaya başlamadan önce aşağıda gereksinimleri edinip bilgisayarınıza kurmalısınız. (AutoCAD ve Visual Studio sürümleri sisteminize bağlı olarak aşağıdakilere göre farklılık gösterebilir. Ancak ObjectARX SDK'nın, AutoCAD sürümünüz ile uyumlu olmasına dikkat etmelisiniz.)
 
 1. AutoCAD 2013 (Yazdığınız kodu denemek için gerekli)
 2. ObjectARX 2013 SDK (Uygulama Geliştirme Aracı). (SDK'yı [buradan](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) indirebilirsiniz.)
@@ -16,7 +16,7 @@ ObjectARX SDK, AutoCAD.Net eklentisi oluşturabilmek için kullanabilecek olan V
 
 Biz *Uygulama Sihirbazını* kullanmaksızın, en baştan AutoCAD.Net eklentisini kendimiz oluşturacağız. 
 
-Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyla aşağıdaki adımları izleyebilirsiniz.
+Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyla aşağıdaki adımlar izlenmelidir.
 
 - `File > Add > New Project` seçilerek açılan pencereden bir sınıf kütüphanesi oluşturun. Seçilen Framework'un AutoCAD sürümüyle uyumlu olmasına dikkat edin. Örneğin AutoCAD 2013 için .Net Framework 4'ü kullanmalısınız. (Bkz. Şekil-1)
 	![Şekil-1](https://eykaraduman.github.io/assets/images/add-new-project.png "Şekil-1"){:width="800"}
@@ -107,9 +107,12 @@ Artık Visual Studio 2017 ortamında `Build > Build PgAutoCAD` sekmesini seçere
 AutoCAD.Net projelerinde Visual Studio ile hata ayıklayabilmek için yapılması gereken birkaç basit ayar var.
 Aşağıdaki adımları izleyerek projelerinizde kolaylıkla hata ayıklayabilirsiniz.
 
-- Proje kök klasörü altında `start` adlı bir .scr (script) dosyası oluşturun. `netload AcadDebug.dll` satırını bu dosyaya yazarak `start.scr` dosyasını projenize ekleyin. Dosya özelliklerinden `Copy to Output Directory` seçeneğini `Copy always` olarak değiştirin. Böylece derleme sırasında `start.scr` dosyası debug klasörüne kopyalanacaktır.
+- Proje kök klasörü altında `start` adlı bir .scr (script) dosyası oluşturun. `netload AcadDebug.dll` satırını bu dosyaya yazarak `start.scr` dosyasını projenize ekleyin. Dosya özelliklerinden `Copy to Output Directory` seçeneğini `Copy always` olarak değiştirin. Böylece derleme sırasında `start.scr` dosyası debug klasörüne kopyalanacaktır.
 - Project menüsünden proje özelliklerini seçin (PgAutoCAD Properties...).
 - Debug sekmesinde, **Start extarnal progam** ve **Command line arguments** seçeneklerini Şekil-3'deki gibi doldurup proje ayarlarını kaydedin. `/nologo` anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. `/b “start.scr”` ise AutoCAD açıldıktan sonra `start.scr` script dosyasını çalıştırarak eklentiyi yükleyecektir.
 
+  ![Şekil-3](https://eykaraduman.github.io/assets/images/debug-properties.png "Şekil-3")
+  	
 
+  <sub>Şekil-3</sub>
 

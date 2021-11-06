@@ -30,8 +30,6 @@ $$
 $$
 $-f_{yd} \leq f_{si} \leq f_{yd}$ sınırı dışındaki gerilmeler için donatı akmıştır.
 
-{% include figure image_path="/assets/images/KedSekil2.png" alt="" caption="Şekil-2" %}
-
 Betondaki gerilmeler eşdeğer dikdörtgen gerilme bloğuyla ifade edilir. Beton basınç bloğu yükseklik faktörü $k_{1}$, TS-500 için Eşitlik-3'de verilmiştir. Ancak $k_1$ 0.64 değerinden küçük olamaz.
 $$
 k_{1} = \begin{eqnarray}

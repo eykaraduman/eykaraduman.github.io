@@ -22,7 +22,7 @@ Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyl
 
 - *File **→** Add **→** New Project* seçilerek açılan pencereden bir sınıf kütüphanesi oluşturun. Seçilen Framework'un AutoCAD sürümüyle uyumlu olmasına dikkat edin. Örneğin AutoCAD 2013 için .Net Framework 4'ü kullanmalısınız. (Bkz. Şekil-1)
 	
-	![Şekil-1](https://eykaraduman.github.io/assets/images/add-new-project.png "Şekil-1"){:width="400"}
+	![Şekil-1](https://eykaraduman.github.io/assets/images/add-new-project.png "Şekil-1"){:width="800"}
 	
 	<sub>Şekil-1: Yeni bir AutoCAD.Net projesi oluşturulması</sub>
 	

@@ -21,7 +21,6 @@ Biz *Uygulama Sihirbazını* kullanmaksızın, en baştan AutoCAD.Net eklentisin
 Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyla aşağıdaki adımları izleyin:
 
 - *File **→** Add **→** New Project* seçilerek açılan pencereden bir sınıf kütüphanesi oluşturun. Seçilen Framework'un AutoCAD sürümüyle uyumlu olmasına dikkat edin. Örneğin AutoCAD 2013 için .Net Framework 4'ü kullanmalısınız. (Bkz. Şekil-1)
-	
 	![Şekil-1](https://eykaraduman.github.io/assets/images/add-new-project.png "Şekil-1"){:width="800"}
 	
 	<sub>Şekil-1: Yeni bir AutoCAD.Net projesi oluşturulması</sub>
@@ -31,5 +30,11 @@ Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyl
   - `AcDbMgd.dll` (ObjectArx AcDb ve ilişkili sınıflarını içerir) 
   - `AcMgd.dll` (AutoCAD uygulama sınıflarını içerir)
 
-- Properties penceresini kullanarak bu üç dosyanın `Copy Local` özelliğini `False` olarak ayarlayın. Böylece derleme esnasında kopyalanmaları engellenecektir. 
-- 
+- Properties penceresini kullanarak bu üç dosyanın `Copy Local` özelliğini `False` olarak ayarlayın. Böylece eklentinizin derleneceği dizine kopyalanmaları engellenecektir. (Bkz. Şekil-2)
+	
+	![Şekil-2](https://eykaraduman.github.io/assets/images/copy-local-false.png "Şekil-2")
+		
+	
+	<sub>Şekil-2</sub>
+	
+	

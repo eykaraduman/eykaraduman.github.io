@@ -107,7 +107,7 @@ Aşağıdaki adımları izleyerek projelerinizde kolaylıkla hata ayıklayabilir
 
 - Proje kök klasörü altında *start* adlı bir .scr (script) dosyası oluşturun. *netload PgAutoCAD.dll* satırını bu dosyaya yazarak *start.scr* dosyasını projenize ekleyin. Dosya özelliklerinden *Copy to Output Directory* seçeneğini *Copy always* olarak değiştirin. Böylece derleme sırasında *start.scr* dosyası *debug* klasörüne kopyalanacaktır.
 - Project menüsünden proje özelliklerini seçin (*PgAutoCAD Properties..*.).
-- Debug sekmesinde, *Start extarnal progam* ve *Command line arguments* seçeneklerini Şekil-3'deki gibi doldurup proje ayarlarını kaydedin. */nologo* anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. */b “start.scr”* ise AutoCAD açıldıktan sonra *start.scr* script dosyasını çalıştırarak eklentiyi yükleyecektir.
+- Debug sekmesinde, *Start extarnal program* ve *Command line arguments* seçeneklerini Şekil-3'deki gibi doldurup proje ayarlarını kaydedin. */nologo* anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. */b “start.scr”* ise AutoCAD açıldıktan sonra *start.scr* script dosyasını çalıştırarak eklentiyi yükleyecektir.
 
   ![Şekil-3](https://eykaraduman.github.io/assets/images/debug-properties.png "Şekil-3")
   	

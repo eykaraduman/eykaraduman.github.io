@@ -12,7 +12,7 @@ Autocad için .Net uygulaması geliştirmeye başlamadan önce aşağıda gereks
 2. ObjectARX 2013 SDK (Uygulama Geliştirme Aracı). (SDK'yı [buradan](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) indirebilirsiniz.)
 4. Visual Studio 2017
 
-ObjectARX SDK, AutoCAD.Net eklentisi oluşturabilmek için kullanabilecek olan Visual Studio şablonlarını (AutoCAD.Net  Uygulama Sihirbazı) içermektedir. Bu sihirbazı SDK içinde bulabilirsiniz. Bu yazıda *Uygulama Sihirbazını* kullanmaksızın, en baştan AutoCAD.Net eklentisini nasıl oluşturulacağını göstermeye çalışacağım.
+ObjectARX SDK, AutoCAD.Net eklentisi oluşturabilmek için kullanabilecek olan Visual Studio şablonlarını (AutoCAD.Net  Uygulama Sihirbazı) içermektedir. Bu sihirbazı SDK içinde bulabilirsiniz. Bu yazıda **Uygulama Sihirbazını** kullanmaksızın, en baştan AutoCAD.Net eklentisini nasıl oluşturulacağını göstermeye çalışacağım.
 
 Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyla aşağıdaki adımlar izlenmelidir.
 
@@ -26,14 +26,14 @@ Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyl
   - `AcDbMgd.dll` (ObjectArx AcDb ve ilişkili sınıflarını içerir) 
   - `AcMgd.dll` (AutoCAD uygulama sınıflarını içerir)
 
-- Properties penceresini kullanarak bu üç dosyanın *Copy Local* özelliğini *False* olarak ayarlayın. Böylece eklentinizin derleneceği dizine kopyalanmaları engellenecektir. (Bkz. Şekil-2)
+- Properties penceresini kullanarak bu üç dosyanın **Copy Local** özelliğini **False** olarak ayarlayın. Böylece eklentinizin derleneceği dizine kopyalanmaları engellenecektir. (Bkz. Şekil-2)
 
   ![Şekil-2](https://eykaraduman.github.io/assets/images/copy-local-false.png "Şekil-2")
   	
 
   <sub>Şekil-2: AutoCAD.Net referans dosyalarının eklnemesi</sub>
 
-- Sınıf kütüphanemizi, bir AutoCAD.Net eklentisine dönüştürmek için,  `Autodesk.AutoCAD.Runtime` isim uzayında bulunan `IExtensionApplication` sınıfından türettiğimiz  *Plugin.cs* sınıfını projemize eklemeliyiz.
+- Sınıf kütüphanemizi, bir AutoCAD.Net eklentisine dönüştürmek için,  `Autodesk.AutoCAD.Runtime` isim uzayında bulunan `IExtensionApplication` sınıfından türettiğimiz  **Plugin.cs** sınıfını projemize eklemeliyiz.
 
   ```csharp
   using System;
@@ -65,11 +65,11 @@ Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyl
   }
   ```
 
-  `[assembly: ExtensionApplication(typeof(PgAutoCAD.Plugin))]` satırı uygulamamızın giriş sınıfının *Plugin.cs* olduğunu ifade etmektedir.
+  `[assembly: ExtensionApplication(typeof(PgAutoCAD.Plugin))]` satırı uygulamamızın giriş sınıfının **Plugin.cs** olduğunu ifade etmektedir.
 
   `Initialize()` fonksiyonu eklentimiz ilk yüklendiğinde ve `Terminate()` fonksiyonu ise eklentimiz sonlandırılırken yapılacaklar için kullanılmaktadır.
 
-- Komutları oluşturabilmek içinse aşağıdaki *Commands.cs* sınıfını projemize eklemeliyiz.
+- Komutları oluşturabilmek içinse aşağıdaki **Commands.cs** sınıfını projemize eklemeliyiz.
 
   ```csharp
   using System;
@@ -99,15 +99,15 @@ Visual Studio 2017 ile yeni bir AutoCAD.Net projesi oluşturmak için sırasıyl
 
   Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod`etiketine bağlı birer fonksiyon olarak tanımlanmaktadır. AutoCAD komut satırına **IlkKomutum** yazıldığında `IlkKomut()` fonksiyonu çalışacaktır.
   
-  Artık Visual Studio 2017 ortamında **Build &rarr; Build PgAutoCAD** sekmesini seçerek derlediğimiz sonuç dll’yi (*..\Release\PgAutoCAD.dll* ya da *..\Debug\PgAutoCAD.dll*) yüklemek için AutoCAD Netload komutu kullanabilirsiniz.
+  Artık Visual Studio 2017 ortamında **Build &rarr; Build PgAutoCAD** sekmesini seçerek derlediğimiz sonuç dll’yi (**..\Release\PgAutoCAD.dll** ya da **..\Debug\PgAutoCAD.dll**) yüklemek için AutoCAD Netload komutu kullanabilirsiniz.
 
 #### Hata Ayıklama
 AutoCAD.Net projelerinde Visual Studio ile hata ayıklayabilmek için yapılması gereken birkaç basit ayar var.
 Aşağıdaki adımları izleyerek projelerinizde kolaylıkla hata ayıklayabilirsiniz.
 
-- Proje kök klasörü altında *start* adlı bir .scr (script) dosyası oluşturun. *netload PgAutoCAD.dll* satırını bu dosyaya yazarak *start.scr* dosyasını projenize ekleyin. Dosya özelliklerinden *Copy to Output Directory* seçeneğini *Copy always* olarak değiştirin. Böylece derleme sırasında *start.scr* dosyası *debug* klasörüne kopyalanacaktır.
-- Project menüsünden proje özelliklerini seçin (*PgAutoCAD Properties..*.).
-- Debug sekmesinde, *Start extarnal program* ve *Command line arguments* seçeneklerini Şekil-3'deki gibi doldurup proje ayarlarını kaydedin. */nologo* anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. */b “start.scr”* ise AutoCAD açıldıktan sonra *start.scr* script dosyasını çalıştırarak eklentiyi yükleyecektir.
+- Proje kök klasörü altında **star*t* adlı bir .scr (script) dosyası oluşturun. **netload PgAutoCAD.dll** satırını bu dosyaya yazarak **start.scr** dosyasını projenize ekleyin. Dosya özelliklerinden **Copy to Output Directory** seçeneğini **Copy always** olarak değiştirin. Böylece derleme sırasında **start.scr** dosyası *debug* klasörüne kopyalanacaktır.
+- Project menüsünden proje özelliklerini seçin (**PgAutoCAD Properties..**).
+- Debug sekmesinde, **Start extarnal program** ve **Command line arguments** seçeneklerini Şekil-3'deki gibi doldurup proje ayarlarını kaydedin. **/nologo** anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. **/b “start.scr”** ise AutoCAD açıldıktan sonra **start.scr** script dosyasını çalıştırarak eklentiyi yükleyecektir.
 
   ![Şekil-3](https://eykaraduman.github.io/assets/images/debug-properties.png "Şekil-3")
   	

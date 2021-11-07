@@ -7,7 +7,7 @@ categories:
   - ObjectARX
 ---
 
-AutoCAD PLINE komutu, PLINETYPE = 0 değeri için Polyline (= AcDb2dPolyline), PLINETYPE = 1 ve 2 değerleri içinse Lwpolyline nesnesi çizebilmemizi sağlar. <strong>ConvertPoly2dToLwPolyline(…)</strong> fonksiyonunu,  AcDb2dPolyline nesnelerini AcDbPolyline nesnelerine çevirmekte kullanabilirsiniz. <strong>makePolyline(…)</strong>, <strong>addToCurrentSpace(…)</strong> ve <strong>openCurrentSpaceBlock(…)</strong> fonksiyonları için <a href="http://www.eykaraduman.github.io/acad/3dpoly-to-lwpoly/">"3B Polyline Nesnelerini LwPolyline Nesnelerine Çevirme”</a> adlı yazıya bakın.
+AutoCAD PLINE komutu, PLINETYPE = 0 değeri için Polyline (= AcDb2dPolyline), PLINETYPE = 1 ve 2 değerleri içinse Lwpolyline nesnesi çizebilmemizi sağlar. <strong>ConvertPoly2dToLwPolyline(…)</strong> fonksiyonunu,  AcDb2dPolyline nesnelerini AcDbPolyline nesnelerine çevirmekte kullanabilirsiniz. <strong>makePolyline(…)</strong>, <strong>addToCurrentSpace(…)</strong> ve <strong>openCurrentSpaceBlock(…)</strong> fonksiyonları için <a href="https://www.eykaraduman.github.io/acad/3dpoly-to-lwpoly/">"3B Polyline Nesnelerini LwPolyline Nesnelerine Çevirme”</a> adlı yazıya bakın.
 
 ```cpp
  void PolyConverter::ConvertPoly2dToLwPolyline(void)  

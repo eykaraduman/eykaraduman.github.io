@@ -56,6 +56,8 @@ plugins:
   - jekyll-feed
   - jemoji
   - jekyll-include-cache
+  - jekyll-spaceship
+  - jekyll-mermaid
 
 author:
   name   : "Esen Yalım Karaduman"
@@ -122,3 +124,6 @@ category_archive:
 tag_archive:
   type: liquid
   path: /tags/
+
+mermaid:
+  src: 'https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js'

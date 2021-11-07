@@ -18,7 +18,6 @@ Kodla ilgili birkaç önemli noktaya dikkat etmekte fayda var;
 
 <ul><li>Kodun kullanıcı tanımlı koordinat sistemlerinde de çalışabilmesi için seçilen noktaları WCS'ye dönüştürmeyi unutmamak gerek. Çünkü <strong>GetPoint(…)</strong> yordamı ile elde edilen tüm noktalar kullanıcı tanımlı koordinat sistemindedir.</li><li>Seçtiğiniz noktaların kırmak istediğiniz nesne üzerinde olup olmadığı doğrulanmalı. Bunun için <strong>IsPointOnCurve(…)</strong> yordamı kullanılmıştır.</li><li>GetSplitCurves(…) yordamına geçirilecek nokta listelerini eğrinin başlangıcına göre mutlaka sıralanmalı. Aksi takdirde noktaları seçim sıranıza bağlı olarak beklediğinizden farklı sonuçlarla karşılaşabilirsiniz. (Bkz. Şekil-1)
 
-
 ```c#
 public static void BreakCurveObjects()
 {
@@ -28,7 +27,17 @@ public static void BreakCurveObjects()
     Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
 
     // Daire ve elips nesnelerinin seçimi için seçim filtresi oluşturulması
-
+    TypedValue[] tyVals = new TypedValue[8]
+    { 
+        new TypedValue(-4, "<OR"),
+        new TypedValue((int)DxfCode.Start, "SPLINE"),
+        new TypedValue((int)DxfCode.Start, "LINE"),
+        new TypedValue((int)DxfCode.Start, "ARC"),
+        new TypedValue((int)DxfCode.Start, "LWPOLYLINE"),
+        new TypedValue((int)DxfCode.Start, "CIRCLE"),
+        new TypedValue((int)DxfCode.Start, "ELLIPSE"),
+        new TypedValue(-4, "OR>")
+    };
     SelectionFilter selFilter = new SelectionFilter(tyVals);
 
     // Daire ya da elips nesnesinin seçilmesi
@@ -112,10 +121,98 @@ public static void BreakCurveObjects()
 }
 ```
 
+```c#
+private static bool IsPointOnCurve(Curve crv, Point3d pt)
+{
+    try
+    {
+        Point3d p = crv.GetClosestPointTo(pt, false);
+        return (p - pt).Length <= Tolerance.Global.EqualPoint;
+    }
+    catch { }
 
+    return false;
+}
+```
 
 <strong>BreakObjectByObject()</strong> yordamı ise eğrisel nesnelerin kesişim noktalarını esas alarak kırma işlemi gerçekleştiriyor. (Bkz. Şekil-2)
 
+```c#
+public static void BreakObjectByObject()
+{
+    Document doc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;
+    Database db = doc.Database;
+    Editor ed = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument.Editor;
+
+    PromptEntityOptions pEntOpt = new PromptEntityOptions("");
+    pEntOpt.AllowNone = false;
+    pEntOpt.Message = "\nSelect a object to break: ";
+    pEntOpt.SetRejectMessage("\nSelect Arc, Circle, Ellipse, Line, Polyline ve Spline!");
+    pEntOpt.AddAllowedClass(typeof(Arc), true);
+    pEntOpt.AddAllowedClass(typeof(Circle), true);
+    pEntOpt.AddAllowedClass(typeof(Ellipse), true);
+    pEntOpt.AddAllowedClass(typeof(Line), true);
+    pEntOpt.AddAllowedClass(typeof(Polyline), true);
+    pEntOpt.AddAllowedClass(typeof(Spline), true);
+
+    PromptEntityResult pEntResObjectToBreak = ed.GetEntity(pEntOpt);
+    if (pEntResObjectToBreak.Status != PromptStatus.OK)
+        return;
+
+    pEntOpt.Message = "\nSelect breaking object: ";
+    PromptEntityResult pEntResBreakinObject = ed.GetEntity(pEntOpt);
+    if (pEntResBreakinObject.Status != PromptStatus.OK)
+        return;
+
+    using (Transaction tr = db.TransactionManager.StartTransaction())
+    {
+        Curve objectToBreak = (Curve)tr.GetObject(pEntResObjectToBreak.ObjectId, OpenMode.ForWrite);
+        Curve breakinObject = (Curve)tr.GetObject(pEntResBreakinObject.ObjectId, OpenMode.ForRead);
+
+        Point3dCollection intersectPts = new Point3dCollection();
+        objectToBreak.IntersectWith(breakinObject, Intersect.OnBothOperands, intersectPts, IntPtr.Zero, IntPtr.Zero);
+
+        if (intersectPts.Count != 0)
+        {
+            DoubleCollection distOfBreakPoints = new DoubleCollection();
+            foreach (Point3d pt in intersectPts)
+            {
+                distOfBreakPoints.Add(objectToBreak.GetDistAtPoint(pt));
+            }
+
+            double[] rawPoints = distOfBreakPoints.ToArray();
+            Array.Sort(rawPoints);
+            Point3dCollection sortedBreakPoints = new Point3dCollection();
+            foreach (double item in rawPoints)
+            {
+                sortedBreakPoints.Add(intersectPts[distOfBreakPoints.IndexOf(item)]);
+            }
+
+            DBObjectCollection objs = objectToBreak.GetSplitCurves(sortedBreakPoints);
+
+            if (objs != null)
+            {
+                if (objs.Count > 0)
+                {
+                    BlockTable bt = (BlockTable)tr.GetObject(db.BlockTableId, OpenMode.ForRead, false);
+                    foreach (var obj in objs)
+                    {
+                        Entity ent = obj as Entity;
+                        BlockTableRecord btRecord = (BlockTableRecord)tr.GetObject(bt[BlockTableRecord.ModelSpace],
+                            OpenMode.ForWrite, false);
+
+                        btRecord.AppendEntity(ent);
+                        tr.AddNewlyCreatedDBObject(ent, true);
+                    }
+
+                    objectToBreak.Erase();
+                    tr.Commit();
+                }
+            }
+        }
+    }
+}
+```
 
 <p>
 <img src="{{ "/assets/images/BreakCurveObjects.gif" | absolute_url }}"  alt="Şekil-1" style="width:50%">

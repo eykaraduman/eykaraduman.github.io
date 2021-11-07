@@ -11,7 +11,7 @@ tags:
 
 AutoCAD ortamında kapalı bir nesnenin ağırlık merkezini bulmak istediğimizde, önce nesneyi bir bölgeye (region) çevirir, daha sonra da <strong>MASSPROP (Tools->Inquiry->Region/Mass Properties)</strong> komutuyla bu bölgenin özelliklerini komut satırında listeleriz.  Aşağıda kaynak kodunu verdiğim <strong>FindCentroid(…)</strong> fonksiyonu, AcDbPolyline, AcDb2dPolyline, AcDb3dPolyline (kapalı olmaları koşuluyla) ve AcDbCircle nesnelerini, MASSPROP komutunu kullanmanıza gerek kalmaksızın bir bölgeye çevirip ağırlık merkezine bir nokta yerleştiriyor.
 
-<img src="{{ "/assets/images/MarkCentroid.png" | absolute_url }}"  alt="Şekil-1" style="width:100%">
+<img src="{{ "/assets/images/MarkCentroid.png" | absolute_url }}"  alt="Şekil-1" style="width:25%">
 
 <figure>
   <figcaption>Şekil-1</figcaption>

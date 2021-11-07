@@ -17,7 +17,6 @@ locale: "tr-TR"
 logo: "/assets/images/logo.png"
 title: Programlama Güncesi
 title_separator : "-"
-subtitle : "Esen Yalım Karaduman"
 email: esen.yalim@gmail.com
 description: C# Python Programming
 twitter_username: username
@@ -97,13 +96,13 @@ defaults:
     values:
       layout: single
       show_date: true
-      author_profile: false
+      author_profile: true
       read_time: false
       comments: true
       share: true
       related: true
-      sidebar:
-        nav: "sidemenu"
+  #   sidebar:
+  #     nav: "sidemenu"
   # _pages
   - scope:
       path: "_pages"

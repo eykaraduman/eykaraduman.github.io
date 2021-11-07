@@ -214,19 +214,3 @@ public static void BreakObjectByObject()
 }
 ```
 
-<p>
-<img src="{{ "/assets/images/BreakCurveObjects.gif" | absolute_url }}"  alt="Şekil-1" style="width:50%">
-
-<figure>
-  <figcaption>Şekil-1</figcaption>
-</figure>
-</p>
-
-
-<p>
-<img src="{{ "/assets/images/BreakObjectsByObject.gif" | absolute_url }}"  alt="Şekil-2" style="width:50%">
-
-<figure>
-  <figcaption>Şekil-2</figcaption>
-</figure>
-</p>

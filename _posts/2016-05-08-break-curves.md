@@ -28,17 +28,7 @@ public static void BreakCurveObjects()
     Editor ed = Application.DocumentManager.MdiActiveDocument.Editor;
 
     // Daire ve elips nesnelerinin seçimi için seçim filtresi oluşturulması
-    TypedValue[] tyVals = new TypedValue[8]
-    { 
-        new TypedValue(-4, "<OR"),
-        new TypedValue((int)DxfCode.Start, "SPLINE"),
-        new TypedValue((int)DxfCode.Start, "LINE"),
-        new TypedValue((int)DxfCode.Start, "ARC"),
-        new TypedValue((int)DxfCode.Start, "LWPOLYLINE"),
-        new TypedValue((int)DxfCode.Start, "CIRCLE"),
-        new TypedValue((int)DxfCode.Start, "ELLIPSE"),
-        new TypedValue(-4, "OR>")
-    };
+
     SelectionFilter selFilter = new SelectionFilter(tyVals);
 
     // Daire ya da elips nesnesinin seçilmesi

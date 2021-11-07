@@ -14,7 +14,6 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 locale: "tr-TR"
-logo: "/assets/images/logo.png"
 title: Programlama Güncesi
 title_separator : "-"
 email: esen.yalim@gmail.com
@@ -61,22 +60,19 @@ plugins:
 author:
   name   : "Esen Yalım Karaduman"
   avatar : "/assets/images/bio-photo.jpg"
-  # bio    : "My awesome biography constrained to a sentence or two goes here."
+  bio    : "C++, C#, Python dillerine meraklı bir inşaat mühendisiyim."
   location  : "Ankara"
   email  : "esen.yalim@gmail.com"
+  
   links:
+    - label: "Linkedin"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/eykaraduman/"
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/eykaraduman"
 
 footer:
-  links:
-    - label: "Github"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/eykaraduman"
-    - label: "Linkedin"
-      icon: "fab fa-fw fa-linkedin"
-      url: "https://www.linkedin.com/in/eykaraduman/"
       
 comments:
   provider: "disqus"

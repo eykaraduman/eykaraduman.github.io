@@ -19,11 +19,15 @@ Kodla ilgili birkaç önemli noktaya dikkat etmekte fayda var;
 <ul><li>Kodun kullanıcı tanımlı koordinat sistemlerinde de çalışabilmesi için seçilen noktaları WCS'ye dönüştürmeyi unutmamak gerek. Çünkü <strong>GetPoint(…)</strong> yordamı ile elde edilen tüm noktalar kullanıcı tanımlı koordinat sistemindedir.</li><li>Seçtiğiniz noktaların kırmak istediğiniz nesne üzerinde olup olmadığı doğrulanmalı. Bunun için <strong>IsPointOnCurve(…)</strong> yordamı kullanılmıştır.</li><li>GetSplitCurves(…) yordamına geçirilecek nokta listelerini eğrinin başlangıcına göre mutlaka sıralanmalı. Aksi takdirde noktaları seçim sıranıza bağlı olarak beklediğinizden farklı sonuçlarla karşılaşabilirsiniz.
 
 
-<img src="{{ "/assets/images/BreakCurveObjects.gif" | absolute_url }}"  alt="Şekil-1" style="width:50%">
+
+
+<img src="{{ "/assets/images/BreakCurveObjects.gif" | absolute_url }}"  alt="Şekil-1" style="width:100%">
 
 <figure>
   <figcaption>Şekil-1</figcaption>
 </figure>
+
+
 
 
 ```csharp
@@ -147,11 +151,15 @@ private static bool IsPointOnCurve(Curve crv, Point3d pt)
 
 
 
-<img src="{{ "/assets/images/BreakObjectsByObject.gif" | absolute_url }}"  alt="Şekil-2" style="width:50%">
+
+
+<img src="{{ "/assets/images/BreakObjectsByObject.gif" | absolute_url }}"  alt="Şekil-2" style="width:100%">
 
 <figure>
   <figcaption>Şekil-2</figcaption>
 </figure>
+
+
 
 
 

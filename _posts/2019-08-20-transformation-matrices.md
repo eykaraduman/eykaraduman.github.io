@@ -7,7 +7,6 @@ toc: true
 published: true
 categories:
   - AutoCAD.Net
-  - C#
 tags:
   - Dönüşüm Matrisleri
 ---

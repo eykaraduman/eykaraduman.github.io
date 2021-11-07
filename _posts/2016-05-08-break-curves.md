@@ -26,7 +26,7 @@ Kodla ilgili birkaç önemli noktaya dikkat etmekte fayda var;
 </figure>
 
 
-```c#
+```csharp
 public static void BreakCurveObjects()
 {
     // Autocad veritabanına erişim
@@ -155,7 +155,7 @@ private static bool IsPointOnCurve(Curve crv, Point3d pt)
 
 
 
-```c#
+```csharp
 public static void BreakObjectByObject()
 {
     Document doc = Autodesk.AutoCAD.ApplicationServices.Application.DocumentManager.MdiActiveDocument;

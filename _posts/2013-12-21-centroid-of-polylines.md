@@ -1,6 +1,6 @@
 ---
-title: 3B Polyline Nesnelerini LwPolyline Nesnelerine Çevirme
-permalink: /acad/3dpoly-to-lwpoly/
+title: Kapalı Çizgilerin Ağırlık Merkezini İşaretleme
+permalink: /acad/cntroid-of-polylines/
 published: true
 classes: wide
 categories:

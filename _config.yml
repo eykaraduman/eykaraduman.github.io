@@ -65,6 +65,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-spaceship
+  - jekyll-mermaid
   
 author:
   name   : "Esen Yalım Karaduman"

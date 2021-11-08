@@ -198,7 +198,7 @@ tr: &DEFAULT_TR
   comments_title             : "Yorumlar"
   more_label                 : "Daha fazlasını öğrenin"
   related_label              : "Bunlar ilginizi çekebilir:"
-  follow_label               : "Takip et:"
+  follow_label               : ""
   feed_label                 : "RSS"
   powered_by                 : "Emeği geçenler: "
   website_label              : "Web sayfası"

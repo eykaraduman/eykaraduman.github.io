@@ -59,6 +59,13 @@ plugins:
   - jekyll-spaceship
   - jekyll-mermaid
 
+whitelist:
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gist
+  - jekyll-feed
+  - jekyll-include-cache
+  
 author:
   name   : "Esen Yalım Karaduman"
   avatar : "/assets/images/bio-photo.jpg"

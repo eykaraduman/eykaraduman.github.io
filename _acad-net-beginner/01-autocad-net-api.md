@@ -51,5 +51,6 @@ Bir AutoCAD .NET API DLL dosyası, Microsoft Visual Studio projesine başvuru ol
 - AutoCAD programının kurulu olduğu dizinde bulunur.
 - [ObjectARX SDK](https://www.autodesk.com/adn)  kurulduktan sonra, DLL dosyaları ana kurulum klasörünün altındaki **inc** dizininde bulunabilir.
 
-ObjectARX SDK'daki DLL'ler, AutoCAD ile birlikte dağıtılan aynı dosyaların bağımlılıklarını içermezler ve  basitleştirilmiş sürümleridir. Bu yüzden ObjectARX SDK'yı indirilip kurulmalı ve ardından AutoCAD veya AutoCAD tabanlı programın kurulum dizininde bulunanlar yerine SDK ile birlikte gelen DLL dosyalarına başvurulmalıdır.{: .notice--warning}
+ObjectARX SDK'daki DLL'ler, AutoCAD ile birlikte dağıtılan aynı dosyaların bağımlılıklarını içermezler ve  basitleştirilmiş sürümleridir. Bu yüzden ObjectARX SDK'yı indirilip kurulmalı ve ardından AutoCAD veya AutoCAD tabanlı programın kurulum dizininde bulunanlar yerine SDK ile birlikte gelen DLL dosyalarına başvurulmalıdır.
+{: .notice--warning}
 

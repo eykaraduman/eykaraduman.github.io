@@ -1,6 +1,6 @@
 ---
 title: "AutoCAD .NET Eklentisi Oluşturma"
-subtitle: "Eklentisinin Uygulama Sihirbazı kullanılmaksızın oluşturulması."
+subtitle: "Eklentinin Uygulama Sihirbazı kullanılmaksızın oluşturulması."
 permalink: /autocadnet/beginnertutorial/create-project-from-stratch/
 toc: true
 classes: wide
@@ -9,7 +9,7 @@ classes: wide
 AutoCAD için .Net uygulaması geliştirmeye başlamadan önce aşağıda gereksinimler kurulmalıdır. AutoCAD ve Visual Studio sürümleri aşağıda verilenlere göre farklılık gösterebilir. Ancak ObjectARX SDK, AutoCAD sürümü ile uyumlu olmalıdır.
 
 1. AutoCAD 2013
-2. ObjectARX 2013 SDK (Uygulama Geliştirme Aracı. SDK'yı [buradan](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) indirebilir.)
+2. ObjectARX 2013 SDK (Uygulama Geliştirme Aracı. SDK [buradan](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) indirebilir.)
 4. Visual Studio 2017
 
 ObjectARX SDK, AutoCAD .NET eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.NET Uygulama Sihirbazını) içermekle birlikte *Uygulama Sihirbazını* kullanmaksızın AutoCAD .NET eklentisi oluşturulacaktır.

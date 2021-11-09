@@ -1,6 +1,6 @@
 ---
 classes: wide
-title: AutoCAD.Net API Nedir?
+title: .NET ve AutoCAD.Net API
 permalink: /autocadnet/beginnertutorial/autocad-net-api/
 toc: true
 ---

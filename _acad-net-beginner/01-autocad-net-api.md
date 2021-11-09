@@ -1,8 +1,8 @@
 ---
-classes: wide
-title: AutoCAD.Net API
+title: AutoCAD .NET API
 permalink: /autocadnet/beginnertutorial/autocad-net-api/
 toc: true
+classes: wide
 ---
 
 ## AutoCAD .NET API Nedir?
@@ -39,7 +39,7 @@ AutoCAD .NET API, çizim dosyası içindeki nesnelere ya da AutoCAD uygulamasın
 
 Sıklıkla kullanılan AutoCAD .NET API DLL dosyaları aşağıdaki gibidir.
 
-- **AcCoreMgd.dll.** Komut satırına ulaşmak, baskı işlemleri vb. için kullanılır.
+- **AcCoreMgd.dll.** Komut satırına ulaşmak, baskı işlemleri vb. için kullanılır. (2013 sürümüyle birlikte yayınlanmıştır.)
 - **AcDbMgd.dll.** Çizim dosyasında saklanan nesnelere ulaşmak için kullanılır.
 - **AcMgd.dll.** AutoCAD uygulaması ve ara yüzü ile çalışırken kullanılır.
 - **AcCui.dll.** Özelleştirme dosyalarıyla çalışılırken kullanılır.
@@ -51,14 +51,14 @@ Bir AutoCAD .NET API DLL dosyası, Microsoft Visual Studio projesine başvuru ol
 - AutoCAD programının kurulu olduğu dizinde bulunur.
 - [ObjectARX SDK](https://www.autodesk.com/adn)  kurulduktan sonra, DLL dosyaları ana kurulum klasörünün altındaki **inc** dizininde bulunabilir.
 
-ObjectARX SDK'daki DLL'ler, AutoCAD ile birlikte dağıtılan aynı dosyaların bağımlılıklarını içermezler ve  basitleştirilmiş sürümleridir. Bu yüzden AutoCAD veya AutoCAD tabanlı programın kurulum dizininde bulunanlar yerine SDK ile birlikte gelen DLL dosyalara başvurulmalıdır.
+ObjectARX SDK'daki DLL'ler, AutoCAD ile birlikte dağıtılan aynı dosyaların bağımlılıklarını içermezler ve  basitleştirilmiş sürümleridir. Bu yüzden AutoCAD veya AutoCAD tabanlı programın kurulum dizininde bulunanlar yerine SDK ile birlikte gelen DLL dosyalarına başvurulmalıdır.
 {: .notice--warning}
 
 ## AutoCAD .NET API ve .Net Framework Runtime Uyumluluğu
 
 AutoCAD, ilk olarak 2005 yılında ObjectARX kütüphanelerinin .NET sürümlerini yayınlamıştır. AutoCAD .NET ile yazılan uygulamaların, kullanıcıların bilgisayarlarında çalışabilmesi için bu bilgisayarların barındırdıkları AutoCAD sürümüne göre derlenmesi gerekmektedir. Ayrıca AutoCAD sürümüne göre uygulamaları derlemekte kullanması gereken Visual Studio sürümleri de değişmektedir.
 
-Aşağıdaki tabloda AutoCAD sürümlerini için hangi .NET Framework Runtime ve Microsoft Visual Studio sürümlerini kullanması gerektiğini göstermektedir.
+Aşağıdaki tabloda AutoCAD sürümlerini için hangi .NET Framework Runtime ve Microsoft Visual Studio sürümlerinin kullanması gerektiğini göstermektedir.
 
 | AutoCAD Harici Sürüm | AutoCAD İç Sürüm | .NET Framework Runtime | Microsoft Visual Studio Sürümü |
 | :------------------- | :--------------- | :--------------------- | :----------------------------- |
@@ -79,5 +79,6 @@ Aşağıdaki tabloda AutoCAD sürümlerini için hangi .NET Framework Runtime ve
 | 2019                 | 23.0             | 4.7                    | 2017                           |
 | 2020                 | 23.1             | 4.7                    | 2017                           |
 | 2021                 | 24.0             | 4.7                    | 2019                           |
+| 2022                 | 24.1             | 4.7                    | 2019                           |
 
 Harici sürümü, AutoCAD’in ticari olarak pazarlanmasında kullanılan sürüm adıdır. Çoğunlukla sürüm hakkında yapılan tartışmalar ve hata bildirimlerinde kullanılır. İç sürüm adı ise AutoCAD’in windows kayıt defterindeki adıdır ve daha çok uygulama geliştiricileri tarafından sürüm faklılıklarından doğan uyum sorunlarını çözmekte kullanılır. İç sürüm adının ilk iki hanesi AutoCAD uygulamaları açısından ikili (binary) uyumluluğu gösterir. Örneğin AutoCAD 17.0 için geliştirdiğiniz bir uygulama AutoCAD 17.1 ve AutoCAD 17.2 için de geçerlidir.

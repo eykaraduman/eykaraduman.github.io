@@ -51,6 +51,33 @@ Bir AutoCAD .NET API DLL dosyası, Microsoft Visual Studio projesine başvuru ol
 - AutoCAD programının kurulu olduğu dizinde bulunur.
 - [ObjectARX SDK](https://www.autodesk.com/adn)  kurulduktan sonra, DLL dosyaları ana kurulum klasörünün altındaki **inc** dizininde bulunabilir.
 
-ObjectARX SDK'daki DLL'ler, AutoCAD ile birlikte dağıtılan aynı dosyaların bağımlılıklarını içermezler ve  basitleştirilmiş sürümleridir. Bu yüzden ObjectARX SDK'yı indirilip kurulmalı ve ardından AutoCAD veya AutoCAD tabanlı programın kurulum dizininde bulunanlar yerine SDK ile birlikte gelen DLL dosyalarına başvurulmalıdır.
+ObjectARX SDK'daki DLL'ler, AutoCAD ile birlikte dağıtılan aynı dosyaların bağımlılıklarını içermezler ve  basitleştirilmiş sürümleridir. Bu yüzden AutoCAD veya AutoCAD tabanlı programın kurulum dizininde bulunanlar yerine SDK ile birlikte gelen DLL dosyalara başvurulmalıdır.
 {: .notice--warning}
 
+## AutoCAD .NET API ve .Net Framework Runtime Uyumluluğu
+
+AutoCAD, ilk olarak 2005 yılında ObjectARX kütüphanelerinin .NET sürümlerini yayınlamıştır. AutoCAD .NET ile yazılan uygulamaların, kullanıcıların bilgisayarlarında çalışabilmesi için bu bilgisayarların barındırdıkları AutoCAD sürümüne göre derlenmesi gerekmektedir. Ayrıca AutoCAD sürümüne göre uygulamaları derlemekte kullanması gereken Visual Studio sürümleri de değişmektedir.
+
+Aşağıdaki tabloda AutoCAD sürümlerini için hangi .NET Framework Runtime ve Microsoft Visual Studio sürümlerini kullanması gerektiğini göstermektedir.
+
+| AutoCAD Harici Sürüm | AutoCAD İç Sürüm | .NET Framework Runtime | Microsoft Visual Studio Sürümü |
+| :------------------- | :--------------- | :--------------------- | :----------------------------- |
+| 2005                 | 16.1             | 1.0                    | 2002                           |
+| 2006                 | 16.2             | 1.1                    | 2003                           |
+| 2007                 | 17.0             | 2.0                    | 2005/2008/2010/2012            |
+| 2008                 | 17.1             | 2.0                    | 2005/2008/2010/2012            |
+| 2009                 | 17.2             | 3.0                    | 2008/2010/2012                 |
+| 2010                 | 18.0             | 3.5                    | 2008/2010/2012                 |
+| 2011                 | 18.1             | 3.5                    | 2008/2010/2012                 |
+| 2012                 | 18.2             | 4.0                    | 2010/2012/2013                 |
+| 2013                 | 19.0             | 4.0                    | 2010/2012/2013                 |
+| 2014                 | 19.1             | 4.0                    | 2010/2012/2013                 |
+| 2015                 | 20.0             | 4.5                    | 2012/2013                      |
+| 2016                 | 20.1             | 4.5                    | 2012/2013/2015                 |
+| 2017                 | 21.0             | 4.6                    | 2015                           |
+| 2018                 | 22.0             | 4.6                    | 2015                           |
+| 2019                 | 23.0             | 4.7                    | 2017                           |
+| 2020                 | 23.1             | 4.7                    | 2017                           |
+| 2021                 | 24.0             | 4.7                    | 2019                           |
+
+Harici sürümü, AutoCAD’in ticari olarak pazarlanmasında kullanılan sürüm adıdır. Çoğunlukla sürüm hakkında yapılan tartışmalar ve hata bildirimlerinde kullanılır. İç sürüm adı ise AutoCAD’in windows kayıt defterindeki adıdır ve daha çok uygulama geliştiricileri tarafından sürüm faklılıklarından doğan uyum sorunlarını çözmekte kullanılır. İç sürüm adının ilk iki hanesi AutoCAD uygulamaları açısından ikili (binary) uyumluluğu gösterir. Örneğin AutoCAD 17.0 için geliştirdiğiniz bir uygulama AutoCAD 17.1 ve AutoCAD 17.2 için de geçerlidir.

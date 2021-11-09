@@ -10,7 +10,7 @@ AutoCAD için .Net uygulaması geliştirmeye başlamadan önce aşağıda gereks
 
 1. AutoCAD 2013
 2. ObjectARX 2013 SDK (Uygulama Geliştirme Aracı. SDK'yı [buradan](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) indirebilir.)
-4. Visual Studio 2017 
+4. Visual Studio 2017
 
 ObjectARX SDK, AutoCAD .NET eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.NET Uygulama Sihirbazını) içermekle birlikte *Uygulama Sihirbazını* kullanmaksızın AutoCAD .NET eklentisi oluşturulacaktır.
 
@@ -76,7 +76,7 @@ namespace PgAutoCAD
 
 ### Komut Sınıfının Oluşturulması (Commands.cs)
 
-Eklentiye ait AutoCAD komutlarını oluşturabilmek için gerekli olan **Commands.cs** sınıfı projeye eklenmelidir.
+Eklentiye ait AutoCAD komutlarını oluşturabilmek için gerekli olan **Commands.cs** sınıfı projeye eklenir.
 
 ```csharp
 using System;
@@ -104,9 +104,9 @@ namespace PgAutoCAD
 }
 ```
 
-Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod`etiketine bağlı birer yordam olarak tanımlanmaktadır. AutoCAD komut satırına **IlkKomutum** yazıldığında `IlkKomut()` yordamı çalışacaktır.
+Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod` özniteliğine bağlı birer yordam olarak tanımlanmaktadır. AutoCAD komut satırına **IlkKomutum** yazıldığında `IlkKomut()` yordamı çalışacaktır.
 
-Artık Visual Studio 2017 ortamında, **Build &rarr; Build PgAutoCAD** sekmesini seçerek derlediğimiz sonuç dll’yi (**..\Release\PgAutoCAD.dll** ya da **..\Debug\PgAutoCAD.dll**) yüklemek için AutoCAD **Netload** komutu kullanılabilir.
+Artık Visual Studio 2017 ortamında, **Build &rarr; Build PgAutoCAD** sekmesini seçerek derlediğimiz sonuç dll’yi (**..\Release\PgAutoCAD.dll** ya da **..\Debug\PgAutoCAD.dll**) yüklemek için AutoCAD **Netload** komutu kullanılır.
 
 ### Hata Ayıklama
 AutoCAD .NET projelerinde Visual Studio ile hata ayıklayabilmek için yapılması gereken birkaç basit ayar bulunmaktadır. 
@@ -115,7 +115,7 @@ AutoCAD .NET projelerinde Visual Studio ile hata ayıklayabilmek için yapılmas
 
 > netload PgAutoCAD.dll
 
-Daha sonra, Visual Studio Project menüsünden proje özellikleri seçilir. (**PgAutoCAD Properties..**) Debug sekmesinde, **Start extarnal program** ve **Command line arguments** seçeneklerini Şekil-3'deki gibi doldurup proje ayarları kaydedilir. **/nologo** anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. **/b “start.scr”** ise AutoCAD açıldıktan sonra **start.scr** script dosyasını çalıştırarak eklentiyi yükleyecektir.
+Daha sonra, Visual Studio Project menüsünden proje özellikleri seçilir. (**PgAutoCAD Properties..**) Debug sekmesinde, **Start extarnal program** ve **Command line arguments** seçenekleri Şekil-3'deki gibi doldurulup proje ayarları kaydedilir. **/nologo** anahtarı, açılışta AutoCAD logosunu gizleyerek AutoCAD’in daha hızlı açılmasını sağlayacaktır. **/b “start.scr”** ise AutoCAD açıldıktan sonra **start.scr** script dosyasını çalıştırarak eklentiyi yükleyecektir.
 
 ![Şekil-3](https://eykaraduman.github.io/assets/images/debug-properties.png "Şekil-3")
 	

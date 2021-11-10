@@ -1,5 +1,5 @@
 ---
-title: AutoCAD .NET API Giriş
+title: AutoCAD .NET API Başlangıç
 permalink: /autocadnet/beginnertutorial/autocad-net-api-start/
 toc: true
 classes: wide

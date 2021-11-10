@@ -1,8 +1,8 @@
 ---
 title: AutoCAD .NET API Başlangıç
 permalink: /autocadnet/beginnertutorial/autocad-net-api-start/
+expert: "AutoCAd.NET API başvuru kaynakları ve gereksinimleri."
 toc: true
-classes: wide
 ---
 
 AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/ObjectDBX® ve AutoCAD .NET API için Türkçe kaynak bulmak neredeyse imkansız. Bu kılavuzun amacı, AutoCAD .NET uygulama arayüzünü yeni öğrenmeye başlayanlar için Türkçe bir kaynak oluşturmak. 

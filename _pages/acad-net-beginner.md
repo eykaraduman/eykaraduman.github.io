@@ -31,10 +31,9 @@ AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/Obje
 
 #### Github Kaynakları
 
-- https://github.com/wtertinek/Linq2Acad
-- https://github.com/luanshixia/AutoCADCodePack
-- https://github.com/ADN-DevTech/MgdDbg
-- 
+- [https://github.com/wtertinek/Linq2Acad](https://github.com/wtertinek/Linq2Acad)
+- [https://github.com/luanshixia/AutoCADCodePack](https://github.com/luanshixia/AutoCADCodePack)
+- [https://github.com/ADN-DevTech/MgdDbg](https://github.com/ADN-DevTech/MgdDbg)
 
 ### Gereksenimler
 

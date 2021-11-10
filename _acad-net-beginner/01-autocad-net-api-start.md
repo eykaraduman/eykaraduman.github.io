@@ -2,6 +2,7 @@
 title: AutoCAD .NET API Başlangıç
 permalink: /autocadnet/beginnertutorial/autocad-net-api-start/
 excpert: "AutoCAd.NET API başvuru kaynakları ve gereksinimleri."
+comments: true
 toc: true
 ---
 
@@ -12,7 +13,7 @@ AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/Obje
 - [x] AutoCAD .NET API'ye genel bir bakış
 - [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
 - [ ] AutoCAD komutlarının oluşturulması
-- [ ] AutoCAD .NET API Nesne Hiyerarşisi
+- [ ] AutoCAD .NET API nesne hiyerarşisi
   - [ ] Appplication, Document ve Database nesneleri
 - [ ] AutoCAD.NET API ile AutoCAD nesnelerinin oluşturulması
 - [ ] AutoCAD nesneleri üzerinde işlemler
@@ -61,7 +62,6 @@ Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](eykaraduman/PgAutoCAD) gith
 - [https://github.com/wtertinek/Linq2Acad](https://github.com/wtertinek/Linq2Acad)
 - [https://github.com/luanshixia/AutoCADCodePack](https://github.com/luanshixia/AutoCADCodePack)
 - [https://github.com/ADN-DevTech/MgdDbg](https://github.com/ADN-DevTech/MgdDbg)
-- 
 
 **Lisans:** Bu kılavuz, "https://eykaraduman.github.io/autocadnet/beginnertutorial/", Creative Commons Attribution 4.0 Uluslararası Lisansı ile lisanslanmıştır. Bu lisansın bir kopyasını görüntülemek için  https://creativecommons.org/licenses/by/4.0/ adresini ziyaret edin.
 {: .notice--warning}

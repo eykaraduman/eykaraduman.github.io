@@ -8,7 +8,7 @@ toc: true
 
 AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/ObjectDBX® ve AutoCAD .NET API için Türkçe kaynak bulmak neredeyse imkansız. Bu kılavuzun amacı, AutoCAD .NET uygulama ara yüzünü yeni öğrenmeye başlayanlar için Türkçe bir kaynak oluşturmak. 
 
-### İçerik
+### İçerik ve Kapsam
 
 - [x] AutoCAD .NET API'ye genel bir bakış
 - [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
@@ -54,6 +54,7 @@ Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](eykaraduman/PgAutoCAD) gith
 - [Autodesk® Developer Network](https://www.autodesk.com/developer-network/overview)
 - [Autodesk AutoCAD .NET API Forum](https://forums.autodesk.com/t5/net/bd-p/152)
 - [AutoCAD DevBlog](https://adndevblog.typepad.com/autocad/)
+- [AutoCAD University](https://www.autodesk.com/autodesk-university/au-online)
 - [Through the Interface](https://www.keanw.com/)
 - [Drive AutoCAD with Code](https://drive-cad-with-code.blogspot.com/)
 - [theswamp.org](https://www.theswamp.org/)

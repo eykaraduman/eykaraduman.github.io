@@ -7,9 +7,38 @@ toc: true
 
 AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/ObjectDBX® ve AutoCAD .NET API için Türkçe kaynak bulmak neredeyse imkansız. Bu kılavuzun amacı, AutoCAD .NET uygulama arayüzünü yeni öğrenmeye başlayanlar için Türkçe bir kaynak oluşturmak. 
 
+### İçerik
+
+- [x] AutoCAD .NET API'ye genel bir bakış
+- [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
+- [ ] AutoCAD komutlarının oluşturulması
+- [ ] AutoCAD .NET API Nesne Hiyerarşisi
+  - [ ] Appplication, Document ve Database nesneleri
+- [ ] AutoCAD.NET API ile AutoCAD nesnelerinin oluşturulması
+- [ ] AutoCAD nesneleri üzerinde işlemler
+- [ ] AutoCAD sözlükleri (Katmanlar, Çizgi Tipleri, Metin Stilleri vb.)
+- [ ] AutoCAD'de veri saklama yöntemleri (XData ve NOD'lar)
+- [ ] Kullanıcı giriş yordamları
+- [ ] Seçim setlerinin oluşturulması ve filtreleme
+- [ ] AutoCAD .NET API ile WPF kullanımı
+- [ ] AutoCAD Eklenti Projesi-1
+- [ ] AutoCAD Eklenti Projesi-2
+
+### Geliştirme Ortamının Hazırlanması
+
+Bu kılavuzdaki örnekleri sınayabilmek için aşağıdaki yazılımlara sahip olmalısınız:
+
+-  Autodesk AutoCAD 2013-2022 (Henüz kurulu değilse, Autodesk'ten 30 günlük ücretsiz deneme sürümünü indirebilirsiniz.)
+-  Microsoft Visual Studio 2017 (Ücretsiz Community sürümü yeterli olacaktır.)
+- Microsoft .NET Framework 4.0 (Henüz yüklenmemişse, Microsoft Visual Studio .NET Framework 4.0'ı yükleyecektir.)
+
+### Kılavuz Kaynak Kodları
+
+Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](eykaraduman/PgAutoCAD) github deposundan ulaşabilirsiniz.
+
 ### Referanslar
 
-**AutoCAD.Net ile Programlamaya Giriş** kılavuzu hazırlanırken bir çok yabancı kaynak ve siteden faydalanılmıştır. Bu kaynaklar aşağıda listelenmiştir.
+**AutoCAD.Net ile Programlamaya Giriş** kılavuzu hazırlanırken farklı yabancı sitelerden ve kitaplardan da faydalanılmıştır. Bu kaynaklar aşağıda listelenmiştir.
 
 #### Web Siteleri
 
@@ -32,13 +61,7 @@ AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/Obje
 - [https://github.com/wtertinek/Linq2Acad](https://github.com/wtertinek/Linq2Acad)
 - [https://github.com/luanshixia/AutoCADCodePack](https://github.com/luanshixia/AutoCADCodePack)
 - [https://github.com/ADN-DevTech/MgdDbg](https://github.com/ADN-DevTech/MgdDbg)
+- 
 
-### Gereksenimler
-
--  C# ve Microsoft® Visual Studio® bilgisine sahip olmalısınız.
-- AutoCAD nesnelerinin yapısına ve davranışana hakim olmalısınız.
-- Verilen kaynak kodları deneyebilmek için AutoCAD uygulaması ve Microsoft Visual Studio isteminizde kurulu olmalı.
-
-### Lisans
-
-Bu kılavuz, "https://eykaraduman.github.io/autocadnet/beginnertutorial/", Creative Commons Attribution 4.0 Uluslararası Lisansı ile lisanslanmıştır. Bu lisansın bir kopyasını görüntülemek için  https://creativecommons.org/licenses/by/4.0/ adresini ziyaret edin.
+**Lisans:** Bu kılavuz, "https://eykaraduman.github.io/autocadnet/beginnertutorial/", Creative Commons Attribution 4.0 Uluslararası Lisansı ile lisanslanmıştır. Bu lisansın bir kopyasını görüntülemek için  https://creativecommons.org/licenses/by/4.0/ adresini ziyaret edin.
+{: .notice--warning}

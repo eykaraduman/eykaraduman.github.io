@@ -6,22 +6,29 @@ comments: true
 toc: true
 ---
 
-AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/ObjectDBX® ve AutoCAD .NET API için Türkçe kaynak bulmak neredeyse imkansız. Bu kılavuzun amacı, AutoCAD .NET uygulama arayüzünü yeni öğrenmeye başlayanlar için Türkçe bir kaynak oluşturmak. 
+AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/ObjectDBX® ve AutoCAD .NET API için Türkçe kaynak bulmak neredeyse imkansız. Bu kılavuzun amacı, AutoCAD .NET uygulama ara yüzünü yeni öğrenmeye başlayanlar için Türkçe bir kaynak oluşturmak. 
 
 ### İçerik
 
 - [x] AutoCAD .NET API'ye genel bir bakış
 - [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
-- [ ] AutoCAD komutlarının oluşturulması
 - [ ] AutoCAD .NET API nesne hiyerarşisi
   - [ ] Appplication, Document ve Database nesneleri
-- [ ] AutoCAD.NET API ile AutoCAD nesnelerinin oluşturulması
+- [ ] AutoCAD komutlarının oluşturulması
+- [x] AutoCAD.NET API ile  işlem yığını (transaction) kullanımı
+- [ ] AutoCAD.NET API ile AutoCAD grafik nesnelerin oluşturulması
 - [ ] AutoCAD nesneleri üzerinde işlemler
+  - [ ] AutoCAD .NET API ile dönüşüm matrisler
+  - [ ] Nesneleri kopyalama, taşıma, döndürme, ölçekleme, aynalama ve silme
+
 - [ ] AutoCAD sözlükleri (Katmanlar, Çizgi Tipleri, Metin Stilleri vb.)
 - [ ] AutoCAD'de veri saklama yöntemleri (XData ve NOD'lar)
+  - [ ] ResultBuffer veri tipi
 - [ ] Kullanıcı giriş yordamları
 - [ ] Seçim setlerinin oluşturulması ve filtreleme
+- [ ] AutoCAD. NET API ile olaylar
 - [ ] AutoCAD .NET API ile WPF kullanımı
+- [ ] AutoCAD .NET uygulamalarının dağıtılması
 - [ ] AutoCAD Eklenti Projesi-1
 - [ ] AutoCAD Eklenti Projesi-2
 
@@ -31,7 +38,7 @@ Bu kılavuzdaki örnekleri sınayabilmek için aşağıdaki yazılımlara sahip 
 
 -  Autodesk AutoCAD 2013-2022 (Henüz kurulu değilse, Autodesk'ten 30 günlük ücretsiz deneme sürümünü indirebilirsiniz.)
 -  Microsoft Visual Studio 2017 (Ücretsiz Community sürümü yeterli olacaktır.)
-- Microsoft .NET Framework 4.0 (Henüz yüklenmemişse, Microsoft Visual Studio .NET Framework 4.0'ı yükleyecektir.)
+- Microsoft .NET Framework 4.0 (Henüz yüklenmemişse, Microsoft Visual Studio .NET Framework 4.0'ü yükleyecektir.)
 
 ### Kılavuz Kaynak Kodları
 

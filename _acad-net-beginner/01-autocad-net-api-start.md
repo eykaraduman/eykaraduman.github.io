@@ -1,7 +1,7 @@
 ---
 title: AutoCAD .NET API Başlangıç
 permalink: /autocadnet/beginnertutorial/autocad-net-api-start/
-expert: "AutoCAd.NET API başvuru kaynakları ve gereksinimleri."
+excpert: "AutoCAd.NET API başvuru kaynakları ve gereksinimleri."
 toc: true
 ---
 

@@ -29,7 +29,7 @@ Paylaşılmış projelerin kullanılmasının nedeni, bu projede barındırılan
 
 Şekil-3'de kırmızı ile gösterilen **PgAcadTools.AutoCAD** paylaştırılmış projesi AutoCAD.Net eklentisine dair tüm sınıfları, komutları, yeşil ile gösterilen **PgAcadTools.AutoCAD.**sınıf kütüphaneleri ise paylaştırılmış projeyi referans olarak içeriyor. AutoCAD 2012 ile 2017 sürümleri arası için oluşturulan sınıf kütüphanelerinin bağımlılıklarını (AcMgd.dll ,AcDbMgd.dll vb.) nuget paket yöneticisini kullanarak ekleyebileceğiniz gibi, bilgisayarınızda barındırdığınız bir klasörden de ekleyebilirsiniz.
 
-<img src="{{ "/assets/images/Shared-Project-3.png" | absolute_url }}"  alt="Şekil-3" style="width:100%">
+<img src="{{ "/assets/images/Shared-Project-3.png" | absolute_url }}"  alt="Şekil-3" style="width:50%">
 
 <figure>
   <figcaption>Şekil-3</figcaption>
@@ -37,12 +37,11 @@ Paylaşılmış projelerin kullanılmasının nedeni, bu projede barındırılan
 
 Ayrıca koşullu derleme sembollerini kullanarak farklı AutoCAD sürümleri için derlenecek kod bölümlerini de yalıtmanın mümkün olduğunu unutmamak gerek. (Şekil-4 ve Şekil-5) Çünkü ilerde farklı AutoCAD sürümler için benzer özellikleri bu kod bölümleri ile desteklemek zorunda mutlaka kalacaksınızdır.
 
-<img src="{{ "/assets/images/Shared-Project-4.png" | absolute_url }}"  alt="Şekil-4" style="width:50%">
+<img src="{{ "/assets/images/Shared-Project-4.png" | absolute_url }}"  alt="Şekil-4" style="width:100%">
 
 <figure>
   <figcaption>Şekil-4</figcaption>
 </figure>
-
 <img src="{{ "/assets/images/Shared-Project-5.png" | absolute_url }}"  alt="Şekil-5" style="width:100%">
 
 <figure>

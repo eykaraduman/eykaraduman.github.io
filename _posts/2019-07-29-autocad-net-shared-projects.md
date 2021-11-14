@@ -4,7 +4,7 @@ permalink: /acad/autocad-net-shared-project/
 published: true
 classes: wide
 categories:
-  - AutoCAD.NET
+  - AutoCAD.Net
 tags:
   - Shared Project
   - Visual Studio 2017

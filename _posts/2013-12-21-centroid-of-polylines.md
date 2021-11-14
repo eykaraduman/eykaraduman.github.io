@@ -1,6 +1,6 @@
 ---
 title: Kapalı Çizgilerin Ağırlık Merkezini İşaretleme
-permalink: /acad/cntroid-of-polylines/
+permalink: /acad/centroid-of-polylines/
 published: true
 classes: wide
 categories:

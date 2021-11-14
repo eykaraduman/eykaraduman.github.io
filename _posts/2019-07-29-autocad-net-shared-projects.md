@@ -6,7 +6,8 @@ classes: wide
 categories:
   - AutoCAD.NET
 tags:
-  - MFC
+  - Shared Project
+  - Visual Studio 2017
 ---
 
 AutoCAD.Net için uygulama geliştirirken, uygulamamızın AutoCAD'in güncel sürümü ile birlikte geçmiş sürümlerini de desteklemesini mutlaka isteriz. Bu desteğin tek bir Visual Studio çözümü içerisinde, AutoCAD ve .Net Framework farklı sürümlerini hedefleyerek nasıl hazırlanabileceğini paylaşılmış (shared) bir projeyle göstermeye çalışacağım.
@@ -29,7 +30,7 @@ Paylaşılmış projelerin kullanılmasının nedeni, bu projede barındırılan
 
 Şekil-3'de kırmızı ile gösterilen **PgAcadTools.AutoCAD** paylaştırılmış projesi AutoCAD.Net eklentisine dair tüm sınıfları, komutları, yeşil ile gösterilen **PgAcadTools.AutoCAD.**sınıf kütüphaneleri ise paylaştırılmış projeyi referans olarak içeriyor. AutoCAD 2012 ile 2017 sürümleri arası için oluşturulan sınıf kütüphanelerinin bağımlılıklarını (AcMgd.dll ,AcDbMgd.dll vb.) nuget paket yöneticisini kullanarak ekleyebileceğiniz gibi, bilgisayarınızda barındırdığınız bir klasörden de ekleyebilirsiniz.
 
-<img src="{{ "/assets/images/Shared-Project-3.png" | absolute_url }}"  alt="Şekil-3" style="width:50%">
+<img src="{{ "/assets/images/Shared-Project-3.png" | absolute_url }}"  alt="Şekil-3" style="width:40%">
 
 <figure>
   <figcaption>Şekil-3</figcaption>

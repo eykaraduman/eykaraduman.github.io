@@ -37,7 +37,7 @@ Paylaşılmış projelerin kullanılmasının nedeni, bu projede barındırılan
 
 Ayrıca koşullu derleme sembollerini kullanarak farklı AutoCAD sürümleri için derlenecek kod bölümlerini de yalıtmanın mümkün olduğunu unutmamak gerek. (Şekil-4 ve Şekil-5) Çünkü ilerde farklı AutoCAD sürümler için benzer özellikleri bu kod bölümleri ile desteklemek zorunda mutlaka kalacaksınızdır.
 
-<img src="{{ "/assets/images/Shared-Project-4.png" | absolute_url }}"  alt="Şekil-4" style="width:100%">
+<img src="{{ "/assets/images/Shared-Project-4.png" | absolute_url }}"  alt="Şekil-4" style="width:50%">
 
 <figure>
   <figcaption>Şekil-4</figcaption>
@@ -48,3 +48,6 @@ Ayrıca koşullu derleme sembollerini kullanarak farklı AutoCAD sürümleri iç
 <figure>
   <figcaption>Şekil-5</figcaption>
 </figure>
+
+[PgAutocadExtension projesine buradan ulaşabilirsiniz.](https://github.com/eykaraduman/PgAutocadExtension){: .btn .btn--info}
+

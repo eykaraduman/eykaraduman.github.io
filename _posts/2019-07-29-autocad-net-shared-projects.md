@@ -20,9 +20,9 @@ Paylaşılmış projelerin kullanılmasının nedeni, bu projede barındırılan
 <figure>
   <figcaption>Şekil-1</figcaption>
 </figure>
-
 <img src="{{ "/assets/images/Shared-Project-2.png" | absolute_url }}"  alt="Şekil-2" style="width:75%">
 
 <figure>
   <figcaption>Şekil-2</figcaption>
 </figure>
+Şekil-3'de kırmızı ile gösterilen **PgAcadTools.AutoCAD** paylaştırılmış projesi AutoCAD.Net eklentisine dair tüm sınıfları, komutları, yeşil ile gösterilen **PgAcadTools.AutoCAD.**sınıf kütüphaneleri ise paylaştırılmış projeyi referans olarak içeriyor. AutoCAD 2012 ile 2017 sürümleri arası için oluşturulan sınıf kütüphanelerinin bağımlılıklarını (AcMgd.dll ,AcDbMgd.dll vb.) nuget paket yöneticisini kullanarak ekleyebileceğiniz gibi, bilgisayarınızda barındırdığınız bir klasörden de ekleyebilirsiniz.

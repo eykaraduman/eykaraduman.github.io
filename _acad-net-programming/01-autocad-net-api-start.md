@@ -61,7 +61,7 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 
 ### Kılavuz Kaynak Kodları
 
-Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](eykaraduman/PgAutoCAD) github deposundan ulaşabilirsiniz.
+Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](https://github.com/eykaraduman/PgAutoCAD) github deposundan ulaşabilirsiniz.
 
 ### Referanslar
 

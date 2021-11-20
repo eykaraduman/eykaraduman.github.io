@@ -1,4 +1,6 @@
 main:
+  - title: "Yazılar"
+    url: /blog/
   - title: "Arşiv"
     url: /posts/
   - title: "Kategoriler"

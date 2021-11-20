@@ -2,7 +2,7 @@
 title: AutoCAD .NET API Başlangıç
 permalink: /autocad-net-programming/autocad-net-api-start/
 classes: wide
-comments: true
+comments: frue
 toc: true
 sidebar:
   title: "AutoCAD .NET API ile Programlama"

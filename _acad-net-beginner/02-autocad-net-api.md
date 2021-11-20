@@ -1,8 +1,10 @@
 ---
 title: AutoCAD .NET API Nedir?
+nav: autocadnet-beginner-tutorial
 permalink: /autocadnet/beginnertutorial/autocad-net-api-nedir/
 toc: true
 classes: wide
+comments: true
 ---
 
 ## AutoCAD .NET API Nedir?

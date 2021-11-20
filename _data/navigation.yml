@@ -14,9 +14,9 @@ autocadnet-programming-tutorial:
        - title: "AutoCAD .NET API Genel Bakış"
          url: /autocad-net-programming/autocad-net-api-start/
        - title: "AutoCAD .NET API Nedir?"
-         url: /utocad-net-programming/autocad-net-api-nedir/
+         url: /autocad-net-programming/autocad-net-api-nedir/
        - title: "AutoCAD .NET Eklentisi Oluşturma"
-         url: /utocad-net-programming/create-project-from-stratch/
+         url: /autocad-net-programming/create-project-from-stratch/
  
     
   

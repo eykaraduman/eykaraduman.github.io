@@ -118,7 +118,7 @@ defaults:
   # _acad-net-beginner
   - scope:
       path: ""
-      type: acad-net-beginner
+      type: acad-net-programming
     values:
       layout: single
       author_profile: false

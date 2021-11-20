@@ -81,8 +81,8 @@ Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](https://github.com/eykaradu
 
 #### Kitaplar
 
-- Instant Autodesk AutoCAD 2014 Customization with.NET
-- VB.NET Programming for AutoCAD Customization
+- Instant Autodesk AutoCAD 2014 Customization with.NET, Packt Publishing, 2013.
+- VB.NET Programming for AutoCAD Customization, VB CAD, Inc. 2007.
 
 #### Github Kaynakları
 
@@ -90,5 +90,5 @@ Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](https://github.com/eykaradu
 - [https://github.com/luanshixia/AutoCADCodePack](https://github.com/luanshixia/AutoCADCodePack)
 - [https://github.com/ADN-DevTech/MgdDbg](https://github.com/ADN-DevTech/MgdDbg)
 
-**Lisans:** Bu kılavuz, "https://eykaraduman.github.io/autocadnet/beginnertutorial/", Creative Commons Attribution 4.0 Uluslararası Lisansı ile lisanslanmıştır. Bu lisansın bir kopyasını görüntülemek için  https://creativecommons.org/licenses/by/4.0/ adresini ziyaret edin.
+**Lisans:** Bu kılavuz, "https://eykaraduman.github.io/autocad-net-programming/", Creative Commons Attribution 4.0 Uluslararası Lisansı ile lisanslanmıştır. Bu lisansın bir kopyasını görüntülemek için  https://creativecommons.org/licenses/by/4.0/ adresini ziyaret edin.
 {: .notice--warning}

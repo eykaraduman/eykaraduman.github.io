@@ -5,5 +5,5 @@ permalink: /autocadnet/beginnertutorial/
 collection: acad-net-beginner
 published: true
 toc: false
-author: true
+author_profile: true
 ---

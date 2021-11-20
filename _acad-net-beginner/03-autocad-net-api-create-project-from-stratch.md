@@ -8,11 +8,16 @@ classes: wide
 
 AutoCAD için .Net uygulaması geliştirmeye başlamadan önce aşağıda gereksinimler kurulmalıdır. AutoCAD ve Visual Studio sürümleri aşağıda verilenlere göre farklılık gösterebilir. Ancak ObjectARX SDK, AutoCAD sürümü ile uyumlu olmalıdır.
 
-1. AutoCAD 2013
-2. ObjectARX 2013 SDK (Uygulama Geliştirme Aracı. SDK [buradan](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) indirebilir.)
-4. Visual Studio 2017
+1. AutoCAD 2013 (Deneme sürümü [buradan](https://www.autodesk.com/products/autocad/free-trial) indirilebilir.)
+2. [ObjectARX 2013 SDK](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) (Uygulama Geliştirme Aracı)
+4. [Visual Studio 2017](https://visualstudio.microsoft.com/tr/vs/community/) (Ücretsiz Community sürümü yeterli olacaktır.)
 
-ObjectARX SDK, AutoCAD .NET eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.NET Uygulama Sihirbazını) içermekle birlikte *Uygulama Sihirbazını* kullanmaksızın AutoCAD .NET eklentisi oluşturulacaktır.
+ObjectARX SDK, AutoCAD .NET eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.NET
+Uygulama Sihirbazını) içermekle birlikte *Uygulama Sihirbazını* kullanmaksızın AutoCAD .NET eklentisi oluşturulacaktır.
+
+ObjectARX SDK, AutoCAD .NET eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.NET
+Uygulama Sihirbazını) içermekle birlikte, bu bölümde Uygulama Sihirbazını kullanmaksızın AutoCAD .NET
+eklentisi oluşturulacaktır.
 
 ### Visual Studio Sınıf Kütüphanesinin Oluşturulması
 
@@ -104,7 +109,11 @@ namespace PgAutoCAD
 }
 ```
 
-Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod` özniteliğine bağlı birer yordam olarak tanımlanmaktadır. AutoCAD komut satırına **IlkKomutum** yazıldığında `IlkKomut()` yordamı çalışacaktır.
+`[assembly: CommandClass(typeof(PgAutoCAD.Commands))]` satırı, uyguylamanın komut sınıfının Commands.cs
+olduğunu ifade etmektedir ve başka bir bir sınıf içinde oluşturulan komutlar çalışmayacaktır. Eğer başka sınıﬂar
+içinde de komut oluşturulmak isteniyorsa bu satır silinmelidir.
+
+Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod` özniteliğine bağlı birer yordam olarak tanımlanmaktadır. AutoCAD komut satırına **IlkKomutum** yazıldığında `IlkKomut()` yordamı çalışacaktır.
 
 Artık Visual Studio 2017 ortamında, **Build &rarr; Build PgAutoCAD** sekmesini seçerek derlediğimiz sonuç dll’yi (**..\Release\PgAutoCAD.dll** ya da **..\Debug\PgAutoCAD.dll**) yüklemek için AutoCAD **Netload** komutu kullanılır.
 

@@ -1,27 +1,53 @@
 ---
 title: AutoCAD .NET API Başlangıç
 permalink: /autocadnet/beginnertutorial/autocad-net-api-start/
-excpert: "AutoCAd.NET API başvuru kaynakları ve gereksinimleri."
+excpert: "AutoCAD.NET API başvuru kaynakları ve gereksinimleri."
 comments: true
 toc: true
 ---
 
-AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/ObjectDBX® ve AutoCAD .NET API için Türkçe kaynak bulmak neredeyse imkansız. Bu kılavuzun amacı, AutoCAD .NET uygulama ara yüzünü yeni öğrenmeye başlayanlar için Türkçe bir kaynak oluşturmak. 
+AutoCAD® için AutoLISP, VBA, ObjectARX® / ObjectDBX®, .NET Framework tabanlı uygulama arayüzleri
+kullanılmaktadır. Bu arayüzlerden en yaygın olanı, ilk kararlı sürümü 1996 yılında yayınlanan AutoLISP programlama dilidir. Yaygınlığını özellikle AutoCAD için tasarlanmış olmasına, derlenmeye ihtiyaç duymamasına
+ve büyük bir kitle tarafından kullanılıp desteklenmesine borçludur. AutoLISP’in AutoCAD programı içinden
+ulaşabilen VLISP adında bütünleşik bir geliştirme ortamı da bulunmaktadır.
+
+ObjectARX® (AutoCAD Runtime Extension) daha çok profesyonel programlar geliştirmekte kullanılmaktadır
+ve üst düzey nesne tabanlı C++ bilgisi gerektirdiğinden, uzmanlaşılması diğer AutoCAD API’leri ile karşılaştırıldığında en güç olanıdır. ObjectARX®, ObjectDBX® ile birlikte özel nesne tasarımını destekleyen tek
+AutoCAD API’sidir ve yapısı nedeniyle AutoCAD çizim veritabanına ulaşmakta herhangi bir kısıt barındırmaz.
+Autodesk tarafından dağıtılan ObjectARX SDK (Software Development Kit) C++ kütüphanelerinden oluşmak-
+tadır.
+
+AutoCAD .NET API ise, en basit tanımıyla, ObjectARX C++ sınıﬂarının büyük bir çoğunluğunun .NET platformuna aktarılmış/açılmış halidir. ObjectARX’te olduğu gibi özel nesne tasarımını içermese de, yerleşik AutoCAD
+nesnelerinin (line, polyline, text vb.) davranışını Overrule API ile değiştirmek mümkündür.
+
+AutoCAD .NET API, AutoLISP ile karşılaştırıldığında, ObjectARX API özelliklerinin çoğunu içermesi nedeniyle kapsamlı ve gelişmiş programlar oluşturmaya imkan tanımaktadır. Ayrıca .NET Framework ile kullanıcı
+arayüzü geliştirme olanakları (WinForms ve WPF), AutoLISP ve ObjectARX’e göre kolay ve modern bir hal
+almıştır.
+
+AutoLISP, VisualLISP ile ilgili Türkçe yayınlanmış kitaplar/kaynaklar olmasına rağmen, AutoCAD .NET API ile ilgili
+Türkçe bir kaynak bulunmamaktadır. Bu kılavuzun açığı kapatacağı
+düşünülmüştür.
+
+AutoCAD .NET API ile Programlamaya Giriş Kılavuzu, .NET Framework’un en popüler dili olan C# ile AutoCAD .NET
+API’nin nasıl kullanılabileceğine odaklanmaktadır. 
+
+Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programlama dili bilgisine sahip ve Microsoft® Visual Studio Geliştirme Ortamını da temel düzeyde kullanmayı biliyor olmalısınız.
 
 ### İçerik ve Kapsam
 
-- [x] AutoCAD .NET API'ye genel bir bakış
+- [x] AutoCAD .NET API'ye genel bir bakış: AutoCAD .NET API nedir?
 - [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
+- [ ] Blok Tabloları ve Blok Tablo Kayıtları
+
 - [ ] AutoCAD .NET API nesne hiyerarşisi
-  - [ ] Appplication, Document ve Database nesneleri
+  - [ ] Application, Document ve Database nesneleri
 - [ ] AutoCAD komutlarının oluşturulması
-- [x] AutoCAD.NET API ile  işlem yığını (transaction) kullanımı
+- [ ] AutoCAD.NET API ile  işlem yığını (transaction) kullanımı
 - [ ] AutoCAD.NET API ile AutoCAD grafik nesnelerin oluşturulması
 - [ ] AutoCAD nesneleri üzerinde işlemler
   - [ ] AutoCAD .NET API ile dönüşüm matrisler
   - [ ] Nesneleri kopyalama, taşıma, döndürme, ölçekleme, aynalama ve silme
-
-- [ ] AutoCAD sözlükleri (Katmanlar, Çizgi Tipleri, Metin Stilleri vb.)
+- [ ] AutoCAD yerleşik sözlükleri (Katmanlar, Çizgi Tipleri, Metin Stilleri vb.)
 - [ ] AutoCAD'de veri saklama yöntemleri (XData ve NOD'lar)
   - [ ] ResultBuffer veri tipi
 - [ ] Kullanıcı giriş yordamları
@@ -32,21 +58,13 @@ AutoCAD® için yaygın olarak kullanılan AutoLISP dışında, ObjectARX®/Obje
 - [ ] AutoCAD Eklenti Projesi-1
 - [ ] AutoCAD Eklenti Projesi-2
 
-### Geliştirme Ortamının Hazırlanması
-
-Bu kılavuzdaki örnekleri sınayabilmek için aşağıdaki yazılımlara sahip olmalısınız:
-
--  Autodesk AutoCAD 2013-2022 (Henüz kurulu değilse, Autodesk'ten 30 günlük ücretsiz deneme sürümünü indirebilirsiniz.)
--  Microsoft Visual Studio 2017 (Ücretsiz Community sürümü yeterli olacaktır.)
-- Microsoft .NET Framework 4.0 (Henüz yüklenmemişse, Microsoft Visual Studio .NET Framework 4.0'ü yükleyecektir.)
-
 ### Kılavuz Kaynak Kodları
 
 Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](eykaraduman/PgAutoCAD) github deposundan ulaşabilirsiniz.
 
 ### Referanslar
 
-**AutoCAD.Net ile Programlamaya Giriş** kılavuzu hazırlanırken farklı yabancı sitelerden ve kitaplardan da faydalanılmıştır. Bu kaynaklar aşağıda listelenmiştir.
+**AutoCAD .NET ile Programlamaya Giriş** kılavuzu hazırlanırken farklı yabancı sitelerden ve kitaplardan da faydalanılmıştır. Bu kaynaklar aşağıda listelenmiştir.
 
 #### Web Siteleri
 

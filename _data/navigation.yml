@@ -8,7 +8,7 @@ main:
   - title: "Hakkımda"
     url: /about/
  
-autocadnet-beginner-tutorial:
+autocadnet-programming-tutorial:
    - title: "AutoCAD .NET API"
      children:
        - title: "AutoCAD .NET API Başlangıç"

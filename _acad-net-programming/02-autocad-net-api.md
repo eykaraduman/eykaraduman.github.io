@@ -1,12 +1,12 @@
 ---
 title: AutoCAD .NET API Nedir?
-permalink: /autocadnet/beginnertutorial/autocad-net-api-nedir/
+permalink: /autocad-net-programming/autocad-net-api-nedir/
 toc: true
 classes: wide
 comments: true
 sidebar:
   title: "AutoCAD .NET API ile Programlama"
-  nav: autocadnet-beginner-tutorial
+  nav: autocadnet-programming-tutorial
 ---
 
 ## AutoCAD .NET API Nedir?

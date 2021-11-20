@@ -89,7 +89,7 @@ comments:
     shortname: "esenyalim"
     
 collections:
-  acad-net-beginner:
+  acad-net-programming:
     output: true
     permalink: /:collection/:path/
     

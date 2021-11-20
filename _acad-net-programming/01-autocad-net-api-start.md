@@ -1,12 +1,12 @@
 ---
 title: AutoCAD .NET API Başlangıç
-permalink: /autocadnet/beginnertutorial/autocad-net-api-start/
+permalink: /autocad-net-programming/autocad-net-api-start/
 classes: wide
 comments: true
 toc: true
 sidebar:
   title: "AutoCAD .NET API ile Programlama"
-  nav: autocadnet-beginner-tutorial
+  nav: autocadnet-programming-tutorial
 ---
 
 AutoCAD® için AutoLISP, VBA, ObjectARX® / ObjectDBX®, .NET Framework tabanlı uygulama arayüzleri

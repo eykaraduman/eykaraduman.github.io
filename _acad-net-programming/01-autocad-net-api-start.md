@@ -16,8 +16,7 @@ ulaşabilen VLISP adında bütünleşik bir geliştirme ortamı da bulunmaktadı
 ObjectARX® (AutoCAD Runtime Extension) daha çok profesyonel programlar geliştirmekte kullanılmaktadır
 ve üst düzey nesne tabanlı C++ bilgisi gerektirdiğinden, uzmanlaşılması diğer AutoCAD API’leri ile karşılaştırıldığında en güç olanıdır. ObjectARX®, ObjectDBX® ile birlikte özel nesne tasarımını destekleyen tek
 AutoCAD API’sidir ve yapısı nedeniyle AutoCAD çizim veritabanına ulaşmakta herhangi bir kısıt barındırmaz.
-Autodesk tarafından dağıtılan ObjectARX SDK (Software Development Kit) C++ kütüphanelerinden oluşmak-
-tadır.
+Autodesk tarafından dağıtılan ObjectARX SDK (Software Development Kit) C++ kütüphanelerinden oluşmaktadır.
 
 AutoCAD .NET API ise, en basit tanımıyla, ObjectARX C++ sınıﬂarının büyük bir çoğunluğunun .NET platformuna aktarılmış/açılmış halidir. ObjectARX’te olduğu gibi özel nesne tasarımını içermese de, yerleşik AutoCAD
 nesnelerinin (line, polyline, text vb.) davranışını Overrule API ile değiştirmek mümkündür.
@@ -30,7 +29,7 @@ AutoLISP, VisualLISP ile ilgili Türkçe yayınlanmış kitaplar/kaynaklar olmas
 Türkçe bir kaynak bulunmamaktadır. Bu kılavuzun açığı kapatacağı
 düşünülmüştür.
 
-AutoCAD .NET API ile Programlamaya Giriş Kılavuzu, .NET Framework’un en popüler dili olan C# ile AutoCAD .NET
+**AutoCAD .NET API ile Programlama** kılavuzu, .NET Framework’un en popüler dili olan C# ile AutoCAD .NET
 API’nin nasıl kullanılabileceğine odaklanmaktadır. 
 
 Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programlama dili bilgisine sahip ve Microsoft® Visual Studio Geliştirme Ortamını da temel düzeyde kullanmayı biliyor olmalısınız.

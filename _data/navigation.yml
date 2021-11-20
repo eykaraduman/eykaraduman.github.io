@@ -9,8 +9,6 @@ main:
     url: /about/
  
 autocadnet-beginner-tutorial:
-  - title: "AutoCAD .NET API ile Programlamaya Giriş"
-    url: /autocadnet/beginnertutorial/
   - title: "AutoCAD .NET API Başlangıç"
     url: /autocadnet/beginnertutorial/autocad-net-api-start/
   - title: "AutoCAD .NET API Nedir?"

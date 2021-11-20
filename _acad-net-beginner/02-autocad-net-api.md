@@ -11,7 +11,7 @@ AutoCAD .NET API, ObjectARX C++ sınıﬂarının Microsoft .Net Framework platf
 AutoCAD .NET API bu C++ sınıﬂarın büyük bir çoğunluğunu içermektedir ve API ile yerleşik AutoCAD
 nesneleri oluşturulabilmekte ve bu nesneler üzerinde taşıma, kopyalama, döndürme gibi işlemlerler gerçekleştirilebilmektedir. AutoCAD .NET API kullanılarak C#, F#, VB.NET ve IronPython gibi dillerle AutoCAD uygulamaları geliştirilebilir.
 
-Nesneler bu uygulama ara yüzünün en önemli öğeleridir ve farklı isim uzayları ile çatılar altında gruplandırılmışlardır. AutoCAD .NET uygulama ara yüzü bir çok farklı nesne içerir.
+Nesneler bu uygulama ara yüzünün en önemli öğeleridir ve farklı isim uzayları ile çatılar altında gruplandırılmışlardır. AutoCAD .NET uygulama arayüzü bir çok farklı nesne içerir.
 
 - Çizgi, metin, ölçülendirme gibi grafik nesneler
 - Metin, ölçülendirme, tablo vb. için kullanılan stiller

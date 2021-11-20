@@ -1,11 +1,14 @@
 ---
 title: "AutoCAD .NET Eklentisi Oluşturma"
 subtitle: "Eklentinin Uygulama Sihirbazı kullanılmaksızın oluşturulması."
-nav: autocadnet-beginner-tutorial
 permalink: /autocadnet/beginnertutorial/create-project-from-stratch/
 toc: true
 classes: wide
 comments: true
+sidebar:
+  title: "AutoCAD .NET API ile Programlamaya Giriş"
+  url: /autocadnet/beginnertutorial/
+  nav: autocadnet-beginner-tutorial
 ---
 
 AutoCAD için .Net uygulaması geliştirmeye başlamadan önce aşağıda gereksinimler kurulmalıdır. AutoCAD ve Visual Studio sürümleri aşağıda verilenlere göre farklılık gösterebilir. Ancak ObjectARX SDK, AutoCAD sürümü ile uyumlu olmalıdır.

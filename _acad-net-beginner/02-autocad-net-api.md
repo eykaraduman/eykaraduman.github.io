@@ -5,8 +5,7 @@ toc: true
 classes: wide
 comments: true
 sidebar:
-  title: "AutoCAD .NET API ile Programlamaya Giriş"
-  url: /autocadnet/beginnertutorial/
+  title: "AutoCAD .NET API ile Programlama"
   nav: autocadnet-beginner-tutorial
 ---
 

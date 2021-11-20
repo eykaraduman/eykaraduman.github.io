@@ -9,12 +9,14 @@ main:
     url: /about/
  
 autocadnet-beginner-tutorial:
-  - title: "AutoCAD .NET API Başlangıç"
-    url: /autocadnet/beginnertutorial/autocad-net-api-start/
-  - title: "AutoCAD .NET API Nedir?"
-    url: /autocadnet/beginnertutorial/autocad-net-api-nedir/
-  - title: "AutoCAD .NET Eklentisi Oluşturma"
-    url: /autocadnet/beginnertutorial/create-project-from-stratch/
+   - title: "AutoCAD .NET API"
+     children:
+       - title: "AutoCAD .NET API Başlangıç"
+         url: /autocadnet/beginnertutorial/autocad-net-api-start/
+       - title: "AutoCAD .NET API Nedir?"
+         url: /autocadnet/beginnertutorial/autocad-net-api-nedir/
+       - title: "AutoCAD .NET Eklentisi Oluşturma"
+         url: /autocadnet/beginnertutorial/create-project-from-stratch/
  
     
   

@@ -8,7 +8,6 @@ sidebar:
   title: "AutoCAD .NET API ile Programlama"
   nav: autocadnet-programming-tutorial
 ---
-
 AutoCAD® için AutoLISP, VBA, ObjectARX® / ObjectDBX®, .NET Framework tabanlı uygulama arayüzleri
 kullanılmaktadır. Bu arayüzlerden en yaygın olanı, ilk kararlı sürümü 1996 yılında yayınlanan AutoLISP programlama dilidir. Yaygınlığını özellikle AutoCAD için tasarlanmış olmasına, derlenmeye ihtiyaç duymamasına
 ve büyük bir kitle tarafından kullanılıp desteklenmesine borçludur. AutoLISP’in AutoCAD programı içinden

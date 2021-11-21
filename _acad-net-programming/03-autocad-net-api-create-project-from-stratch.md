@@ -1,6 +1,6 @@
 ---
 title: "AutoCAD .NET Eklentisi Oluşturma"
-subtitle: "Eklentinin Uygulama Sihirbazı kullanılmaksızın oluşturulması."
+excerpt: "Eklentinin Uygulama Sihirbazı kullanılmaksızın oluşturulması."
 permalink: /autocad-net-programming/create-project-from-stratch/
 toc: true
 classes: wide
@@ -10,17 +10,14 @@ sidebar:
   nav: autocadnet-programming-tutorial
 ---
 
-AutoCAD için .Net uygulaması geliştirmeye başlamadan önce aşağıda gereksinimler kurulmalıdır. AutoCAD ve Visual Studio sürümleri aşağıda verilenlere göre farklılık gösterebilir. Ancak ObjectARX SDK, AutoCAD sürümü ile uyumlu olmalıdır.
+AutoCAD için .Net uygulaması geliştirmeye başlamadan önce aşağıdaki gereksinimler kurulmalıdır. AutoCAD ve Visual Studio sürümleri aşağıda verilenlere göre farklılık gösterebilir. Ancak kullanılacak ObjectARX SDK, AutoCAD sürümü ile mutlaka uyumlu olmalıdır.
 
 1. AutoCAD 2013 (Deneme sürümü [buradan](https://www.autodesk.com/products/autocad/free-trial) indirilebilir.)
 2. [ObjectARX 2013 SDK](https://www.autodesk.com/developer-network/platform-technologies/autocad/objectarx) (Uygulama Geliştirme Aracı)
 4. [Visual Studio 2017](https://visualstudio.microsoft.com/tr/vs/community/) (Ücretsiz Community sürümü yeterli olacaktır.)
 
 ObjectARX SDK, AutoCAD .NET eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.NET
-Uygulama Sihirbazını) içermekle birlikte *Uygulama Sihirbazını* kullanmaksızın AutoCAD .NET eklentisi oluşturulacaktır.
-
-ObjectARX SDK, AutoCAD .NET eklentisi oluşturmakta kullanılan Visual Studio şablonlarını (AutoCAD.NET
-Uygulama Sihirbazını) içermekle birlikte, bu bölümde Uygulama Sihirbazını kullanmaksızın AutoCAD .NET
+Uygulama Sihirbazını) içermekle birlikte, bu bölümde *Uygulama Sihirbazını* kullanmaksızın AutoCAD .NET
 eklentisi oluşturulacaktır.
 
 ### Visual Studio Sınıf Kütüphanesinin Oluşturulması
@@ -43,7 +40,7 @@ Visual Studio Properties penceresini kullanarak bu üç dosyanın **Copy Local**
 ![Şekil-2](https://eykaraduman.github.io/assets/images/copy-local-false.png "Şekil-2")
 	
 
-<sub>Şekil-2: AutoCAD .Net referans dosyalarının eklnemesi</sub>
+<sub>Şekil-2: AutoCAD .Net referans dosyalarının eklenmesi</sub>
 
 ### Eklenti Sınıfının Oluşturulması (Plugin.cs)
 
@@ -113,13 +110,19 @@ namespace PgAutoCAD
 }
 ```
 
-`[assembly: CommandClass(typeof(PgAutoCAD.Commands))]` satırı, uyguylamanın komut sınıfının Commands.cs
+`[assembly: CommandClass(typeof(PgAutoCAD.Commands))]` satırı, uyguylamanın komut sınıfının **Commands.cs**
 olduğunu ifade etmektedir ve başka bir bir sınıf içinde oluşturulan komutlar çalışmayacaktır. Eğer başka sınıﬂar
 içinde de komut oluşturulmak isteniyorsa bu satır silinmelidir.
 
 Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod` özniteliğine bağlı birer yordam olarak tanımlanmaktadır. AutoCAD komut satırına **IlkKomutum** yazıldığında `IlkKomut()` yordamı çalışacaktır.
 
-Artık Visual Studio 2017 ortamında, **Build &rarr; Build PgAutoCAD** sekmesini seçerek derlediğimiz sonuç dll’yi (**..\Release\PgAutoCAD.dll** ya da **..\Debug\PgAutoCAD.dll**) yüklemek için AutoCAD **Netload** komutu kullanılır.
+### Eklentinin Derlenmesi
+
+PgAutoCAD eklentisi, Visual Studio 2017 ortamında, **Build &rarr; Build PgAutoCAD** sekmesi seçilerek derlenir. Sonuç dll, "**..\Release**" ya da " **..\Debug**" dizinlerinde oluşturulur.
+
+### Eklentinin yüklenmesi
+
+AutoCAD .NET eklentilerinin yüklenmesi AutoCAD **Netload** komutu ile yapılmaktadır. Komut satırına *netload* yazılarak "**..\Release\PgAutoCAD.dll**" ya da "**..\Debug\PgAutoCAD.dll**" sonuç dll dosyalarından biri seçilir ve eklenti yüklenir. Artık *Commands.cs* sınıfı içinde tanımlanan komutlar kullanılabilir.
 
 ### Hata Ayıklama
 AutoCAD .NET projelerinde Visual Studio ile hata ayıklayabilmek için yapılması gereken birkaç basit ayar bulunmaktadır. 

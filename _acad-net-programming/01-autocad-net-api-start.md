@@ -1,5 +1,6 @@
 ---
 title: AutoCAD .NET API Başlangıç
+excerpt: "AutoCAD .NET API ile Programlama kılavuzu içerik ve kapsamı."
 permalink: /autocad-net-programming/autocad-net-api-start/
 classes: wide
 comments: frue

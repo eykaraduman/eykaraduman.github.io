@@ -1,6 +1,7 @@
 ---
 title: AutoCAD .NET API Nedir?
 permalink: /autocad-net-programming/autocad-net-api-nedir/
+excerpt: "AutoCAD .NET uygulama arayüzüne genel bir bakış."
 toc: true
 classes: wide
 comments: true

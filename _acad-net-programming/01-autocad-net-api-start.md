@@ -66,7 +66,7 @@ Kılavuzun kaynak kodlarına [eykaraduman/PgAutoCAD](https://github.com/eykaradu
 
 ### Referanslar
 
-**AutoCAD .NET ile Programlamaya Giriş** kılavuzu hazırlanırken farklı yabancı sitelerden ve kitaplardan da faydalanılmıştır. Bu kaynaklar aşağıda listelenmiştir.
+**AutoCAD .NET API ile Programlama** kılavuzu hazırlanırken farklı sitelerden ve kitaplardan faydalanılmıştır. Bu kaynaklar aşağıda listelenmiştir.
 
 #### Web Siteleri
 

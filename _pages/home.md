@@ -1,10 +1,7 @@
 ---
 layout: splash
 permalink: /
-excerpt: | 
-	"C#, Python, AutoCAD. NET ile Programlama"
-	<br>
-	Esen Yalım Karaduman
+excerpt: "C#, Python, AutoCAD. NET ile Programlama <br> Esen Yalım Karaduman"
 header:
   overlay_color: "#333"
 feature_row:

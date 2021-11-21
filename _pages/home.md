@@ -6,10 +6,10 @@ header:
   overlay_color: "#333"
 feature_row:
   - image_path: 
-    alt: "placeholder image 2"
+    alt: "autocad net api ile programlama"
     title: "AutoCAD .NET API ile Programlama Kılavuzu"
-    excerpt: 'Yeni başlayanlar ve uzmanlaşmak için AutoCAD .NET yygulama arayüzünün C# programlama dili ile kullanımı.'
-    url: "#test-link"
+    excerpt: 'Yeni başlayanlar ve uzmanlaşmak isteyenler için AutoCAD .NET uygulama arayüzünün C# programlama dili ile kullanımı.'
+    url: "autocad-net-programming"
     btn_label: "Devamı"
     btn_class: "btn--primary"
 ---

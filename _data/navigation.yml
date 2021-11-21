@@ -12,13 +12,12 @@ main:
  
 autocadnet-programming-tutorial:
    - title: "Giriş"
+     url: /autocad-net-programming/
      children:
        - title: "AutoCAD .NET API Genel Bakış"
          url: /autocad-net-programming/autocad-net-api-start/
        - title: "AutoCAD .NET API Nedir?"
          url: /autocad-net-programming/autocad-net-api-nedir/
        - title: "AutoCAD .NET Eklentisi Oluşturma"
-         url: /autocad-net-programming/create-project-from-stratch/
- 
-    
+         url: /autocad-net-programming/create-project-from-stratch/ 
   

@@ -120,7 +120,7 @@ Komutlar, `public void IlkKomut()` 'da olduğu gibi, `CommandMethod` özniteliğ
 
 PgAutoCAD eklentisi, Visual Studio 2017 ortamında, **Build &rarr; Build PgAutoCAD** sekmesi seçilerek derlenir. Sonuç dll, "**..\Release**" ya da " **..\Debug**" dizinlerinde oluşturulur.
 
-### Eklentinin yüklenmesi
+### Eklentinin Yüklenmesi
 
 AutoCAD .NET eklentilerinin yüklenmesi AutoCAD **Netload** komutu ile yapılmaktadır. Komut satırına *netload* yazılarak "**..\Release\PgAutoCAD.dll**" ya da "**..\Debug\PgAutoCAD.dll**" sonuç dll dosyalarından biri seçilir ve eklenti yüklenir. Artık *Commands.cs* sınıfı içinde tanımlanan komutlar kullanılabilir.
 

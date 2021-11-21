@@ -39,19 +39,17 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 
 - [x] AutoCAD .NET API'ye genel bir bakış: AutoCAD .NET API nedir?
 - [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
-- [ ] Blok Tabloları ve Blok Tablo Kayıtları
-
+- [x] İşlem Yığınları (Transactions)
+- [ ] Blok tabloları ve Blok tablo kayıtları
 - [ ] AutoCAD .NET API nesne hiyerarşisi
   - [ ] Application, Document ve Database nesneleri
-- [ ] AutoCAD komutlarının oluşturulması
-- [ ] AutoCAD.NET API ile  işlem yığını (transaction) kullanımı
+- [ ] AutoCAD.NET API ile komutlar
 - [ ] AutoCAD.NET API ile AutoCAD grafik nesnelerin oluşturulması
 - [ ] AutoCAD nesneleri üzerinde işlemler
   - [ ] AutoCAD .NET API ile dönüşüm matrisler
   - [ ] Nesneleri kopyalama, taşıma, döndürme, ölçekleme, aynalama ve silme
 - [ ] AutoCAD yerleşik sözlükleri (Katmanlar, Çizgi Tipleri, Metin Stilleri vb.)
 - [ ] AutoCAD'de veri saklama yöntemleri (XData ve NOD'lar)
-  - [ ] ResultBuffer veri tipi
 - [ ] Kullanıcı giriş yordamları
 - [ ] Seçim setlerinin oluşturulması ve filtreleme
 - [ ] AutoCAD. NET API ile olaylar

@@ -1,7 +1,7 @@
 ---
 layout: splash
 permalink: /
-excerpt: "Programlama Güncesi</br>*C#*, Python, AutoCAD. NET"
+excerpt: "**C#**, Python, AutoCAD. NET ile Programlama"
 header:
   overlay_color: "#333"
 ---

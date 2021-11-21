@@ -122,7 +122,7 @@ PgAutoCAD eklentisi, Visual Studio 2017 ortamında, **Build &rarr; Build PgAutoC
 
 ### Eklentinin Yüklenmesi
 
-AutoCAD .NET eklentilerinin yüklenmesi AutoCAD **Netload** komutu ile yapılmaktadır. Komut satırına *netload* yazılarak "**..\Release\PgAutoCAD.dll**" ya da "**..\Debug\PgAutoCAD.dll**" sonuç dll dosyalarından biri seçilir ve eklenti yüklenir. Artık *Commands.cs* sınıfı içinde tanımlanan komutlar kullanılabilir.
+AutoCAD .NET eklentilerinin yüklenmesi AutoCAD **Netload** komutu yardımı ile yapılmaktadır. Komut satırına *netload* yazılarak "**..\Release\PgAutoCAD.dll**" ya da "**..\Debug\PgAutoCAD.dll**" sonuç dll dosyalarından biri seçilir ve eklenti yüklenir. Artık *Commands.cs* sınıfı içinde tanımlanan komutlar kullanılabilir.
 
 ### Hata Ayıklama
 AutoCAD .NET projelerinde Visual Studio ile hata ayıklayabilmek için yapılması gereken birkaç basit ayar bulunmaktadır. 

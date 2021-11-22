@@ -76,7 +76,7 @@ public static void NumberOfInsertBtrsInModelSpace()
 
 `NumberOfInsertBtrsInModelSpace` komutu, AutoCAD örnek dosyaları arasından indirebileceğiniz [Blocks and Tables (Metric)](https://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_metric.dwg) çizim dosyasında çalıştırıldığında, blok referans nesne sayısını komut satırına 161 olarak yazdırılacaktır. 
 
-<figure style="width: 500px">
+<figure style="width: 550px">
   <img src="{{ '/assets/images/count-of-block-reference.png' | relative_url }}" alt="count of block references">
   <figcaption>ModelSapace blok tablo kaydı içindeki blok referans nesnelerinin sayılması.</figcaption>
 </figure>

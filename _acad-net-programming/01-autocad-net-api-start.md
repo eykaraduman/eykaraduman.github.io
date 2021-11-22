@@ -40,7 +40,7 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 - [x] AutoCAD .NET API'ye genel bir bakış: AutoCAD .NET API nedir?
 - [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
 - [x] İşlem Yığınları (Transactions)
-- [ ] Blok tabloları ve Blok tablo kayıtları
+- [x] Blok tabloları ve Blok tablo kayıtları
 - [ ] AutoCAD .NET API nesne hiyerarşisi
   - [ ] Application, Document ve Database nesneleri
 - [ ] AutoCAD.NET API ile komutlar

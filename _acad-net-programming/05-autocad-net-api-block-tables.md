@@ -39,7 +39,7 @@ public void ShowBlockTableRecords()
 }
 ```
 
-**`ShowBlockTableRecords`** AutoCAD komutu, ***Model_Space**, ***Paper_Space** ve ***Paper_Space0** blok tablo
+**`ShowBlockTableRecords`** AutoCAD komutu, *Model_Space, *Paper_Space ve *Paper_Space0 blok tablo
 kayıtlarını komut satırına sırasıyla yazacaktır.
 
 **`NumberOfInsertBtrsInModelSpace`** yordamı ise, AutoCAD ModelSpace veritabanı blok tablo kayıtlarına nasıl ulaşılacağının bir örneğini göstermektedir.
@@ -76,7 +76,7 @@ public static void NumberOfInsertBtrsInModelSpace()
 
 AutoCAD örnek dosyaları arasında bulabileceğiniz [Blocks and Tables (Metric)](https://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_metric.dwg) çizim dosyasında, `NumberOfInsertBtrsInModelSpace` komutu çalıştırıldığında, blok referans nesne sayısı komut satırına 161 olarak yazdırılacaktır. 
 
-<figure style="width: 400px">
+<figure style="width: 500px">
   <img src="{{ '/assets/images/count-of-block-reference.png' | relative_url }}" alt="count of block references">
   <figcaption>ModelSapace blok tablo kaydı içindeki blok referans nesnelerinin sayılması.</figcaption>
 </figure>

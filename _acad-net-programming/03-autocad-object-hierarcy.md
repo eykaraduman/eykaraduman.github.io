@@ -37,3 +37,7 @@ E -.-> I[...]
 E -.-> I1[...]
 E -.-> I2[...]
 </div>
+
+### Application Nesnesi
+
+Application nesnesi, AutoCAD. NET API'de ana nesnedir

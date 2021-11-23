@@ -408,4 +408,4 @@ Tüm anlattıklarımı toparlayan ve kolayca sınayıp kontrol edebileceğiniz b
 AutoCAD komutu **SmbTblDia**.
 
 ### İndir
-[Sembol Tabloları Visual Studio 2010 Projesi](http://eykaraduman.github.io/assets/downloads/AbcSymbolTables.zip)
+[Sembol Tabloları Visual Studio 2010 Projesi](https://eykaraduman.github.io/assets/downloads/AbcSymbolTables.zip)

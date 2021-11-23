@@ -1,8 +1,10 @@
 ---
-layout: post
 title: Sembol Tabloları
-category: programlama
-tags: [AutoCAD.Net]
+permalink: /acad/autocad-net-symbol-tables/
+published: true
+classes: wide
+categories:
+  - AutoCAD.Net
 ---
 AutoCAD çizim dosyası, görünür (grafik) ve görünmez (grafik olmayan) nesnelere ait tablo ve kayıtları içeren bir veritabanı dosyasıdır ve aşağıdaki yerleşik (built-in) sembol tablo kayıtlarını mutlaka içerir:
 
@@ -39,7 +41,7 @@ AutoCAD sembol tablolarının bazılarının adlarını verip işlevlerini özet
 Örneklere geçmeden önce çizim veritabanında saklı NOD ve sembol tablo kayıt anahtarlarına nasıl erişilebileceğine bir bakalım. 
 NOD kayıtları ile başlıyoruz:
 
-{% highlight csharp %}
+```c#
  public static void NODKayitListele()  
  {  
  // Çizim veritabanına erişim  
@@ -72,13 +74,13 @@ NOD kayıtları ile başlıyoruz:
  {  
       NODKayitListele();  
  }
-{% endhighlight %}
+```
 
-![Şekil-1](/img/SembolTablo1.jpg)
+![Şekil-1](/assets/images/SembolTablo1.jpg)
 
 Şimdiyse en önemli sembol tablolarından biri olan blok tablosu kayıtlarını araştıralım:
 
-{% highlight csharp %}
+```c#
  public static void BlokTabloKayitListele()  
  {  
       Document doc = Application.DocumentManager.MdiActiveDocument;  
@@ -110,24 +112,24 @@ NOD kayıtları ile başlıyoruz:
  {  
       BlokTabloKayitListele();  
  } 
-{% endhighlight %}
+```
 
 **BlkTblListe** AutoCAD komutunun sonucuysa aşağıdaki mesaj diyaloğu olacaktır:
 
-![Şekil-2](/img/SembolTablo2.jpg)
+![Şekil-2](/assets/images/SembolTablo2.jpg)
 
 Uygun sembol tablo kimliklerini kullanarak diğer tabloların içerdikleri kayıtlara da kolayca ulaşabiliriz. 
 Bunun için **BlokTabloKayitListele()** fonksiyonundaki, 
 
-{% highlight csharp %}
- BlockTable blockTable =  
+```c#
+BlockTable blockTable =  
         (BlockTable)tr.GetObject(db.BlockTableId,OpenMode.ForRead); 
-{% endhighlight %}
+```
 
 satırı yerine aşağıdakilerden birini koymamız yeterli olacaktır: 
 
-{% highlight csharp %}
- DimStyleTable symTable =  
+```
+DimStyleTable symTable =  
       (DimStyleTable)tr.GetObject(db.DimStyleTableId, OpenMode.ForRead);  
  LayerTable symTable =  
       (LayerTable)tr.GetObject(db.LayerTableId, OpenMode.ForRead);  
@@ -143,14 +145,14 @@ satırı yerine aşağıdakilerden birini koymamız yeterli olacaktır:
       (ViewportTable)tr.GetObject(db.ViewportTableId, OpenMode.ForRead);  
  ViewTable symTable =  
       (ViewTable)tr.GetObject(db.ViewTableId, OpenMode.ForRead);
-{% endhighlight %}
+```
 
 **Transaction** nesnesinin, sembol tablo kimliğini ve tabloya erişim türünü parametre olarak kabul eden **GetObject(…)** metodunu farklı tablolar için tekrarlamaktan başka bir şey yapmadık.
 Artık sembol tablo kayıtlarının nasıl ekleneceğini gösteren örneklere geçebiliriz. Ama önce, bu tablolarla çalışmamızı kolaylaştıracak birkaç yardımcı fonksiyon yazmak yerinde olacaktır.
 Bu fonksiyonlardan ilki, üzerinde çalışacağımız tablonun veritabanı nesne kimliğini (ObjectId), tablo kayıt türüyle elde etmemizi sağlayacak **SembolTabloNesneKimlikAl(…)** statik fonksiyonu:
 
-{% highlight csharp %}
- public static ObjectId SembolTabloNesneKimlikAl(Database db, Type SinifTip)  
+```c#
+public static ObjectId SembolTabloNesneKimlikAl(Database db, Type SinifTip)  
  {  
       if (SinifTip == typeof(BlockTableRecord))  
            return db.BlockTableId;  
@@ -172,13 +174,13 @@ Bu fonksiyonlardan ilki, üzerinde çalışacağımız tablonun veritabanı nesn
            return db.ViewportTableId;  
       return ObjectId.Null;  
  } 
-{% endhighlight %}
+```
 
 İkincisi, tablo kaydının veritabanı nesne kimliğini, kayıt türü ve adıyla elde etmemizi sağlayacak **SembolTabloKayitNesneKimlikAl(…)** 
 fonksiyonu: 
 
-{% highlight csharp %}
- public static ObjectId SembolTabloKayitNesneKimlikAl(Database db, Type SinifTip,  
+```c#
+public static ObjectId SembolTabloKayitNesneKimlikAl(Database db, Type SinifTip,  
        string SymAd)  
  {  
       ObjectId symbolTableId = SembolTabloNesneKimlikAl(db, SinifTip);  
@@ -194,14 +196,13 @@ fonksiyonu:
       }  
       return recId;  
  } 
-{% endhighlight %}
+```
 
 Üçüncüsü, adını bildiğimiz bir tablo kaydının sembol tablosunda var olup olmadığını sorgulamakta kullanacağımız 
 **SembolTabloKaydiMevcutMu(…)** fonksiyonu:
 
-{% highlight csharp %}
- public static bool SembolTabloKaydiMevcutMu(Database db, Type SinifTip,  
-       string SymAd)  
+```c#
+ public static bool SembolTabloKaydiMevcutMu(Database db, Type SinifTip, string SymAd)  
  {  
       bool mevcut = false;  
       ObjectId symbolTableId = SembolTabloNesneKimlikAl(db, SinifTip);  
@@ -212,44 +213,42 @@ fonksiyonu:
       }  
       return mevcut;  
  } 
-{% endhighlight %}
+```
 
 Dördüncüsü ve sonuncusu ise herhangi bir çizgi tipini, verili çizgi tipi dosyasında arayan ve bulduğunda çizgi tipi nesne kimliğini 
 döndüren **CizgiTipiKimlikAdAlYadaYükle(…)** fonksiyonu (katman kaydı oluştururken kullanacağız):
 
-{% highlight csharp %}
- public static ObjectId CizgiTipiKimlikAlYadaYukle(string CizgiTipDosya,  
-       string CizgiTipAd)  
-     {  
-       Document doc = Application.DocumentManager.MdiActiveDocument;  
-       Database db = doc.Database;  
-       ObjectId id = SembolTabloKayitNesneKimlikAl(db, typeof(LinetypeTableRecord),  
-         CizgiTipAd);  
-       if (!id.IsNull)  
-         return id;  
-       try  
-       {  
-         db.LoadLineTypeFile(CizgiTipAd, CizgiTipDosya);  
-         id = SembolTabloKayitNesneKimlikAl(db, typeof(LinetypeTableRecord),  
-  CizgiTipAd);  
-         if (!id.IsNull)  
-           return id;  
-         else  
-           return db.ContinuousLinetype;  
-       }  
-       catch  
-       {  
-         return db.ContinuousLinetype;  
-       }  
-     }  
-{% endhighlight %}
+```c#
+public static ObjectId CizgiTipiKimlikAlYadaYukle(string CizgiTipDosya, string CizgiTipAd)  
+{  
+   Document doc = Application.DocumentManager.MdiActiveDocument;  
+   Database db = doc.Database;  
+   ObjectId id = SembolTabloKayitNesneKimlikAl(db, typeof(LinetypeTableRecord),  
+     CizgiTipAd);  
+   if (!id.IsNull)  
+     return id;  
+   try  
+   {  
+     db.LoadLineTypeFile(CizgiTipAd, CizgiTipDosya);  
+     id = SembolTabloKayitNesneKimlikAl(db, typeof(LinetypeTableRecord), CizgiTipAd);  
+     if (!id.IsNull)  
+       return id;  
+     else  
+       return db.ContinuousLinetype;  
+   }  
+   catch  
+   {  
+     return db.ContinuousLinetype;  
+   }  
+}  
+```
 
 Bu fonksiyonların yardımıyla artık ilk sembol tablo kaydımızı yaratabiliriz. Bir katman (layer) kaydı oluşturarak başlayalım. 
 Aşağıda kodunu bulacağınız **KatmanOlustur(…)** fonksiyonu, içerdiği bilgi satırlarından da kolayca takip edebileceğiniz gibi; adı, 
 çizgi tipi ve rengi verili bir katmanı çizim veritabanına ekleyecektir. 
 
-{% highlight csharp %}
- public static ObjectId KatmanOlustur(Database db, string KatmanAdi,  
+```c#
+public static ObjectId KatmanOlustur(Database db, string KatmanAdi,  
        string KatmanCizgiTipiAdi, short KatmanRengi)  
  {  
       ObjectId id = ObjectId.Null;  
@@ -292,13 +291,13 @@ Aşağıda kodunu bulacağınız **KatmanOlustur(…)** fonksiyonu, içerdiği b
       KatmanOlustur(Application.DocumentManager.MdiActiveDocument.Database,  
            "AbcProgramlama", "HIDDEN", 1);  
  }  
-{% endhighlight %}
+```
 
 **KtmEk** AutoCAD komutunu çalıştırdığınızda, “AbcProgramlama” katmanının çizim veritabanı katman listesine eklendiğini göreceksiniz. 
 Katman oluşturmak için izlediğimiz yolu diğer tablo kayıtlarını oluşturmakta da izleyebiliriz. Bir metin stil kaydının (TextStyleTableRecord) çizim veritabanına nasıl ekleneceğini gösteren örnek fonksiyon aşağıda: 
 
-{% highlight csharp %}
- public static ObjectId MetinBicemOlustur(Database db, string MetinDosyaAdi,  
+```c#
+public static ObjectId MetinBicemOlustur(Database db, string MetinDosyaAdi,  
        string MetinStilAd, double MetinYks, double GenislikFaktor)  
  {  
       ObjectId id = ObjectId.Null;  
@@ -342,7 +341,7 @@ Katman oluşturmak için izlediğimiz yolu diğer tablo kayıtlarını oluşturm
       MetinBicemOlustur(Application.DocumentManager.MdiActiveDocument.Database,  
            "Txt.shx", "Metin", 0.00, 1.00);  
  }  
-{% endhighlight %}
+```
 
 Son olarak, AutoCAD içerisindeki tüm grafik nesneleri barındıran blok tablosuna yeni kayıtların nasıl ekleneceğinden bahsedeceğim. 
 Yeni bir AutoCAD çizimi blok tablosu, daha önce de gördüğümüz gibi, *MODEL_SPACE, *PAPER_SPACE , *paper_space0 başlangıç kayıtlarını 
@@ -350,13 +349,13 @@ içerir. Çizime yeni bir layout eklediğimizde ise AutoCAD, *paper_space1 adlı
 Yukarda tanımladığımız **BlkTblListe** AutoCAD komutunu kullanarak bu durumu gözlemleyebilirsiniz. 
 AutoCAD nesneleri, model uzayında yaratılabileceği gibi kağıt uzaylarından (layout’lar) herhangi birinde de yaratılabilir. 
 Model uzayında çizim yapmak istediğimizde model uzayı, kağıt uzayında çizim yapmak istediğimizde ise kağıt uzayı blok tablo kaydını kullanacağız. AutoCAD blok nesnelerinin blok tablosuna eklenmesi ise diğer nesnelerinkinden biraz farklıdır; blok tablosunun blok tablo kaydı aracılığıyla yapılır. Bu farkı örnekleyen fonksiyonumuzun kodu ve AutoCAD komutu aşağıda: 
- 
-{% highlight csharp %}
- public static void YeniBlokTabloOlustur(string blkName)  
+
+```c#
+public static void YeniBlokTabloOlustur(string blkName)  
  {  
-  // Çizim veritabanının eldesi  
+      // Çizim veritabanının eldesi  
       Database db = Application.DocumentManager.MdiActiveDocument.Database;  
-  // İşlem yığınının başlatılması  
+      // İşlem yığınının başlatılması  
       using (Transaction transaction = db.TransactionManager.StartTransaction())  
       {  
            // Blok tablosunun yazma amaçlı eldesi  
@@ -390,7 +389,7 @@ Model uzayında çizim yapmak istediğimizde model uzayı, kağıt uzayında çi
  {  
       YeniBlokTabloOlustur("*CizgiBlok");  
  }  
-{% endhighlight %}
+```
 
 Model ve kağıt uzaylarında çizim yapmak için izleyeceğimiz yolda yukarıdakine benzeyecektir:
 
@@ -403,10 +402,10 @@ Model ve kağıt uzaylarında çizim yapmak için izleyeceğimiz yolda yukarıda
 
 Yukarda andığımız işleri yapan fonksiyon ise aşağıdaki gibi olacaktır:
 
-![Şekil-3](/img/SembolTablo3.jpg)
+![Şekil-3](/assets/images/SembolTablo3.jpg)
 
 Tüm anlattıklarımı toparlayan ve kolayca sınayıp kontrol edebileceğiniz bir Windows formunu Visual Studio.Net projesinde bulabilirsiniz. 
 AutoCAD komutu **SmbTblDia**.
 
 ### İndir
-[Sembol Tabloları Visual Studio 2010 Projesi](http://abcprogramlama.com/downloads/AbcSymbolTables.zip)
+[Sembol Tabloları Visual Studio 2010 Projesi](http://eykaraduman.github.io/assets/downloads/AbcSymbolTables.zip)

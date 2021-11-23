@@ -543,5 +543,5 @@ Bu sınıfın AutoCAD komutları olan AddExtDct, WriteExtDct ve RemoveExtDct. Ad
 Sözlüklerde depolanabilecek veri türleri ise Angle, ObjectId, Int32, Text, Point ve Real. 
 
 ### İndir
-[Veri Depolama Visual Studio 2010 Projesi](http://eykaraduman.github.io/assests/downloads/AbcExtensionDictionary.zip)
+[Veri Depolama Visual Studio 2010 Projesi](http://eykaraduman.github.io/assets/downloads/AbcExtensionDictionary.zip)
 

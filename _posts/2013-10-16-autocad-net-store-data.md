@@ -109,11 +109,11 @@ public void Draw(DataStoreType StoreType)
 
 **IPEProfile** sınıf yapısını gösteren diyagram için lütfen Şekil-2’ye bakınız.
 
-![Şekil-1](/assests/images/VeriDepolama1.jpg)
+![Şekil-1](/assets/images/VeriDepolama1.jpg)
 
 Şekil-1
 
-![Şekil-2](/assests/images/VeriDepolama2.jpg)
+![Şekil-2](/assets/images/VeriDepolama2.jpg)
 
 Şekil-2
 

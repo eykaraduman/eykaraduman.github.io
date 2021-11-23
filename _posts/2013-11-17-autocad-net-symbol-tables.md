@@ -402,7 +402,7 @@ Model ve kağıt uzaylarında çizim yapmak için izleyeceğimiz yolda yukarıda
 
 Yukarda andığımız işleri yapan fonksiyon ise aşağıdaki gibi olacaktır:
 
-![Şekil-3](/assets/images/SembolTablo3.jpg)
+![Şekil-3](/assets/images/SembolTablo3.png)
 
 Tüm anlattıklarımı toparlayan ve kolayca sınayıp kontrol edebileceğiniz bir Windows formunu Visual Studio.Net projesinde bulabilirsiniz. 
 AutoCAD komutu **SmbTblDia**.

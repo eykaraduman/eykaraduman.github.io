@@ -11,7 +11,7 @@ sidebar:
 
 AutoCAD çizim dosyası, görünür (graﬁk) ve görünmez (graﬁk olmayan) nesnelere ait tablo ve kayıtları içeren bir veritabanı dosyasıdır. Çizim dosyasında bir `BlockTable` (blok tablosu) ve birçok `BlockTableRecords`
 (blok tablo kayıtları) bulunur. ModelSpace, PaperSpace ve Layout’lar gerçekte birer blok tablo kaydıdır. Model
-uzayında çizim yapmak istendiğinde ModelSpace, kağıt uzayında çizim yapmak istendiğinde ise PaperSpace blok kaydının kullanılması gerekir.
+uzayında çizim yapmak için ModelSpace, kağıt uzayında çizim yapmak için ise PaperSpace blok kaydı kullanılır.
 
 Yeni oluşturulan bir AutoCAD .dwg dosyası, varsayılan olarak bir adet `ModelSpace` ve iki adet de `PaperSpace`
 blok tablo kaydı içerir. Bunları AutoCAD komut satırına yazdıran `ShowBlockTableRecords` yordamı aşağıda verilmiştir.
@@ -39,10 +39,10 @@ public void ShowBlockTableRecords()
 }
 ```
 
-**`ShowBlockTableRecords`** AutoCAD komutu, *Model_Space, *Paper_Space ve *Paper_Space0 blok tablo
+*ShowBlockTableRecords* AutoCAD komutu, *Model_Space, *Paper_Space ve *Paper_Space0 blok tablo
 kayıtlarını komut satırına sırasıyla yazacaktır.
 
-**`NumberOfInsertBtrsInModelSpace`** yordamı ise, AutoCAD `ModelSpace` blok tablo kayıtlarına nasıl ulaşılacağının bir örneğini göstermektedir.
+Aşağıda verilen **`NumberOfInsertBtrsInModelSpace`** yordamı, AutoCAD `ModelSpace` blok tablo kayıtlarına nasıl ulaşılacağının bir örneğini göstermektedir.
 
 ```c#
 [CommandMethod("NumberOfInsertBtrsInModelSpace")]
@@ -74,10 +74,9 @@ public static void NumberOfInsertBtrsInModelSpace()
 }
 ```
 
-`NumberOfInsertBtrsInModelSpace` komutu, AutoCAD örnek dosyaları arasından indirebileceğiniz [Blocks and Tables (Metric)](https://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_metric.dwg) çizim dosyasında çalıştırıldığında, blok referans nesne sayısını komut satırına 161 olarak yazdıracaktır. 
+*NumberOfInsertBtrsInModelSpace* komutu, [Blocks and Tables (Metric)](https://download.autodesk.com/us/samplefiles/acad/blocks_and_tables_-_metric.dwg) çizim dosyasında çalıştırıldığında, blok referans nesne sayısını komut satırına 161 olarak yazdıracaktır. 
 
 <figure style="width: 550px">
   <img src="{{ '/assets/images/count-of-block-reference.png' | relative_url }}" alt="count of block references">
   <figcaption>ModelSapace blok tablo kaydı içindeki blok referans nesnelerinin sayılması.</figcaption>
 </figure>
-

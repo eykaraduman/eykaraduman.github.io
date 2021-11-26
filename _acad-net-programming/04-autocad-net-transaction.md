@@ -13,11 +13,11 @@ sidebar:
 
 ### İşlem Yığını Nedir?
 
-**İşlem Yığını (Transaction)**, veri tabanı işlemlerinde işlemsel bir bütünlüğü temsil eden ve daha küçük parçalara ayrılamayan en küçük birimi olarak tanımlanabilir. Bu tanımı gereği de her işlem yığını atomsal, tutarlı, yalıtılmış ve sürekli olmalıdır. 
+**İşlem Yığını (Transaction)**, veri tabanı işlemlerinde işlemsel bir bütünlüğü temsil eden ve daha küçük parçalara ayrılamayan en küçük birim olarak tanımlanabilir. Bu tanımı gereği de her işlem yığını atomsal, tutarlı, yalıtılmış ve sürekli olmalıdır. 
 
 İşlem yığını içsel süreçlerinde oluşacak bir hata işlem bütünlüğünün geri sarılmasını (rollback), bu süreçlerin başarıyla tamamlanması ise bu bütünlüğün onaylanmasını (commit) gerektirir.
 
-Her AutoCAD dosyası (dwg) grafik ve grafik olmayan bilgilerin ya da nesnelerin tanımlarını içeren bir veritabanı dosyası olduğundan yukarıda anılan tüm öğeleri içerir. AutoCAD .NET programlamada da işlem yığını (transaction) diğer veritabanlarında olduğu gibi veritabanı işlemlerinin doğru sıra ve yetkiyle yapılıp yapılmadığını kontrol etmek için kullanılır.
+Her AutoCAD dosyası (dwg) grafik ve grafik olmayan bilgilerin ya da nesnelerin tanımlarını içeren bir veritabanı dosyası olduğu için yukarıda anılan tüm öğeleri içerir. AutoCAD .NET programlamada da işlem yığını (transaction), diğer veritabanlarında da olduğu gibi veritabanı işlemlerinin doğru sıra ve yetkiyle yapılıp yapılmadığını kontrol etmek için kullanılır.
 
 Basit bir AutoCAD .NET işlem yığınının işleyişi aşağıdaki gibidir:
 
@@ -35,7 +35,7 @@ using Autodesk.AutoCAD.Geometry;
 using Autodesk.AutoCAD.Runtime;
 ```
 
-AutoCAD .NET API, işlem yığınını, AutoCAD `DBObject` ve `Entity` örneklerini, açma, okuma, yazma vb. amaçlarla işlemek için ana mekanizma olarak sağlamaktadır. Yeni bir nesne oluştururken bu mekanizmanın işleyişi ana hatlarıyla aşağıdaki gibidir:
+AutoCAD .NET API, işlem yığınını, AutoCAD `DBObject` ve `Entity` örneklerini açma, okuma, yazma vb. amaçlarla işlemek için ana mekanizma olarak sağlamaktadır. Yeni bir AutoCAD nesnesi oluştururken bu mekanizmanın işleyişi aşağıdaki gibidir:
 
 - İşlem yığın yöneticisine erişim ve işlem yığınının başlatılması (StartTransaction)
 - Model ve kağıt çizim uzaylarını barındıran blok tablosuna okuma amaçlı erişilmesi (BlockTable)
@@ -118,7 +118,7 @@ public void TransactionSampleWithUsingKeyword()
 }
 ```
 
-Yukardaki örneklerden de kolayca anlaşılacağı üzere, okuma ya da yazma amaçlı tüm AutoCAD veritabanı işlemlerinde, işlem yığınlarının (transactions) kullanılmasının zorunlu olduğudur. Veritabanı okuma amaçlı erişimlerinin yazma amaçlı erişimlerden farkı ise işlem yığınının onaylanması gerekliliğinin bulunmamasıdır.
+Yukardaki örneklerden de kolayca anlaşılacağı üzere, okuma ya da yazma amaçlı tüm AutoCAD veritabanı işlemlerinde, işlem yığınlarının (transactions) kullanılmasının zorunlu olduğudur. Veritabanına okuma amaçlı erişimlerin yazma amaçlı erişimlerden farkı ise işlem yığınının onaylanması gerekliliğinin bulunmamasıdır.
 
 ### İşlem Yığını Kullanımında Dikkat Edilmesi Gerekenler
 

@@ -16,11 +16,7 @@ feature_row_1:
   - image_path: /assets/images/imp-xyz-header.png
     alt: "koordinat aktarım"
     title: "Koordinat Aktarım AutoCAD Eklentisi"
-    excerpt: "Metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD uygulamasıdır. Desteklediği AutoCAD sürümleri: 2013-2022. <ul>
-  <li>Dosyadan koordinat bilgisi aktarma ve çizdirme</li>
-  <li>Nokta, Daire ve Blok çizim nesnelerinden koordinat listesi oluşturma ve dışarı aktarma</li>
-  <li>Koordinat bilgilerinden tablo oluşturma</li>
-</ul> "
+    excerpt: "Metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD uygulamasıdır. Desteklediği AutoCAD sürümleri: 2013-2022. Dosyadan koordinat bilgisi aktarma ve çizdirme, Nokta, Daire ve Blok çizim nesnelerinden koordinat listesi oluşturma ve dışarı aktarma, Koordinat bilgilerinden tablo oluşturma."
     url: "import-coordinate"
     btn_label: "İncele ve İndir"
     btn_class: "btn--primary"

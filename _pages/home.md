@@ -8,10 +8,10 @@ feature_row:
   - image_path: /assets/images/autocad-net.png
     alt: "autocad net api ile programlama"
     title: "AutoCAD .NET API ile Programlama Kılavuzu"
-    excerpt: "Yeni başlayanlar ve uzmanlaşmak isteyenler için AutoCAD .NET uygulama arayüzünün C# programlama dili ile kullanımı. AutoCAD .NET API, en basit tanımıyla, ObjectARX C++ sınıﬂarının büyük bir çoğunluğunun .NET platformuna aktarılmış/açılmış halidir. ObjectARX’te olduğu gibi özel nesne tasarımını içermese de, yerleşik AutoCAD
+    excerpt: "Yeni başlayanlar ve uzmanlaşmak isteyenler için AutoCAD .NET uygulama arayüzünün C# programlama dili ile kullanımına dair kılavuzdur. AutoCAD .NET API, en basit tanımıyla, ObjectARX C++ sınıﬂarının büyük bir çoğunluğunun .NET platformuna aktarılmış/açılmış halidir. ObjectARX’te olduğu gibi özel nesne tasarımını içermese de, yerleşik AutoCAD
 nesnelerinin (line, polyline, text vb.) davranışını Overrule API ile değiştirmek mümkündür."
     url: "autocad-net-programming"
-    btn_label: "Oku"
+    btn_label: "Kılavuz Ana Sayfası"
     btn_class: "btn--primary"
 feature_row_1:
   - image_path: /assets/images/imp-xyz-header.png

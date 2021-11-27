@@ -3,11 +3,16 @@ title: "Koordinat Aktarım AutoCAD Eklentisi"
 permalink: /import-coordinate/
 author_profile: true
 ---
-**Koordinat Aktarım**, metin dosyalarından koordinat bilgilerini aktaran bir AutoCAD eklentisidir. Aşağıdaki okuma şablonlarını desteklemektedir.
+![Şekil-1](/assets/images/imp-xyz.png)
 
+**Koordinat Aktarım**, metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD eklentisidir. Aşağıdaki okuma şablonlarını desteklemektedir ve
+
+AutoCAD'in 2013-2022 arası sürümleri için derlenmiştir. Kurulum dosyası indirme bağlantısını aşağıda bulabilirsiniz.
 
 {% capture notice-1 %}
-* X Y ve X Y
+**Desteklenen okuma şablonları:**
+
+* X Y ve Y X
 * X Y Z ve Y X Z
 * ID X Y Z ve ID Y X Z,
 * X Y Z Red Green Blue ve Y X Z Red Green Blue
@@ -23,8 +28,7 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 {% capture notice-2 %}
 
 **Desteklenen tablo şablonları:**
-
-* X Y ve X Y
+* X Y ve Y X
 * X Y Z ve Y X Z
 * ID X Y ve ID Y X 
 * ID X Y Z ve ID Y X Z,
@@ -33,7 +37,7 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 <div class="notice">
 {{ notice-2 | markdownify }}
 </div>
-Programın diğer özellikleri:
+**Programın Diğer Özellikleri**
 
 - Nokta, Daire ve Blok çizim nesnelerinden koordinat listesi oluşturma ve dışarı aktarma
 - Dosyadan aktarımda koordinat değerleri için ayraç belirleme
@@ -44,7 +48,21 @@ Programın diğer özellikleri:
 - Kimlik numarası metni, daire ve daire blok için ölçek seçeneği
 - Kimlik numarasını önekle oluşturabilme
 - Nokta aktarım ve tablo satır değerleri için ondalık hassasiyet
-  
 
-[İletişim](https://eykaraduman.github.io/contact/){: .btn .btn--info}
+**Dosyadan Koordinat Bilgisi Aktarım**
+
+- Komut satırına *ImpXYZ* yazın.
+- Listenize uygun bir dosya okuma şablonu belirleyin.
+- Koordinat dosyasını seçerek içeri aktarın.
+- Daha sonra *Koordinat Yerleştir* tuşuna basarak noktaları seçmiş olduğunuz ayarlara göre çizdirin.
+- *Tablo Oluştur* tuşunu basarak aktardığınız koordinatlardan tablo oluşturun.
+
+**Dışarıya Koordinat Bilgisi Aktarma**
+
+- *Nesne Seç* tuşunu kullanarak Nokta, Daire ve Blok çizim nesneleri koordinat listesini oluşturun.
+- *Dosyaya Aktar* düğmesine basarak belirlediğiniz yazma şablonuna göre koordinatları dosyaya aktarın
+
+
+
+[Kurulum Dosyasını İndir](https://eykaraduman.github.io/contact/){: .btn .btn--info}
 

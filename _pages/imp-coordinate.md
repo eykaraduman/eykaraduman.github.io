@@ -18,9 +18,12 @@ author_profile: true
 <div class="notice">
 {{ notice-1 | markdownify }}
 </div>
-Ayrıca **Koordinat Aktarım**, aktardığı koordinat listelerinden, AutoCAD Tablo nesnelerini şu şablonlara göre oluşturabilmektedir:
+Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Circle Blok ya da Line olarak eklenebilmekte ve destelenen şablonlara göre AutoCAD Tablo nesneleri de oluşturulabilmektedir.
 
 {% capture notice-2 %}
+
+**Desteklenen tablo şablonları:**
+
 * X Y ve X Y
 * X Y Z ve Y X Z
 * ID X Y ve ID Y X 
@@ -30,6 +33,18 @@ Ayrıca **Koordinat Aktarım**, aktardığı koordinat listelerinden, AutoCAD Ta
 <div class="notice">
 {{ notice-2 | markdownify }}
 </div>
+Programın diğer özellikleri:
+
+- Koordinat değerleri için istenilen ayraca göre aktarım
+- RGB ile nokta yerleştirme (Sadece daire şekli için)
+- Otomatik kimlik numarası ekleme (Sadece daire ve daire blok için)
+- Kimlik numarası için metin hizalama seçenekleri
+- Şekil ve kimlik numarası metni için katman seçimi
+- Kimlik numarası metni, daire ve daire blok için ölçek seçeneği
+- Kimlik numarasını önekle oluşturabilme
+- Nokta aktarım ve tablo satır değerleri için hassasiyet
+- Ayarların kaydedilmesi
+  
 
 
 [İletişim](https://eykaraduman.github.io/contact/){: .btn .btn--info}

@@ -5,9 +5,7 @@ author_profile: true
 ---
 ![Şekil-1](/assets/images/imp-xyz.png)
 
-**Koordinat Aktarım**, metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD eklentisidir. Aşağıdaki okuma şablonlarını desteklemektedir ve
-
-AutoCAD'in 2013-2022 arası sürümleri için derlenmiştir. Kurulum dosyası indirme bağlantısını aşağıda bulabilirsiniz.
+**Koordinat Aktarım**, metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD eklentisidir. Aşağıdaki okuma şablonlarını desteklemektedir ve AutoCAD'in 2013-2022 arası sürümleri için derlenmiştir. Kurulum dosyası indirme bağlantısını aşağıda bulabilirsiniz.
 
 {% capture notice-1 %}
 **Desteklenen okuma şablonları:**
@@ -23,7 +21,7 @@ AutoCAD'in 2013-2022 arası sürümleri için derlenmiştir. Kurulum dosyası in
 <div class="notice">
 {{ notice-1 | markdownify }}
 </div>
-Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Circle Blok ya da Line olarak eklenebilmekte ve destelenen şablonlara göre AutoCAD Tablo nesneleri de oluşturulabilmektedir.
+Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Circle Block ya da Line olarak eklenebilmekte ve destelenen şablonlara göre AutoCAD Tablo nesneleri de oluşturulabilmektedir.
 
 {% capture notice-2 %}
 
@@ -37,9 +35,11 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 <div class="notice">
 {{ notice-2 | markdownify }}
 </div>
-**Programın Diğer Özellikleri**
+**Programın Özellikleri**
 
+- Dosyadan koordinat bilgisi aktarma ve çizdirme
 - Nokta, Daire ve Blok çizim nesnelerinden koordinat listesi oluşturma ve dışarı aktarma
+- Koordinat bilgilerinden tablo oluşturma
 - Dosyadan aktarımda koordinat değerleri için ayraç belirleme
 - RGB ile nokta yerleştirme (Sadece daire şekli için)
 - Otomatik kimlik numarası ekleme (Sadece daire ve daire blok için)
@@ -60,7 +60,7 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 **Dışarıya Koordinat Bilgisi Aktarma**
 
 - *Nesne Seç* tuşunu kullanarak Nokta, Daire ve Blok çizim nesneleri koordinat listesini oluşturun.
-- *Dosyaya Aktar* düğmesine basarak belirlediğiniz yazma şablonuna göre koordinatları dosyaya aktarın
+- *Dosyaya Aktar* tuşuna basarak belirlediğiniz yazma şablonuna göre koordinatları dosyaya yazdırın.
 
 
 

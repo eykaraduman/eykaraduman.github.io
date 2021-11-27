@@ -66,6 +66,9 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 - *Nesne Seç* tuşunu kullanarak Nokta, Daire ve Blok çizim nesneleri koordinat listesini oluşturun.
 - *Dosyaya Aktar* tuşuna basarak belirlediğiniz yazma şablonuna göre koordinatları dosyaya yazdırın.
 
+**Lisans:** *Koordinat Aktarım AutoCAD Eklentisi*, Creative Commons Attribution 4.0 Uluslararası Lisansı ile lisanslanmıştır. Bu lisansın bir kopyasını görüntülemek için  https://creativecommons.org/licenses/by/4.0/ adresini ziyaret edin.
+{: .notice--warning}
+
 **İndirme**
 
 [Kurulum Dosyasını İndir](https://eykaraduman.github.io/assets/downloads/ImportXYZ-2013-2022.exe){: .btn .btn--info}

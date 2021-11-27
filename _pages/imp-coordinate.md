@@ -35,17 +35,16 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 </div>
 Programın diğer özellikleri:
 
-- Koordinat değerleri için istenilen ayraca göre aktarım
+- Nokta, Daire ve Blok çizim nesnelerinden koordinat listesi oluşturma ve dışarı aktarma
+- Dosyadan aktarımda koordinat değerleri için ayraç belirleme
 - RGB ile nokta yerleştirme (Sadece daire şekli için)
 - Otomatik kimlik numarası ekleme (Sadece daire ve daire blok için)
 - Kimlik numarası için metin hizalama seçenekleri
-- Şekil ve kimlik numarası metni için katman seçimi
+- Çizim şekil ve kimlik numarası metni için katman seçimi
 - Kimlik numarası metni, daire ve daire blok için ölçek seçeneği
 - Kimlik numarasını önekle oluşturabilme
-- Nokta aktarım ve tablo satır değerleri için hassasiyet
-- Ayarların kaydedilmesi
+- Nokta aktarım ve tablo satır değerleri için ondalık hassasiyet
   
-
 
 [İletişim](https://eykaraduman.github.io/contact/){: .btn .btn--info}
 

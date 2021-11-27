@@ -7,7 +7,7 @@ author_profile: true
 **Koordinat Aktarım**, çeşitli desenlerle tanımlanmış metin dosyalarından koordinat bilgilerini aktaran bir AutoCAD eklentisidir.
 
 
-{% raw %}{% capture notice-2 %}
+{% capture notice-2 %}
 #### Desteklediği Okuma Şablonları
 
 * X Y ve X Y
@@ -16,9 +16,9 @@ author_profile: true
 * X Y Z Red Green Blue ve Y X Z Red Green Blue
 * X Y R (Yarıçap) ve Y X R (Yarıçap)
 * X Y Z R (Yarıçap) ve Y X Z R (Yarıçap)
-{% endcapture %}{% endraw %}
+{% endcapture %}
 
-<div class="notice">{% raw %}{{ notice-2 | markdownify }}{% endraw %}</div>
+<div class="notice">{{ notice-2 | markdownify }}</div>
 
 ####Desteklediği Tablo Şablonları
 

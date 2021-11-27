@@ -3,12 +3,10 @@ title: "Koordinat Aktarım AutoCAD Eklentisi"
 permalink: /import-coordinate/
 author_profile: true
 ---
-**Koordinat Aktarım**, çeşitli desenlerle tanımlanmış metin dosyalarından koordinat bilgilerini aktaran bir AutoCAD eklentisidir.
+**Koordinat Aktarım**, metin dosyalarından koordinat bilgilerini aktaran bir AutoCAD eklentisidir. Aşağıdaki okuma şablonlarını desteklemektedir.
 
 
 {% capture notice-1 %}
-#### Desteklediği Okuma Şablonları
-
 * X Y ve X Y
 * X Y Z ve Y X Z
 * ID X Y Z ve ID Y X Z,
@@ -20,16 +18,13 @@ author_profile: true
 <div class="notice">
 {{ notice-1 | markdownify }}
 </div>
-
-**Koordinat Aktarım**, aktardığı koordinat listelerinden AutoCAD Tablo nesneleri de oluşturabilmektedir.
+Ayrıca **Koordinat Aktarım**, aktardığı koordinat listelerinden, AutoCAD Tablo nesnelerini şu şablonlara göre oluşturabilmektedir:
 
 {% capture notice-2 %}
-#### Desteklediği Tablo Şablonları
-
 * X Y ve X Y
 * X Y Z ve Y X Z
 * ID X Y ve ID Y X 
-* * ID X Y Z ve ID Y X Z,
+* ID X Y Z ve ID Y X Z,
 {% endcapture %}
 
 <div class="notice">

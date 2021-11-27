@@ -1,6 +1,5 @@
 ---
 title: "Koordinat Aktarım AutoCAD Eklentisi"
-layout: post
 permalink: /import-coordinate/
 author_profile: true
 ---

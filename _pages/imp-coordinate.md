@@ -5,7 +5,9 @@ author_profile: true
 ---
 ![Şekil-1](/assets/images/imp-xyz.png)
 
-**Koordinat Aktarım**, metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD eklentisidir. Aşağıdaki okuma şablonlarını desteklemektedir ve AutoCAD'in 2013-2022 arası sürümleri için derlenmiştir. Kurulum dosyası indirme bağlantısını aşağıda bulabilirsiniz.
+**Koordinat Aktarım**, metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD eklentisidir. Aşağıdaki okuma şablonlarını desteklemektedir ve AutoCAD'in 2013-2022 arası sürümleri için derlenmiştir. 
+
+Kurulum dosyası indirme bağlantısını aşağıda bulabilirsiniz.
 
 {% capture notice-1 %}
 **Desteklenen okuma şablonları:**
@@ -26,6 +28,7 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 {% capture notice-2 %}
 
 **Desteklenen tablo şablonları:**
+
 * X Y ve Y X
 * X Y Z ve Y X Z
 * ID X Y ve ID Y X 
@@ -62,7 +65,7 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 - *Nesne Seç* tuşunu kullanarak Nokta, Daire ve Blok çizim nesneleri koordinat listesini oluşturun.
 - *Dosyaya Aktar* tuşuna basarak belirlediğiniz yazma şablonuna göre koordinatları dosyaya yazdırın.
 
-
+**İndirme**
 
 [Kurulum Dosyasını İndir](https://eykaraduman.github.io/contact/){: .btn .btn--info}
 

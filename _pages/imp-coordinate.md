@@ -2,6 +2,7 @@
 title: "Koordinat Aktarım AutoCAD Eklentisi"
 permalink: /import-coordinate/
 author_profile: true
+comments: true
 ---
 ![Şekil-1](/assets/images/imp-xyz.png)
 
@@ -67,5 +68,5 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 
 **İndirme**
 
-[Kurulum Dosyasını İndir](https://eykaraduman.github.io/contact/){: .btn .btn--info}
+[Kurulum Dosyasını İndir](https://eykaraduman.github.io/){: .btn .btn--info}
 

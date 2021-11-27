@@ -10,8 +10,18 @@ feature_row:
     title: "AutoCAD .NET API ile Programlama Kılavuzu"
     excerpt: 'Yeni başlayanlar ve uzmanlaşmak isteyenler için AutoCAD .NET uygulama arayüzünün C# programlama dili ile kullanımı.'
     url: "autocad-net-programming"
-    btn_label: "Devamı"
+    btn_label: "Oku"
+    btn_class: "btn--primary"
+feature_row_1:
+  - image_path: /assets/images/imp-xyz-header.png
+    alt: "koordinat aktarım"
+    title: "Koordinat Aktarım AutoCAD Eklentisi"
+    excerpt: 'Metin dosyalarından koordinat bilgilerini aktaran basit bir AutoCAD uygulaması.'
+    url: "import-coordinate"
+    btn_label: "İncele"
     btn_class: "btn--primary"
 ---
 
 {% include feature_row id="feature_row" type="left" %}
+
+{% include feature_row id="feature_row_1" type="left" %}

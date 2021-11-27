@@ -68,5 +68,5 @@ Aktarılan koordinat listeleri, çizime Point, Polyline, Polyline3d, Circle, Cir
 
 **İndirme**
 
-[Kurulum Dosyasını İndir](https://eykaraduman.github.io/){: .btn .btn--info}
+[Kurulum Dosyasını İndir](https://eykaraduman.github.io/assets/downloads/ImportXYZ-2013-2022.exe){: .btn .btn--info}
 

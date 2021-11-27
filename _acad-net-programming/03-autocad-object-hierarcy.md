@@ -40,4 +40,4 @@ E -.-> I2[...]
 
 ### Application Nesnesi
 
-Application nesnesi, AutoCAD. NET API'de ana nesnedir
+Application nesnesi, AutoCAD. NET API'de ana nesnedir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizimlerin veritabanlarına ulaşılabilir.

@@ -18,7 +18,9 @@ author_profile: true
 * X Y Z R (Yarıçap) ve Y X Z R (Yarıçap)
 {% endcapture %}
 
-<div class="notice">{{ notice-2 | markdownify }}</div>
+<div class="notice">
+{{ notice-2 | markdownify }}
+</div>
 
 ####Desteklediği Tablo Şablonları
 

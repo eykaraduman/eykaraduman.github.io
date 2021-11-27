@@ -1,6 +1,7 @@
 ---
-permalink: /import-coordinate/
 title: "Koordinat Aktarım AutoCAD Eklentisi"
+layout: post
+permalink: /import-coordinate/
 author_profile: true
 ---
 **Koordinat Aktarım**, çeşitli desenlerle tanımlanmış metin dosyalarından koordinat bilgilerini aktaran bir AutoCAD eklentisidir.

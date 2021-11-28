@@ -17,7 +17,7 @@ Bir nesne, AutoCAD .NET API'sinin ana yapı taşıdır. AutoCAD .NET API'de bir�
 - Çizimin görünümüyle ilgili olanlar (View, Viewport)
 - AutoCAD uygulaması ve çizimi
 
-Nesneler, AutoCAD `Application` nesnesi en başta olacak şekilde hiyerarşik bir şekilde dizilmiştir. Bu hiyerarşik yapıya Nesne Modeli denir. Aşağıdaki gösterim, AutoCAD nesneleri arasındaki temel ilişkileri göstermektedir. AutoCAD .NET API'de burada gösterilmeyen daha birçok nesne bulunmaktadır.
+Nesneler, AutoCAD `Application` nesnesi en başta olacak şekilde hiyerarşik bir şekilde dizilmiştir. Bu hiyerarşik yapıya Nesne Modeli denir. Aşağıdaki gösterim, AutoCAD nesneleri arasındaki temel ilişkileri göstermektedir. AutoCAD .NET API burada gösterilmeyen daha birçok nesne barındırmaktadır.
 
 <div class="mermaid">
 graph TD
@@ -42,3 +42,17 @@ E -.-> I2[...]
 ### Application Nesnesi
 
 Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanlarına ulaşılabilir.
+
+|||
+| ---------------------------- | --------------- |
+| **DocumentManager**    |   Açık çizimlere ait doküman nesnelerini içerir.   |
+| **DocumentWindowCollection** | Her dokümana ait doküman pencerelerini içerir. |
+| **MainWindow** | AutoCAD uygulama penceresinin referansını içerir. |
+| **MenuBar** | AutoCAD menü çubuğu COM nesnesine referansı içerir. |
+| **MenuGroups** |                 |
+| **Preferences** | Seçenekler diyalog kutusuna erişime ve seçenekleri değiştirmeye imkan sağlar. |
+| **StatusBar** | AutoCAD durum çubuğu nesnesidir. |
+| **Publisher** | Çizimlerin yayınlanmasına hizmet eden nesnedir. |
+| **InfoCenter** |                 |
+| **UserConfigurationManager** | Kayıtlı profillerle çalışmaya izin veren nesnedir. |
+

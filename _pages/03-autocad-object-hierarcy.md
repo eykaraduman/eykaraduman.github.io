@@ -47,16 +47,17 @@ Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla
 | ---------------------------- | --------------- |
 | **DocumentManager**    |   Açık çizimlere ait doküman nesnelerini içerir.   |
 | **DocumentWindowCollection** | Her dokümana ait doküman pencerelerini içerir. |
-| **MainWindow** | AutoCAD uygulama penceresinin referansını içerir. |
-| **MenuBar** | AutoCAD menü çubuğu COM nesnesine referansı içerir. |
-| **MenuGroups** |                 |
+| **MainWindow** | AutoCAD uygulama penceresinin referansıdır. |
+| **MenuBar** | AutoCAD menü çubuğu COM nesnesinin referansıdır |
+| **MenuGroups** | AutoCAD menü grupları COM nesnesinin referansıdır. Menü grubu, yüklenmiş CUIx dosyalarının özelleştirme grup adlarını içerir. |
 | **Preferences** | Seçenekler diyalog kutusuna erişime ve seçenekleri değiştirmeye imkan sağlar. |
 | **StatusBar** | AutoCAD durum çubuğu nesnesidir. |
 | **Publisher** | Çizimlerin yayınlanmasına hizmet eden nesnedir. |
-| **InfoCenter** |                 |
+| **InfoCenter** | Bilgi merkezi araç menüsü referansıdır. |
 | **UserConfigurationManager** | Kayıtlı profillerle çalışmaya izin veren nesnedir. |
 
 #### Application Nesnesine Erişim
 
-var AcadApp = Autodesk.AutoCAD.ApplicationServices.Application; {: .notice--warning}
+var AcadApp = Autodesk.AutoCAD.ApplicationServices.Application;
+{: .notice--warning}
 

@@ -41,7 +41,7 @@ E -.-> I2[...]
 
 ### Application Nesnesi
 
-Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanlarına ulaşılabilir. Application nesnesi, `Autodesk.AutoCAD.ApplicationServices` isim uzayında yer alır.
+Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanlarına ulaşılabilir. Application nesnesi, `Autodesk.AutoCAD.ApplicationServices` isim uzayında yer alır.
 
 |||
 | ---------------------------- | --------------- |
@@ -58,6 +58,5 @@ Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla
 
 #### Application Nesnesine Erişim
 
-var AcadApp = Autodesk.AutoCAD.ApplicationServices.Application;{: .notice--warning}
-
+var AcadApp = Autodesk.AutoCAD.ApplicationServices.Application; {: .notice--warning}
 

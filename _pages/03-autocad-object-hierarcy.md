@@ -58,6 +58,13 @@ Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla
 
 #### Application Nesnesine Erişim
 
-var AcadApp = Autodesk.AutoCAD.ApplicationServices.Application;
+Aşağıda verilen kod parçası Application nesnesine ulaşarak AutoCAD uygulamasının major sürüm değerini verecektir. Örneğin AutoCAD 2013 sürümü için bu değer 19'dur.
+
+var majorVersion = Autodesk.AutoCAD.ApplicationServices.Application.Version.Major;
 {: .notice--warning}
 
+Application nesnesi ayrıca bazı önemli yordamlar da içermektedir:
+
+- Menü yordamları; `LoadMainMenu`, `LoadPartialMenu`, `ReloadAllMenus`, `UnloadPartialMenu`
+- .Net Framework ile oluşturulan Form ve WPF Window'ları gösteren yordamlar; `ShowModelessDialog`, `ShowModalDialog`
+- Sürükle-bırak için kullanılan `DragDrop` yordamı

@@ -1,6 +1,6 @@
 ---
-title: "AutoCAD Nesne Hiyerarşisi"
-permalink: /autocad-net-programming/autocad-object-hierarcy/
+title: "AutoCAD Nesne Modeli"
+permalink: /autocad-net-programming/autocad-object-model/
 toc: true
 classes: wide
 comments: true
@@ -9,12 +9,12 @@ sidebar:
   title: "AutoCAD .NET API ile Programlama"
   nav: autocadnet-programming-tutorial
 ---
-AutoCAD .NET API'de birçok farklı nesne türü bulunmaktadır. Bu nesnelerin bazıları şunlardır: 
+AutoCAD .NET API'de birçok farklı nesne türü barındırmaktadır. Bu nesnelerin bazıları şunlardır: 
 
 - Çizgiler, yaylar, metinler ve ölçülendirmeler gibi grafiksel nesneler 
 - Katman, çizgi tipi ve ölçülendirme stilleri 
 - Katmanlar, gruplar ve bloklar gibi düzenleyici yapılar
-- Çizimin görünümüyle ilgili olanlar (View, Viewport)
+- Çizimin görünümüyle ilgili nesneler (View, Viewport)
 - AutoCAD uygulaması ve çizimi
 
 Nesneler, AutoCAD `Application` nesnesi en başta olacak şekilde hiyerarşik bir şekilde dizilmiştir. Bu hiyerarşik yapıya *Nesne Modeli* denir. Aşağıdaki gösterim, AutoCAD nesneleri arasındaki temel ilişkileri göstermektedir. AutoCAD .NET API, aşağıda gösterilenlerin dışında nesneler de barındırmaktadır.
@@ -54,7 +54,7 @@ Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla
 | **StatusBar** | AutoCAD StatusBar (durum çubuğu) nesnesidir. |
 | **Publisher** | Çizimlerin yayınlanmasına hizmet eden nesnedir. |
 | **InfoCenter** | Bilgi merkezi araç menüsü referansıdır. |
-| **UserConfigurationManager** | Kayıtlı profillerle çalışmaya izin veren nesnedir. |
+| **UserConfigurationManager** | Kullanıcı profilleriyle çalışmaya izin veren nesnedir. |
 
 #### Application Nesnesine Erişim
 
@@ -77,7 +77,7 @@ Application nesnesi ayrıca bazı önemli yordamlar da içermektedir:
 
 `Editor` nesnesi, kullanıcılardan bilgi toplamak için kullanılmaktadır. 
 
-şlem yığını yöneticisi (TransactionManager nesnesi) ise tek bir işlem (transaction) altında birden çok veritabanı nesnesine erişmek için kullanılır.
+İşlem yığını yöneticisi (TransactionManager nesnesi) ise tek bir işlem (transaction) altında birden çok veritabanı nesnesine erişmek için kullanılır.
 
 <div class="mermaid">
 graph TD
@@ -97,7 +97,7 @@ C --- D7[Window]
 Document doc = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument;
 ```
 
-AutoCAD etkin doküman nesnesine yukarıdaki kod parçasıyla ulaşılabilr.
+AutoCAD etkin doküman nesnesine yukarıdaki kod parçasıyla ulaşılabilir.
 
 ### Database Nesnesi
 
@@ -110,7 +110,6 @@ Mevcut dokümanın veritabanı nesnesine, doküman nesnesinin veritabanı üye �
 ```c#
 Database db1 = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument.Database;
 Database db2 = Autodesk.AutoCAD.DatabaseServices.HostApplicationServices.WorkingDatabase;
-
 ```
 
 ### Grafiksel ve Grafiksel Olmayan Nesneler
@@ -132,13 +131,17 @@ Yeni bir sembol tablosu kaydı oluşturmak için ilgilenilen tablo türünün `A
 
 Diğer bir grafiksel olmayan nesnelerden biri de sözlüklerdir. Sözlük, herhangi bir AutoCAD nesnesini veya bir XRecord'u içerebilen kapsayıcı bir nesnedir. Sözlükler ya adlandırılmış nesne sözlüğü ya da bir sembol tablo kaydının/grafiksel varlığın uzantı sözlüğü (extension dictionary) olarak saklanır. Adlandırılmış nesne sözlüğüne (NOD) bir sözlük eklemek için `SetAt` yordamını kullanmak gerekir.
 
-Adlandırılmış nesne sözlüğü, veritabanıyla ilişkili tüm diğer sözlükler için ana tablodur. Sembol tablolarından farklı olarak, yeni sözlükler oluşturulabilir. Sözlükler çizim varlıklarını içeremezler. Ancak çizim varlıkları sözlüklerde `Handle`'ları  (değişmez kimlikleri) aracılığıyla saklanabilmektedir.
+Adlandırılmış nesne sözlüğü (NOD), veritabanıyla ilişkili tüm diğer sözlükler için ana tablodur. Sembol tablolarından farklı olarak, yeni sözlükler oluşturulabilir. Sözlükler çizim varlıklarını içeremezler. Ancak çizim varlıkları sözlüklerde `Handle`'ları  (değişmez kimlikleri) aracılığıyla saklanabilmektedir.
+
+![Şekil-1](/assets/images/default-dwg-nod.png)
+
+<figcaption>Varsayılan .dwg dosyasının içerdiği adlandırılmış nesne sözlükleri</figcaption>
 
 ### Koleksiyon Nesneleri
 
-AutoCAD veritabanı/çizimi, çoğu grafiksel ve grafiksel olmayan nesneyi koleksiyonlar veya depolama (container) nesneleri halinde gruplandırır. Bu nesneler farklı türde veriler içermesine rağmen, kullanımlarını ve öğrenmelerini kolaylaştırmak için ortak yöntem ve özellikleri içerir. `Count` özelliği ve `Item` işlevi bunların bir örneğidir. 
+AutoCAD veritabanı/çizimi, çoğu grafiksel ve grafiksel olmayan nesneyi koleksiyonlar veya depolama (container) nesneleri halinde gruplandırır. Bu nesneler farklı türde veriler içermesine rağmen, kullanımlarını ve öğrenmelerini kolaylaştırmak için ortak yöntem ve özellikler içerir. `Count` özelliği ve `Item` işlevi bunların bir örneğidir. 
 
-AutoCAD .NET API'sindeki koleksiyon üyelerine aşağadakiler örnek olarak verilebilir: 
+AutoCAD .NET API'sindeki koleksiyon üyelerine aşağıdakiler örnek olarak verilebilir: 
 
 - Katman sembol tablosundaki (LayerTable) katman kaydı (LayerTableRecord)
 - ACAD_LAYOUT sözlüğündeki Layout

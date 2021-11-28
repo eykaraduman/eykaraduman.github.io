@@ -1,9 +1,10 @@
 ---
 title: "AutoCAD Nesne Hiyerarşisi"
 permalink: /autocad-net-programming/autocad-object-hierarcy/
+toc: true
 classes: wide
 comments: true
-published: false
+published: true
 sidebar:
   title: "AutoCAD .NET API ile Programlama"
   nav: autocadnet-programming-tutorial
@@ -40,4 +41,4 @@ E -.-> I2[...]
 
 ### Application Nesnesi
 
-Application nesnesi, AutoCAD. NET API'de ana nesnedir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizimlerin veritabanlarına ulaşılabilir.
+Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanlarına ulaşılabilir.

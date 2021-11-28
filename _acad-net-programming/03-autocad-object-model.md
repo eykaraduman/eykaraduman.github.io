@@ -1,5 +1,5 @@
 ---
-title: "AutoCAD Nesne Modeli"
+title: "AutoCAD .NET API Nesne Modeli"
 permalink: /autocad-net-programming/autocad-object-model/
 toc: true
 classes: wide

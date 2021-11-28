@@ -63,8 +63,6 @@ Aşağıda verilen kod parçası Application nesnesine ulaşarak AutoCAD uygulam
 ```
 var majorVersion = Autodesk.AutoCAD.ApplicationServices.Application.Version.Major;
 ```
-{: .notice--warning}
-
 Application nesnesi ayrıca bazı önemli yordamlar da içermektedir:
 
 - Menü yordamları; `LoadMainMenu`, `LoadPartialMenu`, `ReloadAllMenus`, `UnloadPartialMenu`
@@ -79,16 +77,51 @@ Application nesnesi ayrıca bazı önemli yordamlar da içermektedir:
 
 Veritabanı nesnesi, tüm grafiksel ve grafiksel olmayan AutoCAD nesnelerinin çoğunu içerir. Veritabanında bulunan nesnelerden bazıları varlıklar (entity), sembol tabloları ve adlandırılmış sözlüklerdir. Veritabanındaki varlıklar, bir çizim içindeki grafik nesneleri temsil eder. Çizgiler, daireler, yaylar, metinler, taramalar ve çoklu çizgiler varlık örnekleridir.
 
+#### Database Nesnesine Erişim
+
 Mevcut dokümanın veritabanı nesnesine, doküman nesnesinin veritabanı üye özelliği ile erişlir.
 
 ```c#
 Application.DocumentManager.MdiActiveDocument.Database
 ```
 
-#### Database Nesnesine Erişim
+#### 
 
 ### Grafik ve Grafik Olmayan Nesneler
 
-#### Sembol Tabloları ve Sözlükler
+Varlıklar olarak da bilinen grafik nesneler, bir çizimi oluşturan görünür nesnelerdir (çizgiler, daireler, metinler vb.). Bir çizime grafik nesneleri eklemek için, doğru blok tablo kaydına ulaşılmalı ve ardından da  `AppendEntity` yöntemi kullanılarak çizime yeni nesneler eklenmelidir. 
+
+// ekleme örneği
+
+Nesneleri değiştirmek ya da sorgulamak içinse, ModelSpace/PaperSpace blok tablosu kaydı üzerinden nesnelerin referansına ulaşmak gerekir. Her grafik nesne, Kopyala, Sil, Taşı, Aynala, Döndür gibi AutoCAD düzenleme komutu işlevlerini gerçekleştiren yöntemlere sahiptir. 
+
+// nesne üzerinde işlem örneği
+
+Bu nesneler genişletilmiş veriler (xdata)  içerebilir ve başka bir varlığın özelliklerini de sahiplenebilir. Çoğu grafik nesnesi, `ObjectId`,  `LayerId`, `LinetypeId`, `Color` ve `Hande` gibi bazı ortak özelliklere sahiptir. 
+
+*Grafiksel olmayan nesneler*, katmanlar, çizgi tipleri, ölçülendirme stilleri, tablo stilleri gibi bir çizimin parçası olan ancak görünmeyen nesnelerdir. Bu nesneler sembol tabloları olarak adlandırılmıştır ve bir veritabanına yeni sembol tabloları eklenemez.
+
+Yeni bir sembol tablosu kaydı oluşturmak için, ilgilenilen tablosunun `Add` yordamı kullanılır.
+
+// sembol tablo add
+
+
+
+Adlandırılmış nesne sözlüğüne (NOD) bir sözlük eklemek için `SetAt` yordamını kullanmak gerekir.
+
+// nod setat örnek
+
+Sözlük, herhangi bir AutoCAD nesnesini veya bir XRecord'u içerebilen kapsayıcı bir nesnedir. Sözlükler ya veritabanında adlandırılmış nesne sözlüğü altında ya da bir tablo kaydının/grafiksel varlığın uzantı sözlüğü (extension dictionary) olarak saklanır. Adlandırılmış nesne sözlüğü, bir veritabanıyla ilişkili tüm sözlükler için ana tablodur. Sembol tablolarından farklı olarak, yeni sözlükler oluşturulabilir ve bu sözlük adlandırılmış nesne sözlüğüne eklenebilir. Sözlükler çizim varlıklarını içeremez. Ancak çizim varlıkları sözlüklerde `Handle`'ları  (değişmez kimlikleri) aracılığıyla saklanabilir.
 
 ### Koleksiyon Nesneleri
+
+AutoCAD, çoğu grafiksel ve grafiksel olmayan nesneyi koleksiyonlar veya depolama (container) nesneleri halinde gruplandırır. Bu nesneler farklı türde veriler içermesine rağmen, kullanımlarını ve öğrenmelerini kolaylaştırmak için ortak yöntem ve özellikleri içerir. `Count` özelliği ve `Item` işlevi bunların bir örneğidir. 
+
+// item, count örneği
+
+AutoCAD .NET API'sindeki koleksiyon üyelerine aşağadakiler örnek olarak verilebilir: 
+
+- Katmanlar sembol tablosundaki katman tablosu kaydı A
+- CAD_LAYOUT sözlüğündeki Layout
+- DocumentCollection'daki Document
+- Bir blok referansındaki nitelikler (atttibutes)

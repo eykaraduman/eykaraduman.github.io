@@ -11,13 +11,13 @@ sidebar:
 ---
 Bir nesne, AutoCAD .NET API'sinin ana yapı taşıdır. AutoCAD .NET API'de birçok farklı nesne türü vardır. AutoCAD .NET API'de temsil edilen nesnelerden bazıları şunlardır: 
 
-- Çizgiler, yaylar, metin ve ölçülendirmeler gibi grafik nesneler 
+- Çizgiler, yaylar, metin ve ölçülendirmeler gibi grafiksel nesneler 
 - Katman, çizgi tipi ve ölçülendirme stilleri 
-- Katmanlar, gruplar ve bloklar gibi düzenleyisi yapılar
+- Katmanlar, gruplar ve bloklar gibi düzenleyici yapılar
 - Çizimin görünümüyle ilgili olanlar (View, Viewport)
 - AutoCAD uygulaması ve çizimi
 
-Nesneler, AutoCAD `Application` nesnesi en başta olacak şekilde hiyerarşik bir şekilde dizilmiştir. Bu hiyerarşik yapıya Nesne Modeli denir. Aşağıdaki gösterim, AutoCAD nesneleri arasındaki temel ilişkileri göstermektedir. AutoCAD .NET API burada gösterilmeyen daha birçok nesne barındırmaktadır.
+Nesneler, AutoCAD `Application` nesnesi en başta olacak şekilde hiyerarşik bir şekilde dizilmiştir. Bu hiyerarşik yapıya *Nesne Modeli* denir. Aşağıdaki gösterim, AutoCAD nesneleri arasındaki temel ilişkileri göstermektedir. AutoCAD .NET API burada gösterilmeyen daha birçok nesne barındırmaktadır.
 
 <div class="mermaid">
 graph TD
@@ -58,18 +58,37 @@ Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla
 
 #### Application Nesnesine Erişim
 
-Aşağıda verilen kod parçası Application nesnesine ulaşarak AutoCAD uygulamasının major sürüm değerini verecektir. Örneğin AutoCAD 2013 sürümü için bu değer 19'dur.
+Aşağıdaki kod parçası Application nesnesine ulaşarak AutoCAD uygulamasının major sürüm değerini verecektir. Örneğin AutoCAD 2013 sürümü için bu değer 19'dur.
 
 ```
 var majorVersion = Autodesk.AutoCAD.ApplicationServices.Application.Version.Major;
 ```
 Application nesnesi ayrıca bazı önemli yordamlar da içermektedir:
 
-- Menü yordamları; `LoadMainMenu`, `LoadPartialMenu`, `ReloadAllMenus`, `UnloadPartialMenu`
-- .Net Framework ile oluşturulan Form ve WPF Window'ları gösteren yordamlar; `ShowModelessDialog`, `ShowModalDialog`, `ShowModelessWindow`, `ShowModalWindow`
+- `LoadMainMenu`, `LoadPartialMenu`, `ReloadAllMenus`, `UnloadPartialMenu` gibi menü işlemleri ile ilgili olan yordamlar
+- `ShowModelessDialog`, `ShowModalDialog`, `ShowModelessWindow`, `ShowModalWindow` gibi kullancı ara yüzüyle ilgili olan yordamlar
 - Sürükle-bırak için kullanılan `DragDrop` yordamı
 
 ### Document Nesnesi
+
+Aslında bir AutoCAD çizimi olan `Document` nesnesi, `DocumentCollection` nesnesinin bir parçasıdır. Çizim dosyalarını oluşturmak, açmak ve kapatmak için `DocumentExtension` ve `DocumentCollectionExtention` nesneleri kullanılır. `Document` nesnesi ile tüm grafiksel ve grafiksel olmayan AutoCAD nesnelerinin çoğunu içeren `Database` nesnesine erişilebilmektedir. 
+
+`Database` ve `Document` nesneleri ile durum çubuğuna, belgenin açıldığı pencereye, `Editor` ve `TransactionManager` nesnelerine ulaşılabilir. 
+
+`Editor` nesnesi, kullanıcılardan bilgi toplamak için kullanılmaktadır. İşlem yığını yöneticisi (TransactionManager nesnesi), tek bir işlem (transaction) altında birden çok veritabanı nesnesine erişmek için kullanılır.
+
+<div class="mermaid">
+graph TD
+A(Application) ---B[DocumentManager]
+B --- C[Document]
+C --- D1[Database]
+C --- D2[Editor]
+C --- D3[GraphicsManager]
+C --- D4[Statusbar]
+C --- D5[TransactionManager]
+C --- D6[UserData]
+C --- D7[Window]
+</div>
 
 #### Document Nesnesine Erişim
 
@@ -84,8 +103,6 @@ Mevcut dokümanın veritabanı nesnesine, doküman nesnesinin veritabanı üye �
 ```c#
 Application.DocumentManager.MdiActiveDocument.Database
 ```
-
-#### 
 
 ### Grafik ve Grafik Olmayan Nesneler
 

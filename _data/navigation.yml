@@ -20,6 +20,8 @@ autocadnet-programming-tutorial:
          url: /autocad-net-programming/autocad-net-api-nedir/
        - title: "AutoCAD .NET Eklentisi Oluşturma"
          url: /autocad-net-programming/create-project-from-stratch/ 
+       - title: "AutoCAD .NET API Nesne Modeli"
+         url: /autocad-net-programming/autocad-object-model/                  
    - title: "Nesnelerle Çalışma"
      children:
        - title: "İşlem Yığınları (Transactions)"

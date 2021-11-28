@@ -41,7 +41,7 @@ E -.-> I2[...]
 
 ### Application Nesnesi
 
-Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanlarına ulaşılabilir. Application nesnesi, `Autodesk.AutoCAD.ApplicationServices` isim uzayında yer alır.
+Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanlarına ulaşılabilir. Application nesnesi, `Autodesk.AutoCAD.ApplicationServices` ve `Autodesk.AutoCAD.ApplicationServices.Core` isim uzaylarında yer alır.
 
 |||
 | ---------------------------- | --------------- |
@@ -60,11 +60,35 @@ Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla
 
 Aşağıda verilen kod parçası Application nesnesine ulaşarak AutoCAD uygulamasının major sürüm değerini verecektir. Örneğin AutoCAD 2013 sürümü için bu değer 19'dur.
 
+```
 var majorVersion = Autodesk.AutoCAD.ApplicationServices.Application.Version.Major;
+```
 {: .notice--warning}
 
 Application nesnesi ayrıca bazı önemli yordamlar da içermektedir:
 
 - Menü yordamları; `LoadMainMenu`, `LoadPartialMenu`, `ReloadAllMenus`, `UnloadPartialMenu`
-- .Net Framework ile oluşturulan Form ve WPF Window'ları gösteren yordamlar; `ShowModelessDialog`, `ShowModalDialog`
+- .Net Framework ile oluşturulan Form ve WPF Window'ları gösteren yordamlar; `ShowModelessDialog`, `ShowModalDialog`, `ShowModelessWindow`, `ShowModalWindow`
 - Sürükle-bırak için kullanılan `DragDrop` yordamı
+
+### Document Nesnesi
+
+#### Document Nesnesine Erişim
+
+### Database Nesnesi
+
+Veritabanı nesnesi, tüm grafiksel ve grafiksel olmayan AutoCAD nesnelerinin çoğunu içerir. Veritabanında bulunan nesnelerden bazıları varlıklar (entity), sembol tabloları ve adlandırılmış sözlüklerdir. Veritabanındaki varlıklar, bir çizim içindeki grafik nesneleri temsil eder. Çizgiler, daireler, yaylar, metinler, taramalar ve çoklu çizgiler varlık örnekleridir.
+
+Mevcut dokümanın veritabanı nesnesine, doküman nesnesinin veritabanı üye özelliği ile erişlir.
+
+```c#
+Application.DocumentManager.MdiActiveDocument.Database
+```
+
+#### Database Nesnesine Erişim
+
+### Grafik ve Grafik Olmayan Nesneler
+
+#### Sembol Tabloları ve Sözlükler
+
+### Koleksiyon Nesneleri

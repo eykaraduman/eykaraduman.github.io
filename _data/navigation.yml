@@ -28,4 +28,8 @@ autocadnet-programming-tutorial:
          url: /autocad-net-programming/autocad-net-transactions/
        - title: "Blok Tabloları ve Blok Tablo Kayıtları"
          url: /autocad-net-programming/autocad-netblock-tables/
+       - title: "Grafiksel Nesnelerin Oluşturulması"
+         url: /autocad-net-programming/creating-entities/               
+       - title: "Dönüşümler"
+         url: /autocad-net-programming/transformations/         
   

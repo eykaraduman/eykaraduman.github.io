@@ -37,7 +37,7 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 
 ### İçerik ve Kapsam
 
-- [x] AutoCAD .NET API'ye genel bir bakış: AutoCAD .NET API nedir?
+- [x] Genel bir bakış: AutoCAD .NET API nedir?
 - [x] Microsoft Visual Studio ile AutoCAD eklentisinin oluşturulması
 - [x] AutoCAD .NET API nesne modeli
   - [x] Application, Document ve Database nesneleri
@@ -45,14 +45,14 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
   - [x] Koleksiyon nesneleri
 - [x] İşlem Yığınları (Transactions)
 - [x] Blok tabloları ve blok tablo kayıtları
-- [ ] AutoCAD.NET API ile komutlar
-- [ ] AutoCAD.NET API ile AutoCAD grafik nesnelerin oluşturulması
-- [ ] AutoCAD nesneleri üzerinde işlemler
-  - [ ] AutoCAD .NET API ile dönüşüm matrisler
+- [ ] Komutlar
+- [ ] Grafiksel nesnelerin oluşturulması
+- [ ] Nesneler üzerinde işlemler
+  - [ ] Dönüşüm matrisleri
   - [ ] Nesneleri kopyalama, taşıma, döndürme, ölçekleme, aynalama ve silme
-- [ ] AutoCAD yerleşik sözlükleri (Katmanlar, Çizgi Tipleri, Metin Stilleri vb.)
-- [ ] AutoCAD'de veri saklama yöntemleri (XData ve NOD'lar)
-- [ ] Kullanıcı giriş yordamları
+- [ ] Yerleşik sözlükler (Katman tabloları, çizgi tipleri, çetin stilleri vb.)
+- [ ] Veri saklama yöntemleri (XData, ExtensionDictionary ve NOD')
+- [ ] Kullanıcıdan giriş bilgisi toplama
 - [ ] Seçim setlerinin oluşturulması ve filtreleme
 - [ ] AutoCAD. NET API ile olaylar
 - [ ] AutoCAD .NET API ile WPF kullanımı

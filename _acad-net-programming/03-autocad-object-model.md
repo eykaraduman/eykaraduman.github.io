@@ -13,7 +13,7 @@ AutoCAD .NET API'de birçok farklı nesne türü barındırmaktadır. Bu nesnele
 
 - Çizgiler, yaylar, metinler ve ölçülendirmeler gibi grafiksel nesneler 
 - Katman, çizgi tipi ve ölçülendirme stilleri (sembol tabloları)
-- Katmanlar, gruplar ve bloklar gibi düzenleyici ve gruplayan yapılar
+- Katmanlar, gruplar ve bloklar gibi düzenleyici ve gruplandırıcı yapılar
 - Çizimin görünümüyle ilgili nesneler (View, Viewport)
 - AutoCAD uygulaması ve çizimi
 
@@ -120,21 +120,21 @@ Circle circle = new Circle {Center = new Point3d(0.0, 0.0, 0.0), Radius = 10.0};
 ObjectId circleId = blockTableRecord.AppendEntity(circle);
 ```
 
-Nesneleri değiştirmek ya da sorgulamak içinse, ModelSpace/PaperSpace blok tablosu kaydı üzerinden nesnelerin referansılarına ulaşmak gerekir. Her grafiksel nesne; kopyalama, silme, taşıma, aynalama ve döndürme gibi AutoCAD düzenleme komutu işlevlerini destekleyen ortak dönüşüm fonksiyonlarına sahiptir. AutoCAD .NET API de düzenleme işleveri, dönüşüm matrisleri ve varlıkların`TransforBy` yordamı kullanılarak yerine getirilir.
+Nesneleri değiştirmek ya da sorgulamak içinse, ModelSpace/PaperSpace blok tablosu kaydı üzerinden nesnelerin referansılarına ulaşmak gerekir. Her grafiksel nesne; kopyalama, silme, taşıma, aynalama ve döndürme gibi AutoCAD düzenleme komutu işlevlerini destekleyen ortak dönüşüm fonksiyonlarına sahiptir. AutoCAD .NET API de düzenleme işlemleri, dönüşüm matrisleri ve varlıkların`TransforBy` yordamı kullanılarak yerine getirilir.
 
 Ayrıca varlıklar (entity) ve nesneler (objects) genişletilmiş veriler (extented data/xdata)  içerebileceği gibi başka bir varlığın özelliklerini de sahiplenebilirler. Çoğu grafiksel nesne, `ObjectId`,  `LayerId`, `LinetypeId`, `Color` ve `Hande` gibi bazı ortak özelliklere sahiptir. 
 
-*Grafiksel olmayan nesneler*, katmanlar, çizgi tipleri, ölçülendirme stilleri, tablo stilleri gibi bir çizimin parçası olan ancak görünmeyen nesnelerdir. Bu nesneler *sembol tabloları* olarak adlandırılmıştır. Yeni bir sembol tablosu oluşturmak mümkün değildir. Yeni bir sembol tablosu kaydı oluşturmak için ilgilenilen tablo türünün `Add` yordamı kullanılır.
+*Grafiksel olmayan nesneler*; katmanlar, çizgi tipleri, ölçülendirme stilleri, tablo stilleri gibi bir çizimin parçası olan ancak görünmeyen nesnelerdir. Bu nesneler *sembol tabloları* olarak adlandırılmıştır. Yeni bir sembol tablosu oluşturmak mümkün değildir. 
 
-AutoCAD .NET API'de önemli nesnelerden bir diğeri ise *sözlüklerdir*. Sözlükler de grafiksel olmayan nesnelerdendir. Sözlük, herhangi bir AutoCAD nesnesini (object) veya bir XRecord'u içerebilen kapsayıcı bir nesnedir. Sözlükler veritabanında, adlandırılmış nesne sözlüğü (NOD) ya da uzantı sözlüğü (extension dictionary) olarak saklanır. 
+AutoCAD .NET API'de önemli nesnelerden bir diğeri ise *sözlüklerdir*. Sözlükler de grafiksel olmayan nesnelerdendir. Sözlük, herhangi bir AutoCAD nesnesini (object) ya d bir XRecord'u içerebilen kapsayıcı bir nesnedir. Sözlükler veritabanında, adlandırılmış nesne sözlüğü (NOD) ya da uzantı sözlüğü (extension dictionary) olarak saklanır. 
 
-Adlandırılmış nesne sözlüğü (NOD), veritabanıyla ilişkili tüm diğer sözlükler için ana tablodur. Sembol tablolarından farklı olarak, NOD altında yeni sözlükler oluşturulabilir. 
-
-Sözlükler çizim varlıklarını (entity) içeremezler. Ancak çizim varlıkları sözlüklerde, varlıkların `Handle`(değişmez kimlik) özelliği aracılığıyla saklanabilmektedir.
+Adlandırılmış nesne sözlüğü (NOD), veritabanıyla ilişkili tüm diğer sözlükler için ana tablodur. (Bkz. Şekil-1) Sembol tablolarından farklı olarak, NOD altında yeni sözlükler oluşturulabilir. 
 
 ![Şekil-1](/assets/images/default-dwg-nod.png)
 
-<figcaption>Varsayılan .dwg dosyasının içerdiği adlandırılmış nesne sözlükleri</figcaption>
+<figcaption>Şekil-1: Varsayılan .dwg dosyasının içerdiği adlandırılmış nesne sözlükleri</figcaption>
+
+Sözlükler çizim varlıklarını (entities) içeremezler. Ancak çizim varlıkları, varlıkların `Handle` (değişmez kimlik) özelliği kullanılarak sözlüklerde saklamak için çeşitli yollar bulunmaktadır.
 
 ### Koleksiyon Nesneleri
 

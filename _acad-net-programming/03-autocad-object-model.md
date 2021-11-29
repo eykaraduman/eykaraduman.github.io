@@ -12,12 +12,12 @@ sidebar:
 AutoCAD .NET API'de birçok farklı nesne türü barındırmaktadır. Bu nesnelerin bazıları şunlardır: 
 
 - Çizgiler, yaylar, metinler ve ölçülendirmeler gibi grafiksel nesneler 
-- Katman, çizgi tipi ve ölçülendirme stilleri 
-- Katmanlar, gruplar ve bloklar gibi düzenleyici yapılar
+- Katman, çizgi tipi ve ölçülendirme stilleri (sembol tabloları)
+- Katmanlar, gruplar ve bloklar gibi düzenleyici ve gruplayan yapılar
 - Çizimin görünümüyle ilgili nesneler (View, Viewport)
 - AutoCAD uygulaması ve çizimi
 
-Nesneler, AutoCAD `Application` nesnesi en başta olacak şekilde hiyerarşik bir şekilde dizilmiştir. Bu hiyerarşik yapıya *Nesne Modeli* denir. Aşağıdaki gösterim, AutoCAD nesneleri arasındaki temel ilişkileri göstermektedir. AutoCAD .NET API, aşağıda gösterilenlerin dışında nesneler de barındırmaktadır.
+Nesneler, `Application` nesnesi en başta olacak şekilde hiyerarşik bir şekilde dizilmiştir. Bu hiyerarşik yapıya *Nesne Modeli* denir. Aşağıdaki gösterim, AutoCAD nesneleri arasındaki temel ilişkileri göstermektedir. AutoCAD .NET API, aşağıda gösterilenlerin dışında bir çok farklı nesne de barındırmaktadır.
 
 <div class="mermaid">
 graph TD
@@ -41,7 +41,7 @@ E -.-> I2[...]
 
 ### Application Nesnesi
 
-Application nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanına ulaşılabilir. Application nesnesi, `Autodesk.AutoCAD.ApplicationServices` ve `Autodesk.AutoCAD.ApplicationServices.Core` isim uzaylarında yer alır.
+`Autodesk.AutoCAD.ApplicationServices` ve `Autodesk.AutoCAD.ApplicationServices.Core` isim uzaylarında yer alan `Application` nesnesi, AutoCAD. NET API kök nesnesidir. Bu nesne aracılığıyla AutoCAD ana penceresine ve çizim veritabanına ulaşılabilmektedir.
 
 |Application Nesnesinin İçerdikleri||
 | ---------------------------- | --------------- |
@@ -65,17 +65,16 @@ var majorVersion = Autodesk.AutoCAD.ApplicationServices.Application.Version.Majo
 ```
 Application nesnesi ayrıca bazı önemli yordamlar da içermektedir:
 
-- `LoadMainMenu`, `LoadPartialMenu`, `ReloadAllMenus`, `UnloadPartialMenu` gibi menü işlemleri ile ilgili olanlar
-- `ShowModelessDialog`, `ShowModalDialog`, `ShowModelessWindow`, `ShowModalWindow` gibi kullancı ara yüzüyle ilgili olanlar
-- Sürükle-bırak için kullanılan `DragDrop` yordamı
+- `LoadMainMenu`, `LoadPartialMenu`, `ReloadAllMenus`, `UnloadPartialMenu` (menü işlemleri)
+- `ShowModelessDialog`, `ShowModalDialog`, `ShowModelessWindow`, `ShowModalWindow` (kullancı ara yüzüyle işlemleri)
 
 ### Document Nesnesi
 
- `Document` nesnesi aslında bir AutoCAD çizimidir ve `DocumentCollection` nesnesinin bir parçasıdır. Çizim dosyalarını oluşturmak, açmak ve kapatmak için `DocumentExtension` ve `DocumentCollectionExtention` nesneleri kullanılır. `Document` nesnesi ile tüm grafiksel ve grafiksel olmayan AutoCAD nesnelerinin çoğunu içeren `Database` nesnesine erişilebilmektedir. 
+`Document` nesnesi aslında bir AutoCAD çizimidir ve `DocumentCollection` nesnesinin bir parçasıdır. Çizim dosyalarını oluşturmak, açmak ve kapatmak için `DocumentExtension` ve `DocumentCollectionExtention` nesneleri kullanılır. `Document` nesnesi ile tüm grafiksel ve grafiksel olmayan AutoCAD nesnelerin içeren `Database` nesnesine erişmek mümkündür. 
 
-`Database` ve `Document` nesneleri ile durum çubuğuna, belgenin açıldığı pencereye, `Editor` ve `TransactionManager` nesnelerine ulaşılabilir. 
+`Database` ve `Document` nesneleri ile durum çubuğuna (StatusBar), belgenin açıldığı pencereye (Window), `Editor` ve `TransactionManager` nesnelerine ulaşılabilir. 
 
-`Editor` nesnesi, kullanıcılardan bilgi toplamak için kullanılmaktadır. 
+`Editor` nesnesi, kullanıcılardan string, int, double, point vb. türlerde bilgi toplamak için kullanılmaktadır. 
 
 İşlem yığını yöneticisi (TransactionManager nesnesi) ise tek bir işlem (transaction) altında birden çok veritabanı nesnesine erişmek için kullanılır.
 
@@ -101,11 +100,11 @@ AutoCAD etkin doküman nesnesine yukarıdaki kod parçasıyla ulaşılabilir.
 
 ### Database Nesnesi
 
-Veritabanı nesnesi, tüm grafiksel ve grafiksel olmayan AutoCAD nesnelerinin çoğunu içerir. Veritabanında bulunan nesnelerden bazıları varlıklar (entity), sembol tabloları (symbol tables) ve adlandırılmış sözlüklerdir (named object dictionary). Veritabanındaki varlıklar, bir çizim içindeki grafik nesneleri temsil eder. Çizgiler, daireler, yaylar, metinler, taramalar ve çoklu çizgiler varlık örnekleridir.
+Veritabanı (Database) nesnesi, tüm grafiksel ve grafiksel olmayan AutoCAD nesnelerin içerir. Veritabanında bulunan nesnelerden bazıları varlıklar (entity), sembol tabloları (symbol tables) ve adlandırılmış sözlüklerdir (named object dictionaries). Veritabanındaki varlıklar, bir çizim içindeki grafik nesneleri temsil eder. Çizgiler, daireler, yaylar, metinler, taramalar ve çoklu çizgiler varlık örnekleridir.
 
 #### Database Nesnesine Erişim
 
-Mevcut dokümanın veritabanı nesnesine, doküman nesnesinin veritabanı üye özelliği ile erişilir.
+Mevcut dokümanın veritabanı nesnesine, `Document` nesnesinin `Database` üye özelliği ile erişilir. Aşağıdaki kod parçası bu reişimin iki faklı yolunu göstermektedir.
 
 ```c#
 Database db1 = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument.Database;
@@ -114,24 +113,24 @@ Database db2 = Autodesk.AutoCAD.DatabaseServices.HostApplicationServices.Working
 
 ### Grafiksel ve Grafiksel Olmayan Nesneler
 
-Varlıklar olarak da bilinen grafiksel nesneler, bir çizimi oluşturan görünür nesnelerdir (çizgiler, daireler, metinler vb.dir). Bir çizime grafiksel nesneleri eklemek için, doğru blok tablo kaydına ulaşılmalı ve ardından da  `AppendEntity` yöntemi kullanılarak çizime yeni nesneler eklenmelidir. 
+Varlıklar olarak da bilinen grafiksel nesneler, bir çizimi oluşturan görünür nesnelerdir (çizgiler, daireler, metinler vb.dir). Bir çizime grafiksel nesneleri eklemek için, doğru blok tablo kaydına (ModelSapace ya da PaperSpace) ulaşılmalı ve ardından da  `AppendEntity` yöntemi kullanılarak nesneler çizime eklenmelidir. 
 
 ```
 Circle circle = new Circle {Center = new Point3d(0.0, 0.0, 0.0), Radius = 10.0};
 ObjectId circleId = blockTableRecord.AppendEntity(circle);
 ```
 
-Nesneleri değiştirmek ya da sorgulamak içinse, ModelSpace/PaperSpace blok tablosu kaydı üzerinden nesnelerin referansına ulaşmak gerekir. Her grafiksel nesne, Kopyala, Sil, Taşı, Aynala, Döndür gibi AutoCAD düzenleme komutu işlevlerini gerçekleştiren yöntemlere sahiptir. AutoCAD .NET API terminolojisinde bu yöntemlerin genel adı dönüşümlerdir . Bu yöntemlerin uygulanmasında dönüşüm matrisleri ve varlıkların`TransforBy` yordamı kullanılır.
+Nesneleri değiştirmek ya da sorgulamak içinse, ModelSpace/PaperSpace blok tablosu kaydı üzerinden nesnelerin referansılarına ulaşmak gerekir. Her grafiksel nesne; kopyalama, silme, taşıma, aynalama ve döndürme gibi AutoCAD düzenleme komutu işlevlerini destekleyen ortak dönüşüm fonksiyonlarına sahiptir. AutoCAD .NET API de düzenleme işleveri, dönüşüm matrisleri ve varlıkların`TransforBy` yordamı kullanılarak yerine getirilir.
 
-Ayrıca varlıklar ve nesneler genişletilmiş veriler (extented data/xdata)  içerebileceği gibi başka bir varlığın özelliklerini de sahiplenebilirler. Çoğu grafiksel nesne, `ObjectId`,  `LayerId`, `LinetypeId`, `Color` ve `Hande` gibi bazı ortak özelliklere sahiptir. 
+Ayrıca varlıklar (entity) ve nesneler (objects) genişletilmiş veriler (extented data/xdata)  içerebileceği gibi başka bir varlığın özelliklerini de sahiplenebilirler. Çoğu grafiksel nesne, `ObjectId`,  `LayerId`, `LinetypeId`, `Color` ve `Hande` gibi bazı ortak özelliklere sahiptir. 
 
-*Grafiksel olmayan nesneler*, katmanlar, çizgi tipleri, ölçülendirme stilleri, tablo stilleri gibi bir çizimin parçası olan ancak görünmeyen nesnelerdir. Bu nesneler sembol tabloları olarak adlandırılmıştır. Yeni bir sembol tablosu oluşturmak mümkün değildir.
+*Grafiksel olmayan nesneler*, katmanlar, çizgi tipleri, ölçülendirme stilleri, tablo stilleri gibi bir çizimin parçası olan ancak görünmeyen nesnelerdir. Bu nesneler *sembol tabloları* olarak adlandırılmıştır. Yeni bir sembol tablosu oluşturmak mümkün değildir. Yeni bir sembol tablosu kaydı oluşturmak için ilgilenilen tablo türünün `Add` yordamı kullanılır.
 
-Yeni bir sembol tablosu kaydı oluşturmak için ilgilenilen tablo türünün `Add` yordamı kullanılır.
+AutoCAD .NET API'de önemli nesnelerden bir diğeri ise *sözlüklerdir*. Sözlükler de grafiksel olmayan nesnelerdendir. Sözlük, herhangi bir AutoCAD nesnesini (object) veya bir XRecord'u içerebilen kapsayıcı bir nesnedir. Sözlükler veritabanında, adlandırılmış nesne sözlüğü (NOD) ya da uzantı sözlüğü (extension dictionary) olarak saklanır. 
 
-Diğer bir grafiksel olmayan nesnelerden biri de sözlüklerdir. Sözlük, herhangi bir AutoCAD nesnesini veya bir XRecord'u içerebilen kapsayıcı bir nesnedir. Sözlükler ya adlandırılmış nesne sözlüğü ya da bir sembol tablo kaydının/grafiksel varlığın uzantı sözlüğü (extension dictionary) olarak saklanır. Adlandırılmış nesne sözlüğüne (NOD) bir sözlük eklemek için `SetAt` yordamını kullanmak gerekir.
+Adlandırılmış nesne sözlüğü (NOD), veritabanıyla ilişkili tüm diğer sözlükler için ana tablodur. Sembol tablolarından farklı olarak, NOD altında yeni sözlükler oluşturulabilir. 
 
-Adlandırılmış nesne sözlüğü (NOD), veritabanıyla ilişkili tüm diğer sözlükler için ana tablodur. Sembol tablolarından farklı olarak, yeni sözlükler oluşturulabilir. Sözlükler çizim varlıklarını içeremezler. Ancak çizim varlıkları sözlüklerde `Handle`'ları  (değişmez kimlikleri) aracılığıyla saklanabilmektedir.
+Sözlükler çizim varlıklarını (entity) içeremezler. Ancak çizim varlıkları sözlüklerde, varlıkların `Handle`(değişmez kimlik) özelliği aracılığıyla saklanabilmektedir.
 
 ![Şekil-1](/assets/images/default-dwg-nod.png)
 
@@ -139,7 +138,7 @@ Adlandırılmış nesne sözlüğü (NOD), veritabanıyla ilişkili tüm diğer 
 
 ### Koleksiyon Nesneleri
 
-AutoCAD veritabanı/çizimi, çoğu grafiksel ve grafiksel olmayan nesneyi koleksiyonlar veya depolama (container) nesneleri halinde gruplandırır. Bu nesneler farklı türde veriler içermesine rağmen, kullanımlarını ve öğrenmelerini kolaylaştırmak için ortak yöntem ve özellikler içerir. `Count` özelliği ve `Item` işlevi bunların bir örneğidir. 
+AutoCAD veritabanı/çizimi, çoğu grafiksel ve grafiksel olmayan nesneyi, koleksiyonlar ya da depolama (container) nesneleri halinde gruplandırır. Bu nesneler farklı türde veriler içermesine rağmen, kullanımlarını ve öğrenilmelerini kolaylaştırmak için ortak yöntem ve özellikler içerecek şekilde tasarlanmıştır. `Count` özelliği ve `Item` işlevi bu durumun bir örneğidir. 
 
 AutoCAD .NET API'sindeki koleksiyon üyelerine aşağıdakiler örnek olarak verilebilir: 
 

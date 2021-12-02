@@ -14,7 +14,7 @@ sidebar:
 
 ### Çok Kullanılan Geometri Yapıları
 
-####Point3d
+#### Point3d
 
 Pointd3d yapısı, AutoCAD varlıkları yaratılırken yaygın olarak kullanılan basit bir nesnedir. Üç farklı kurucuya sahiptir.
 
@@ -32,7 +32,7 @@ Point3d pntB = new Point3d(4.0, 0.0, 0.0);
 Line line = new Line(pntA, pntB);
 ```
 
-####Vector3d
+#### Vector3d
 
 Vector3d yapısı, doğrultu işlemleri için kullanılır. Kurucuları Point3d ile benzerdir.
 

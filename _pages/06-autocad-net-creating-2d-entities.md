@@ -54,6 +54,7 @@ public void DrawLine1()
 	Document doc = Application.DocumentManager.MdiActiveDocument;
 	Database db = doc.Database;
 	
+
 	// İşlem yığınının başlatılması
 	using (Transaction tr = doc.TransactionManager.StartTransaction())
 	{
@@ -77,4 +78,10 @@ public void DrawLine1()
 }
 {% endhighlight %}
 
-10-13 numaralı kod satırları çizgiyi oluşturulmakta ve 15-17 numaralı kod satırları ise çizgiyi çizim veritabanına eklemektedir.
+16-19numaralı kod satırları çizgiyi oluşturulmakta ve 21-26 numaralı kod satırları ise çizgiyi çizim veritabanına eklemektedir.
+
+DrawLine1 yordamında şu noktaları gözden kaçırmamak gerek:
+
+- Blok tablosu ve blok tablo kaydına erişirken `GetObject` yordamı kullanılmalıdır.
+- Eğer çizim veritabanına bir nesne ekleyeceksek ModelSpace ya da PaperSpace  blok tablo kaydına yazma amaçlı  erişmemiz gerektiğidir. Ancak okuma amaçlı erişilmiş blok tablo kaydına her zaman `btr.UpgradeOpen()` yordamını kullanrak yazma amaçlı erişmek mümkündür.
+

@@ -80,8 +80,8 @@ public void DrawLine1()
 
 16-19numaralı kod satırları çizgiyi oluşturulmakta ve 21-26 numaralı kod satırları ise çizgiyi çizim veritabanına eklemektedir.
 
-DrawLine1 yordamında şu noktaları gözden kaçırmamak gerek:
+*DrawLine1* yordamında şu noktaları gözden kaçırmamak gerek:
 
 - Blok tablosu ve blok tablo kaydına erişirken `GetObject` yordamı kullanılmalıdır.
-- Eğer çizim veritabanına bir nesne ekleyeceksek ModelSpace ya da PaperSpace  blok tablo kaydına yazma amaçlı  erişmemiz gerektiğidir. Ancak okuma amaçlı erişilmiş blok tablo kaydına her zaman `btr.UpgradeOpen()` yordamını kullanrak yazma amaçlı erişmek mümkündür.
+- Eğer çizim veritabanına bir nesne ekleyeceksek ModelSpace ya da PaperSpace  blok tablo kaydına yazma amaçlı  erişmemiz gerektiğidir. Ancak okuma amaçlı erişilmiş blok tablo kaydına her zaman `btr.UpgradeOpen()` yordamını kullanrak yazma amaçlı erişmek de mümkündür.
 

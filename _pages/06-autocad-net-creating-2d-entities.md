@@ -1,5 +1,5 @@
 ---
-title: "2B Varlıkların Oluşturulması"
+title: "2B (2D) Varlıkların (Entities) Oluşturulması"
 permalink: /autocad-net-programming/creating-2d-entities/
 classes: wide
 comments: true
@@ -9,4 +9,37 @@ sidebar:
   nav: autocadnet-programming-tutorial
 ---
 
-İşlem Yığınları ve Dönüşümler adlı bölümlerde , ModelSpace'e nasıl çizim yapılacağına dair basit örnekler vermiştik. 2B varlıkların oluşturulmasına geçmeden önce, ilerleyen kısımlarda sıkça kullanacağımız Point3d ve Vector3d sınıflarını tanımak faydalı olacaktır.
+İşlem Yığınları ve Dönüşümler adlı bölümlerde , ModelSpace'e nasıl çizim yapılacağına dair basit örnekler vermiştik. 2B varlıkların oluşturulmasına geçmeden önce, ilerleyen kısımlarda sıkça kullanacağımız `Point3d` ve `Vector3d` yapılarını tanımak faydalı olacaktır. Bu yapılar`Autodesk.AutoCAD.Geometry` isim uzayında yer almaktadır.
+
+**Point3d**
+
+Pointd3d yapısı, AutoCAD varlıkları yaratılırken yaygın olarak kullanılan basit bir nesnedir. Üç farklı kurucuya sahiptir.
+
+```c#
+public Point3d(PlanarEntity plane, Point2d point);
+public Point3d(double[] xyz);
+public Point3d(double x, double y, double z); // x,y ve z koordinatları ile 3B bir nokta oluşturur
+```
+
+Bir çok AutoCAD varlığının Point3d türünde özellikleri bulunmaktadır. `Line` nesnesinin başlangıç ve bitiş noktaları bunun örneğidir. Aşağıdaki kod parçası, üç birim uzunluğunda yatay bir çizgi oluşturacaktır. Çizginin görünebilmesi için daha önce gösterildiği gibi çizginin, ModelSpace ya da PaperSpace blok tablo kaydına eklenmesi gereklidir.
+
+```c#
+Point3d pntA = new Point3d(1.0, 0.0, 0.0);
+Point3d pntB = new Point3d(4.0, 0.0, 0.0);
+Line line = new Line(pntA, pntB);
+```
+
+**Vector3d**
+
+Vector3d yapısı, doğrultu işlemleri için kullanılır. Kurucuları Point3d ile benzerdir.
+
+```c#
+public Vector3d(PlanarEntity plane, Vector2d vector2d);
+public Vector3d(double[] xyz);
+public Vector3d(double x, double y, double z);
+```
+
+Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
+
+### Çizgi (Line) Oluşturulması
+

@@ -4,14 +4,17 @@ permalink: /autocad-net-programming/creating-2d-entities/
 classes: wide
 comments: true
 published: true
+toc: true
 sidebar:
   title: "AutoCAD .NET API ile Programlama"
   nav: autocadnet-programming-tutorial
 ---
 
-İşlem Yığınları ve [Dönüşümler](/autocad-net-programming/transformations/) adlı bölümlerde , ModelSpace'e nasıl çizim yapılacağına dair basit örnekler vermiştik. 2B varlıkların oluşturulmasına geçmeden önce, ilerleyen kısımlarda sıkça kullanacağımız `Point3d` ve `Vector3d` yapılarını tanımak faydalı olacaktır. Bu yapılar`Autodesk.AutoCAD.Geometry` isim uzayında yer almaktadır.
+[İşlem Yığınları](/autocad-net-programming/autocad-net-transactions/) ve [Dönüşümler](/autocad-net-programming/transformations/) adlı bölümlerde , ModelSpace'e nasıl çizim yapılacağına dair basit örnekler vermiştik. 2B varlıkların oluşturulmasına geçmeden önce, ilerleyen kısımlarda sıkça kullanacağımız `Point3d` ve `Vector3d` yapılarını tanımak faydalı olacaktır. Bu yapılar`Autodesk.AutoCAD.Geometry` isim uzayında yer almaktadır.
 
-**Point3d**
+### Çok Kullanılan Geometri Yapıları
+
+####Point3d
 
 Pointd3d yapısı, AutoCAD varlıkları yaratılırken yaygın olarak kullanılan basit bir nesnedir. Üç farklı kurucuya sahiptir.
 
@@ -29,7 +32,7 @@ Point3d pntB = new Point3d(4.0, 0.0, 0.0);
 Line line = new Line(pntA, pntB);
 ```
 
-**Vector3d**
+####Vector3d
 
 Vector3d yapısı, doğrultu işlemleri için kullanılır. Kurucuları Point3d ile benzerdir.
 
@@ -65,4 +68,4 @@ public void DrawLine1()
 }
 {% endhighlight %}
 
-10-13 numaralı satırlar arasında `Line` nesnesi oluşturulmakta ve15-17 numaralı satırlar arasında ise çizime eklenmektedir.
+10-13 numaralı kod satırları çizgiyi oluşturulmakta ve 15-17 numaralı kod satırları ise çizgiyi çizim veritabanına eklemektedir.

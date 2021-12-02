@@ -67,7 +67,7 @@ public void DrawLine1()
 
 
 
-{% highlight csharp %}
+{% highlight csharp linenos%}
 public void DrawLine1()
 {
 	Document doc = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument;

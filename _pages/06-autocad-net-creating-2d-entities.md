@@ -47,24 +47,33 @@ Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
 ### Çizgi (Line) Oluşturulması
 
 {% highlight csharp linenos %}
+[CommandMethod("DrawLine1")]
 public void DrawLine1()
 {
-	Document doc = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument;
+	// Aktif doküman ve veritabanı erişim
+	Document doc = Application.DocumentManager.MdiActiveDocument;
 	Database db = doc.Database;
-	TransactionManager trMan = doc.TransactionManager;
-	using (Transaction tr = trMan.StartTransaction())
+	
+	// İşlem yığınının başlatılması
+	using (Transaction tr = doc.TransactionManager.StartTransaction())
 	{
+		// Blok tablosunun okuma amaçlı ve
+		// ModelSpace blok tablosu kaydının ise yazma amaçlı açılması 
 		BlockTable bt = (BlockTable)db.BlockTableId.GetObject(OpenMode.ForRead);
-		BlockTableRecord btr = (BlockTableRecord)trMan.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite);
+		BlockTableRecord btr = (BlockTableRecord)doc.TransactionManager.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite);
+		
 		// Çizgi nesnesinin oluşturulması
 		Point3d startPnt = new Point3d(1.0, 0.0, 0.0);
 		Point3d endPnt = new Point3d(4.0, 0.0, 0.0);
 		Line line= new Line(startPnt, endPnt);
 		
+		// Çizginin blok tablo kaydına eklenmesi
 		btr.AppendEntity(line);
+		// Çizginin işlme yığınına eklenmesi
 		tr.AddNewlyCreatedDBObject(line, true);
+		// İşlem yığınının onaylanması
 		tr.Commit();
-	}
+	} // İşlem yığınının sonlandırılması
 }
 {% endhighlight %}
 

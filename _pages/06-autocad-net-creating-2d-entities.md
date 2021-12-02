@@ -60,7 +60,7 @@ public void DrawLine1()
 		Point3d startPnt = new Point3d(1.0, 0.0, 0.0);
 		Point3d endPnt = new Point3d(4.0, 0.0, 0.0);
 		Line line= new Line(startPnt, endPnt);
-
+		
 		btr.AppendEntity(line);
 		tr.AddNewlyCreatedDBObject(line, true);
 		tr.Commit();

@@ -43,3 +43,48 @@ Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
 
 ### Çizgi (Line) Oluşturulması
 
+```c#
+public void DrawLine1()
+{
+	Document doc = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument;
+	Database db = doc.Database;
+	TransactionManager trMan = doc.TransactionManager;
+	using (Transaction tr = trMan.StartTransaction())
+	{
+		BlockTable bt = (BlockTable)db.BlockTableId.GetObject(OpenMode.ForRead);
+		BlockTableRecord btr = (BlockTableRecord)trMan.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite);
+		// Çizgi nesnesinin oluşturulması
+		Point3d startPnt = new Point3d(1.0, 0.0, 0.0);
+		Point3d endPnt = new Point3d(4.0, 0.0, 0.0);
+		Line line= new Line(startPnt, endPnt);
+
+		btr.AppendEntity(line);
+		tr.AddNewlyCreatedDBObject(line, true);
+		tr.Commit();
+	}
+}
+```
+
+
+
+{% highlight csharp %}
+public void DrawLine1()
+{
+	Document doc = Autodesk.AutoCAD.ApplicationServices.Core.Application.DocumentManager.MdiActiveDocument;
+	Database db = doc.Database;
+	TransactionManager trMan = doc.TransactionManager;
+	using (Transaction tr = trMan.StartTransaction())
+	{
+		BlockTable bt = (BlockTable)db.BlockTableId.GetObject(OpenMode.ForRead);
+		BlockTableRecord btr = (BlockTableRecord)trMan.GetObject(bt[BlockTableRecord.ModelSpace], OpenMode.ForWrite);
+		// Çizgi nesnesinin oluşturulması
+		Point3d startPnt = new Point3d(1.0, 0.0, 0.0);
+		Point3d endPnt = new Point3d(4.0, 0.0, 0.0);
+		Line line= new Line(startPnt, endPnt);
+
+		btr.AppendEntity(line);
+		tr.AddNewlyCreatedDBObject(line, true);
+		tr.Commit();
+	}
+}
+{% endhighlight %}

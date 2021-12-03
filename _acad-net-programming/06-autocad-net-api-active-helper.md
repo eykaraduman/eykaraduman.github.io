@@ -67,5 +67,5 @@ Artık doküman, veritabanı ve editör nesnelerine kolayca erişebiliriz:
 ```c#
 var doc = Active.Document;
 var db = Active.Database;
-var doc = Active.Editor;
+var ed = Active.Editor;
 ```

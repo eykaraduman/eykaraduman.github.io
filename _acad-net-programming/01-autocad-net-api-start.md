@@ -46,12 +46,13 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 - [x] İşlem Yığınları (Transactions)
 - [x] Blok tabloları ve blok tablo kayıtları
 - [ ] Komutlar
+- [x] AutoCAD çalışma zamanı ortam yardımcısı (Active.cs)
 - [ ] Grafiksel nesnelerin oluşturulması
 - [x] Nesneler üzerinde işlemler
   - [x] Dönüşüm matrisleri
   - [x] Nesneleri kopyalama, taşıma, döndürme, ölçekleme, aynalama ve silme
 - [ ] Yerleşik sözlükler (Katman tabloları, çizgi tipleri, çetin stilleri vb.)
-- [ ] Veri saklama yöntemleri (XData, ExtensionDictionary ve NOD')
+- [ ] Veri saklama yöntemleri (XData, ExtensionDictionary ve NOD)
 - [ ] Kullanıcıdan giriş bilgisi toplama
 - [ ] Seçim setlerinin oluşturulması ve filtreleme
 - [ ] AutoCAD. NET API ile olaylar

@@ -46,7 +46,8 @@ Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
 
 ### Çizgi (Line) Oluşturulması
 
-5. ve 6. satırlarda erişilen doküman ve veritabanı nesneleri [Active](/autocad-net-programming/runtime-active-helper/) sınıfında tanımlanmıştır.
+5 ve 6. satırlarda erişilen doküman ve veritabanı nesneleri [Active](/autocad-net-programming/runtime-active-helper/) sınıfında tanımlanmıştır.
+{: .notice}
 
 {% highlight csharp linenos %}
 [CommandMethod("DrawLine1")]

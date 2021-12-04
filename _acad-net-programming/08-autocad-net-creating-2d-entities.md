@@ -50,12 +50,9 @@ Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
 
 `Line` nesnesinin iki adet kurucusu vardır.
 
-```pseudocode
+```
 public Line()
-    Member of Autodesk.AutoCAD.DatabaseServices.Line
-
 public Line(Autodesk.AutoCAD.Geometry.Point3d pointer1, Autodesk.AutoCAD.Geometry.Point3d pointer2)
-    Member of Autodesk.AutoCAD.DatabaseServices.Line
 ```
 
 #### Çizgi (Line) Oluşturulması-1

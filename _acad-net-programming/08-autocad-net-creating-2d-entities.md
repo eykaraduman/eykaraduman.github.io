@@ -44,7 +44,21 @@ public Vector3d(double x, double y, double z);
 
 Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
 
-### Çizgi (Line) Oluşturulması-1
+### AutoCAD Line Nesnesi
+
+#### Kurucular
+
+`Line` nesnesinin iki adet kurucusu vardır.
+
+```pseudocode
+public Line()
+    Member of Autodesk.AutoCAD.DatabaseServices.Line
+
+public Line(Autodesk.AutoCAD.Geometry.Point3d pointer1, Autodesk.AutoCAD.Geometry.Point3d pointer2)
+    Member of Autodesk.AutoCAD.DatabaseServices.Line
+```
+
+#### Çizgi (Line) Oluşturulması-1
 
 5 ve 6. satırlarda erişilen doküman ve veritabanı nesneleri [Active](/autocad-net-programming/runtime-active-helper/) sınıfında tanımlanmıştır.
 {: .notice--warning}
@@ -109,3 +123,29 @@ public void DrawLine1Yeni()
 }
 ```
 
+#### Çizgi (Line) Oluşturulması-2 (Dikdörtgen Çizdirilmesi)
+
+```c#
+[CommandMethod("DrawLines")]
+public void DrawLine2()
+{
+	double width = 5.0;
+	double height = 2.5;
+
+	Point3d pnt1 = new Point3d(0.0, 0.0, 0.0);
+	Point3d pnt2 = pnt1 + new Vector3d(width, 0.0, 0.0);
+	Point3d pnt3 = pnt2 + new Vector3d(0.0, height, 0.0);
+	Point3d pnt4 = pnt1 + new Vector3d(0.0, height, 0.0);
+
+	List<Line> lines = new List<Line>
+	{
+		new Line(pnt1, pnt2),
+		new Line(pnt2, pnt3),
+		new Line(pnt1, pnt4),
+		new Line(pnt3, pnt4)
+	};
+	lines.AddToModelSpace();
+}
+```
+
+`DrawLine2` yordamı genişliği 5, yüksekliği 2.5 birim bir dikdörtgenin kenar çizgilerini oluşturacaktır.

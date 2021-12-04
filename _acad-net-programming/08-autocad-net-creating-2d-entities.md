@@ -44,7 +44,7 @@ public Vector3d(double x, double y, double z);
 
 Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
 
-### Çizgi (Line) Oluşturulması
+### Çizgi (Line) Oluşturulması-1
 
 5 ve 6. satırlarda erişilen doküman ve veritabanı nesneleri [Active](/autocad-net-programming/runtime-active-helper/) sınıfında tanımlanmıştır.
 {: .notice}
@@ -91,7 +91,10 @@ public void DrawLine1()
 - Oluşturulan `Line` nesnesi sonlandırılmamıştır. Çünkü sonlandırma işini işlem yığını üstlenmiştir. (`line.Dispose();` satırını koda eklemek hatayla sonuçlanacaktır.)
 - `AppendEntity` yordamı `ObjectId` türünde bir nesne döndürür. AutoCAD çiziminde her nesnenin, grafiksel olsun ya da olmasın, mutlaka benzersiz bir kimliği (ObjectId) vardir. Bu kimlikle nesnenin hangi veritabanına ait olduğu, geçerli olup olmadığı gibi bilgilere ulaşılabilmektedir. `ObjectId` için unutlmaması gereken en önemli şey, çizim kapatılıp açıldığında, nesne özelliklerinde değişiklik yapıldığında değerinin değişebileceğidir.
 
-Diğer AutoCAD varlıklarının çizim veritabanına eklenmesinde izlenecek yol, `DrawLine1` yordamında izlenenle aynı olacaktır. Kılavuzun ilerleyen bölümlerinde kod tekrarından kaçınmak ve veritabanına varlık ekleme işlemlerini kolaylaştırmak için statik `DatabaseHelper` sınıfı tasarlanmıştır. (Bkz. [EK-2: AutoCAD Veritabanı Yardımcısı)](/autocad-net-programming/databese-helper/)
+Diğer AutoCAD varlıklarının çizim veritabanına eklenmesinde izlenecek yol, `DrawLine1` yordamında izlenenle aynı olacaktır. 
+
+Kılavuzun ilerleyen bölümlerinde kod tekrarından kaçınmak ve veritabanına varlık ekleme işlemlerini kolaylaştırmak için statik `DatabaseHelper` sınıfı tasarlanmıştır. (Bkz. [EK-2: AutoCAD Veritabanı Yardımcısı)](/autocad-net-programming/databese-helper/)
+{: .notice}
 
 `DatabaseHelper` `AddToModelSpace` yordamının yardımı ile `DrawLine1` artık daha sade bir biçimde aşağıdaki gibi yazılabilir.
 

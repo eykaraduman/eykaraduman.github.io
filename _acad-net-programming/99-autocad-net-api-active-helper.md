@@ -1,5 +1,5 @@
 ---
-title: "AutoCAD Çalışma Zamanı Ortam Yardımcısı (Active.cs)"
+title: "EK-1: AutoCAD Çalışma Zamanı Yardımcısı (Active.cs)"
 permalink: /autocad-net-programming/runtime-active-helper/
 classes: wide
 comments: true

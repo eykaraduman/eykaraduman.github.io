@@ -46,9 +46,8 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 - [x] İşlem Yığınları (Transactions)
 - [x] Blok tabloları ve blok tablo kayıtları
 - [ ] Komutlar
-- [x] AutoCAD çalışma zamanı ortam yardımcısı (Active.cs)
-- [ ] Grafiksel nesnelerin oluşturulması
-- [x] Nesneler üzerinde işlemler
+- [x] 2B (2D) Varlıkların (Entities) Oluşturulması
+- [x] Varlıklar üzerinde işlemler
   - [x] Dönüşüm matrisleri
   - [x] Nesneleri kopyalama, taşıma, döndürme, ölçekleme, aynalama ve silme
 - [ ] Yerleşik sözlükler (Katman tabloları, çizgi tipleri, çetin stilleri vb.)
@@ -60,6 +59,8 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 - [ ] AutoCAD .NET uygulamalarının dağıtılması
 - [ ] AutoCAD Eklenti Projesi-1
 - [ ] AutoCAD Eklenti Projesi-2
+- [x] Ek-1: AutoCAD çalışma zamanı yardımcısı (Active.cs)
+- [x] Ek-2: AutoCAD veritabanı yardımcısı (DatabaseHelper.cs)
 
 ### Kılavuz Kaynak Kodları
 

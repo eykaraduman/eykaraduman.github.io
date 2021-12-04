@@ -145,4 +145,4 @@ public void DrawLine2()
 }
 ```
 
-`DrawLine2` yordamı genişliği 5, yüksekliği 2.5 birim bir dikdörtgenin kenar çizgilerini oluşturacaktır.
+`DrawLine2` yordamı alt köşe noktası (0, 0, 0) olan ve genişliği 5, yüksekliği 2.5 birim bir dikdörtgenin kenar çizgilerini oluşturacaktır.

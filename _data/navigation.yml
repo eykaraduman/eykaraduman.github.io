@@ -28,8 +28,10 @@ autocadnet-programming-tutorial:
          url: /autocad-net-programming/autocad-net-transactions/
        - title: "Blok Tabloları ve Blok Tablo Kayıtları"
          url: /autocad-net-programming/autocad-netblock-tables/
-       - title: "Grafiksel Nesnelerin Oluşturulması"
-         url: /autocad-net-programming/creating-entities/               
+       - title: "AutoCAD Çalışma Zamanı Ortam Yardımcısı (Active.cs)"
+         url: /autocad-net-programming/runtime-active-helper/      
+       - title: "2B (2D) Varlıkların (Entities) Oluşturulması"
+         url: /autocad-net-programming/creating-2d-entities/             
        - title: "Dönüşümler"
          url: /autocad-net-programming/transformations/         
   

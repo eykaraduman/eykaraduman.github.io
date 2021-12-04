@@ -81,13 +81,13 @@ public void DrawLine1()
 
 16-19 numaralı kod satırları çizgiyi oluşturulmakta ve 21-26 numaralı kod satırları ise çizgiyi çizim veritabanına eklemektedir.
 
-*DrawLine1* yordamında şu noktaları gözden kaçırmamak çizim veritabanına varlık eklemenin mekanizmasını anlamak açısından önemlidir:
+*DrawLine1* yordamında aşağıdaki noktaları gözden kaçırmamak çizim veritabanına varlık eklemenin mekanizmasını anlamak açısından önemlidir:
 
 - Blok tablosu ve blok tablo kaydına erişirken `GetObject` yordamı kullanılmıştır.
-- ModelSpace blok tablo kaydına yazma amaçlı  erişilmiştir. Ancak okuma amaçlı erişilmiş blok tablo kaydına her zaman `btr.UpgradeOpen()` yordamını kullanrak yazma amaçlı erişmek de mümkündür.
+- ModelSpace blok tablo kaydına yazma amaçlı  erişilmiştir. Ancak okuma amaçlı erişilmiş blok tablo kaydına her zaman `btr.UpgradeOpen()` yordamını kullanarak yazma amaçlı erişmek de mümkündür.
 - Oluşturulan `Line` nesnesi sonlandırılmamıştır. Çünkü sonlandırma işini işlem yığını üstlenmiştir. (`line.Dispose();` satırını koda eklemek hatayla sonuçlanacaktır.)
 
-Diğer AutoCAD varlıklarının eklenmesinde izlenecek yol, `DrawLine1` yordamında izlenenle aynı olacaktır. Bu nedenle, kod tekrarından kaçınmak için varlıkları parametre olarak kabul eden bir yordamın hazırlanması bize hem zaman kazandıracak hem de kolaylık sağlayacaktır. **DatabaseHelper.cs** sınıfı ModelSpace ve PaperSpace blok tablo kayıtlarına varlıkların eklenmesini kolaylaştırmak için tasarlanmıştır.
+Diğer AutoCAD varlıklarının çizim veritabanına eklenmesinde izlenecek yol, `DrawLine1` yordamında izlenenle aynı olacaktır. Bu nedenle, kod tekrarından kaçınmak için varlıkları parametre olarak kabul eden bir yordamın hazırlanması bize hem zaman kazandıracak hem de kolaylık sağlayacaktır. Statik `DatabaseHelper` sınıfı ModelSpace ve PaperSpace blok tablo kayıtlarına varlıkların eklenmesini kolaylaştırmak için tasarlanmıştır.
 
 .**DatabaseHelper.cs** :
 

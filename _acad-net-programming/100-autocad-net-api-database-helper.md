@@ -9,7 +9,11 @@ sidebar:
   nav: autocadnet-programming-tutorial
 ---
 
-`DatabaseHelper` statik sınıfı, AutoCAD .NET API veitabanı işlemlerini kolaylaştıran yardımcı bir sınıftır. Varlıkları model ve kağıt uzaylarına ekleyen metotlar barındırmaktadır.
+`DatabaseHelper` statik sınıfı, AutoCAD .NET API veritabanı işlemlerini kolaylaştıran yardımcı bir sınıftır. Varlıkları model ve kağıt uzaylarına ekleyen metotlar barındırmaktadır.
+
+![ClassDiagram](/assets/images/cd-database-helper.png "ClassDiagram")
+
+**DatabaseHelper.cs**:
 
 ```c#
 using System.Collections.Generic;

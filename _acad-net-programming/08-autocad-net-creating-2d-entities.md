@@ -47,7 +47,7 @@ Bu yapının `kXAxis` özelliği, (1, 0, 0)  vektörünü göstermektedir.
 ### Çizgi (Line) Oluşturulması-1
 
 5 ve 6. satırlarda erişilen doküman ve veritabanı nesneleri [Active](/autocad-net-programming/runtime-active-helper/) sınıfında tanımlanmıştır.
-{: .notice}
+{: .notice--warning}
 
 {% highlight csharp linenos %}
 [CommandMethod("DrawLine1")]
@@ -94,7 +94,7 @@ public void DrawLine1()
 Diğer AutoCAD varlıklarının çizim veritabanına eklenmesinde izlenecek yol, `DrawLine1` yordamında izlenenle aynı olacaktır. 
 
 Kılavuzun ilerleyen bölümlerinde kod tekrarından kaçınmak ve veritabanına varlık ekleme işlemlerini kolaylaştırmak için statik `DatabaseHelper` sınıfı tasarlanmıştır. (Bkz. [EK-2: AutoCAD Veritabanı Yardımcısı)](/autocad-net-programming/databese-helper/)
-{: .notice}
+{: .notice--warning}
 
 `DatabaseHelper` `AddToModelSpace` yordamının yardımı ile `DrawLine1` artık daha sade bir biçimde aşağıdaki gibi yazılabilir.
 

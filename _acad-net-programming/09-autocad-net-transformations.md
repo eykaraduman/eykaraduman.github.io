@@ -1,5 +1,5 @@
 ---
-title: Dönüşümler
+title: 2B Varlıkların Dönüşümleri
 excerpt: "AutoCAD.Net API ile dönüşüm (ölçekleme, döndürme, yer değiştirme)."
 permalink: /autocad-net-programming/transformations/
 classes: wide

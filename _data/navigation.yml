@@ -12,7 +12,7 @@ main:
  
 autocadnet-programming-tutorial:
    - title: "Giriş"
-     url: /autocad-net-programming/
+     url: /autocad-net-programming/autocad-net-api-start/
      children:
        - title: "AutoCAD .NET API Genel Bakış"
          url: /autocad-net-programming/autocad-net-api-start/
@@ -30,7 +30,7 @@ autocadnet-programming-tutorial:
          url: /autocad-net-programming/autocad-netblock-tables/
        - title: "2B (2D) Varlıkların (Entities) Oluşturulması"
          url: /autocad-net-programming/creating-2d-entities/             
-       - title: "Dönüşümler"
+       - title: "2B Varlıkların Dönüşümleri"
          url: /autocad-net-programming/transformations/         
    - title: "Ekler"
      children:

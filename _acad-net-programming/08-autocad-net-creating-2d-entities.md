@@ -100,7 +100,7 @@ public void DrawLine1()
 - Blok tablosu ve blok tablo kaydına erişirken `GetObject` yordamı kullanılmıştır. Bu yordam `DBObject` türünde nesneler döndürmektedir ve uygun tür dönüşümü yapılarak BlockTable ve BlockTableRecord nesnelerine erişilmektedir. (Satır 13 ve 15.)
 - ModelSpace blok tablo kaydına yazma amaçlı erişilmiştir. Ancak okuma amaçlı erişilmiş blok tablo kaydına her zaman `btr.UpgradeOpen();` yordamını kullanarak yazma amaçlı erişmek de mümkündür.
 - Oluşturulan `Line` nesnesi sonlandırılmamıştır. Çünkü sonlandırma işini işlem yığını üstlenmiştir. (`line.Dispose();` satırını koda eklemek hatayla sonuçlanacaktır.)
-- `AppendEntity` yordamı `ObjectId` türünde bir nesne döndürmektedir. AutoCAD çiziminde her nesnenin, grafiksel olsun ya da olmasın, mutlaka benzersiz bir kimliği (ObjectId) vardir. Bu kimlikle nesnenin hangi veritabanına ait olduğu, geçerli olup olmadığı gibi bilgilere ulaşılabilmektedir. `ObjectId` için unutlmaması gereken en önemli şey, çizim kapatılıp açıldığında, nesne özelliklerinde değişiklik yapıldığında değerinin değişebileceğidir.
+- `AppendEntity` yordamı `ObjectId` türünde bir nesne döndürmektedir. AutoCAD çiziminde her nesnenin, grafiksel olsun ya da olmasın, mutlaka benzersiz bir kimliği (ObjectId) vardır. Bu kimlikle nesnenin hangi veritabanına ait olduğu, geçerli olup olmadığı gibi bilgilere ulaşılabilmektedir. `ObjectId` için unutulmaması gereken en önemli şey, çizim kapatılıp tekrar açıldığında, nesne özelliklerinde değişiklik yapıldığında değerinin değişebileceğidir.
 
 Diğer AutoCAD varlıklarının çizim veritabanına eklenmesinde izlenecek yol, `DrawLine1` yordamında izlenenle aynı olacaktır. 
 

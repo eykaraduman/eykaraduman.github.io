@@ -46,10 +46,12 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
 - [x] İşlem Yığınları (Transactions)
 - [x] Blok tabloları ve blok tablo kayıtları
 - [ ] Komutlar
-- [x] 2B (2D) Varlıkların (Entities) Oluşturulması
-- [x] Varlıklar üzerinde işlemler
-  - [x] Dönüşüm matrisleri
-  - [x] Nesneleri kopyalama, taşıma, döndürme, ölçekleme, aynalama ve silme
+- [x] 2B (2D) Varlıklar (Entities)
+  - [x] *Varlıkların oluşturulması*
+  - [x] Varlıkların dönüşümleri (kopyalama, taşıma, döndürme, ölçekleme ve aynalama) 
+  - [ ] Varlıkları silme
+
+- [ ] Bloklar ve blok etiketleri
 - [ ] Yerleşik sözlükler (Katman tabloları, çizgi tipleri, çetin stilleri vb.)
 - [ ] Veri saklama yöntemleri (XData, ExtensionDictionary ve NOD)
 - [ ] Kullanıcıdan giriş bilgisi toplama

@@ -52,7 +52,7 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
   - [ ] Varlıkları silme
 
 - [ ] Bloklar ve blok etiketleri
-- [ ] Yerleşik sözlükler (Katman tabloları, çizgi tipleri, çetin stilleri vb.)
+- [ ] Yerleşik sözlükler (Katman tabloları, çizgi tipleri, metin stilleri vb.)
 - [ ] Veri saklama yöntemleri (XData, ExtensionDictionary ve NOD)
 - [ ] Kullanıcıdan giriş bilgisi toplama
 - [ ] Seçim setlerinin oluşturulması ve filtreleme

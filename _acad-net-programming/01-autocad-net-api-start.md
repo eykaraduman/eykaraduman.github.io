@@ -50,11 +50,10 @@ Bu kılavuzdan tam olarak yararlanabilmek için en az orta düzeyde C# programla
   - [x] *Varlıkların oluşturulması*
   - [x] Varlıkların dönüşümleri (kopyalama, taşıma, döndürme, ölçekleme ve aynalama) 
   - [ ] Varlıkları silme
-
-- [ ] Bloklar ve blok etiketleri
-- [ ] Yerleşik sözlükler (Katman tabloları, çizgi tipleri, metin stilleri vb.)
-- [ ] Veri saklama yöntemleri (XData, ExtensionDictionary ve NOD)
 - [ ] Kullanıcıdan giriş bilgisi toplama
+- [ ] Bloklar ve blok etiketleri
+- [ ] Yerleşik tablolar(Katman tabloları, çizgi tipleri, metin stilleri vb.)
+- [ ] Veri saklama yöntemleri (XData, ExtensionDictionary ve NOD)
 - [ ] Seçim setlerinin oluşturulması ve filtreleme
 - [ ] AutoCAD. NET API ile olaylar
 - [ ] AutoCAD .NET API ile WPF kullanımı

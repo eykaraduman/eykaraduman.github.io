@@ -70,7 +70,7 @@ $$
 A_1\cdot \overline{h_1}+\cfrac{Q^2}{g\cdot A_1}=A_2\cdot \overline{h_2}+\cfrac{Q^2}{g\cdot A_2}\tag{6}
 $$
 
-$h_1=C_c\cdot a$ ve $h_{1k}=h1$ olmak üzere sınır kuyruk suyu derinliği $h_2^*$ eşitlik (7) ile hesaplanabilir. $(h_2^* = h_{2k}$)
+$h_1=C_c\cdot a$ ve $h_{1k}=h1$ olmak üzere sınır kuyruk suyu derinliği $h_2^{*}$ eşitlik (7) ile hesaplanabilir. $(h_2^{*} = h_{2k})$
 
 $$
 \cfrac{h_2^*}{a}=\cfrac{C_c}{2}\left( \sqrt{1+\cfrac{16 \cdot \cfrac{h_o^2}{a^2}}{C_c\cdot \left(C_c+\cfrac{h_o}{a}\right)}-1}\right)\tag{7}
